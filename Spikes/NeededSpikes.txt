@@ -1,1 +1,10 @@
-This is where we can write all the needed spikes
+
+
+Talking from the Pi to the Server -- C
+Sending an email/text to a phone through a website -- some language?
+Pi program to get the tempurature from the device -- C
+Getting the sensor working on the Pi -- hardware issue
+Going through the previous programs code -- php/laravell etc
+
+
+
