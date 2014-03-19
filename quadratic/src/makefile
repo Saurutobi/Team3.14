@@ -1,2 +1,3 @@
 all:
-	gcc -c quadratic.c 
+	gcc -c quadratic.c minus.c plus.c -lm
+	gcc *.o -lm
