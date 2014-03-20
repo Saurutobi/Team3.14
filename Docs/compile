@@ -1,0 +1,6 @@
+#!/bin/bash
+	pdflatex Feasability.tex
+	rm ~/Desktop/Feasability.pdf
+	mv Feasability.pdf ~/Desktop/
+	rm Feasability.log
+	rm Feasability.aux

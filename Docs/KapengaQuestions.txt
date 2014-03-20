@@ -1,0 +1,6 @@
+
+Why was the @lert Temperature sensor chosen?
+What rooms are the sensors installed in?
+How many people are currently using this system(the one made by the senior design team)?
+What are other solutions to temperature sensing that other areas of campus are using?
+
