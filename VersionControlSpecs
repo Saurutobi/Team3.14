@@ -1,4 +1,3 @@
-
   ______________________________________________________________
   |		|			|	|		|
   |		|			|	|		|
@@ -12,14 +11,23 @@ Makefile        |
      RaspPi   Server  UnitTests
 
 
-All Documentation
-	stories
-	programming standards
-	feasability report	
-	unit test standards
-	all other docs that we used even wikipedia pages
-	legal docs
-	license
+/source
+		-readme
+		-subdirectories
+	/spikes
+		-readme (is a summary of what is in the folder)
+		-code
+		-examples
+		-proof of concept
+	/docs	
+		-stories
+		-programming standards
+		-feasibility report
+		-unit test standards
+		-all other docs that you've used or looked at, even if wikipedia pages
+		-legal docs
+		-licenses/gnu/etc
+
 
 
 
