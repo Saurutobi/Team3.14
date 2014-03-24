@@ -1,6 +1,15 @@
 
 Why was the @lert Temperature sensor chosen?
+we should implement this because we already have space
+create a driver module that talks to individual devices
+could create a driver module that could talk to the cpu to get temp of other computers
+
 What rooms are the sensors installed in?
+
 How many people are currently using this system(the one made by the senior design team)?
+
 What are other solutions to temperature sensing that other areas of campus are using?
 
+
+another framework that we could use is cakephp -- module view control
+these kind of decisions can be put into our spikes area
