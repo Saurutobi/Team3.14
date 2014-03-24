@@ -1,5 +1,5 @@
 CREATE TABLE `users` (
-  `WinID` int(11) NOT NULL,
+  `WinID` varchar(9) NOT NULL,
   `FirstName` varchar(30) NOT NULL,
   `LastName` varchar(30) NOT NULL,
   `UserName` varchar(20) NOT NULL,
