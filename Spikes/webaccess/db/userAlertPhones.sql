@@ -1,5 +1,5 @@
 CREATE TABLE `userAlertPhones` (
-  `WinID` int(11) NOT NULL,
+  `WinID` varchar(9) NOT NULL,
   `PhoneNumber` varchar(10) NOT NULL,
   `Enabled` bit(1) NOT NULL,
   KEY `fk_users_userAlertPhones_idx` (`WinID`),
