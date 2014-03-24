@@ -1,0 +1,29 @@
+We need to create a logging make that will allow us to log all things
+We need to find a coding standard for our program
+We need to split off the input method as another program to test
+We need to write a square root program
+We need to create tests for
+	input program
+	Quadratic Plus program
+	Quadratic Minus program
+	Square Root Program
+
+quadratic plus and minus will need a mock square root object
+We need to determine if we are giving correct amounts of exactness
+
+We need to create doxygen documentation
+
+He will have stuff from the quadratic program on the final
+	machine epsilon
+	mock object
+
+for mock objects
+	expected result
+	returned result
+	relative error with the result
+
+	sent
+	count 
+	error
+
+
