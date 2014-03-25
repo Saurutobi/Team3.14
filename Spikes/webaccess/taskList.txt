@@ -1,0 +1,15 @@
+Task List:
+
+
+Status    |   Task                                                    |   Time Estimate     |   Risk
+--------------------------------------------------------------------------------------------------------------
+50%       |   1.) create tables/keys/triggers                         |   02:00:00          | 
+0%        |   2.) create "createDatabase.sql" script                  |   00:30:00          |
+0%        |   3.) create "deviceReport.php" input page for devices    |   00:30:00          |
+0%        |   4.) create c program that simply submits post with      |   01:30:00          |
+                  tolerence-random data                               |                     |
+0%        |   4.) explore CakeMVC as a Laravel alternative            |   05:00:00          |
+0%        |   5.) create login page                                   |   01:00:00          |
+0%        |   6.) create landing page, create session handling        |   02:00:00          |     
+
+more to come...
