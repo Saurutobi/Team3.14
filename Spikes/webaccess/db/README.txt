@@ -1,9 +1,16 @@
-As a placeholder, from "Pragmatic Version Control with Subversion":
+If the database needs to be installed from scratch, open a mysql terminal, 
+  navigate to the /db folder and run the following:
 
-If your project uses a database, store all the schema-
-related stuff here. Work hard not to fall into the habit of
-modifying schemas online. Have your database admin-
-istrator create SQL scripts for each update—scripts that
-both update the schema and migrate the data. By keep-
-ing these in the repository, you’ll be able to migrate any
-version of the database to any other version.
+    mysql -u [username] -p[password] < createDatabase.sql
+
+
+This will:
+
+1.) create the database/schema
+2.) create the empty tables, complete with triggers, indexes, and keys
+3.) insert an administrator with a random username/password that upon creation will 
+  trigger a delete of the temporary admin
+
+Note: the first time the program is run the temprorary admin will be forced to
+  create a username/password for a permanent admin before any further actions
+  would be allowed.
