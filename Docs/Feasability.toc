@@ -1,8 +1,10 @@
 \contentsline {subsection}{Abstract}{2}
 \contentsline {subsection}{Background}{3}
 \contentsline {subsection}{Design Decisions}{4}
-\contentsline {subsection}{Spikes}{5}
-\contentsline {subsection}{Resources}{6}
-\contentsline {subsection}{Feasibility}{7}
-\contentsline {subsection}{Glossary}{8}
-\contentsline {subsection}{OwnerShip}{9}
+\contentsline {subsection}{Stories -- Requirements}{5}
+\contentsline {subsection}{Stories -- Functional}{6}
+\contentsline {subsection}{Spikes}{7}
+\contentsline {subsection}{Resources}{8}
+\contentsline {subsection}{Feasibility}{9}
+\contentsline {subsection}{Glossary}{10}
+\contentsline {subsection}{OwnerShip}{11}
