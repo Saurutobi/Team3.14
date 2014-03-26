@@ -26,4 +26,4 @@ for mock objects
 	count 
 	error
 
-
+We only want to print out if a process fails
