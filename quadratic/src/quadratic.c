@@ -1,26 +1,3 @@
-/*
-	Programming Standard
-	- subversion
-	- Unit Testing: Cunit
-	- Automation using make
-	- Documentation standard (Things to look at: doxygen, IEEE (wiki))
-*/
-
-/* 
-PROGRAM NEEDS
-needs to work on most Linux systems
-given an "a" "b" "c" in float pofloat need to return "x1" "x2"
-8 digits of accuracy (8 digits need to be correct, it's impossible) and precision
-
-x = [b +-  sqrt(b^2 - 4ac)] / 2a
-
-gcc compiler (which one? more current but doesn't need to be newest)
-
-R2
-run in shell script and return the values
-*/ 
-
-
 /*	Quadratic Equation */
 
 #include <stdio.h>
