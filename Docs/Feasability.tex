@@ -1,5 +1,5 @@
 \documentclass{report}
-
+\usepackage[pdftex]{graphicx}
 
 
 \begin{document}
@@ -9,12 +9,12 @@
 
 \vspace*{\fill}
 \begin{center}
-Temperature Monitoring System
-by Mike Guzior, Jason Pearson
-Marcel Englmaier and Justin Koehler
-3/16/2014
-Client: John Kapenga
-Advisor: John Kapenga
+Temperature Monitoring System\hspace*{\fill}
+by Mike Guzior, Jason Pearson\hspace*{\fill}
+Marcel Englmaier and Justin Koehler\hspace*{\fill}
+3/16/2014\hspace*{\fill}
+Client: John Kapenga\hspace*{\fill}
+Advisor: John Kapenga\hspace*{\fill}
 \end{center}
 \vspace*{\fill}
 \end{titlepage}
@@ -31,9 +31,12 @@ The goal of this project is to create an easy to use and low cost temperature mo
 	Western Michigan currently uses the Temperature @lert WiFi Edition to keep track of the temperature of rooms around campus. These sensors work very well but their major flaw is that they are very expensive. These sensors cost upwards of two hundred dollars per sensor and have many features that are neat, but unnecessary for our purposes. To alleviate this problem we proposed to create a server that would communicate with a network of home brewed sensor computers. The server was created by another Western Michigan Computer Science senior design team and it currently is used to communicate with the @lert sensors.  
 	\newline
 	\indent
-	The currently used Temperature @lert WiFi sensor has accuracy of \pm$.5\,^{\circ}{\rm C}$. The max and minimum temperatures that the current sensor will calculate are -$10\,^{\circ}{\rm C}$ and +$85\,^{\circ}{\rm C}$. The current sensor also gives humidity readings. This is not high priority, but if we are able to implement it that would be desirable. The humidity readings that the current sensors give are between 10\% and 90\% relative humidity. This relative humidity has \pm3\% relative humidity accuracy One major feature of the sensor is the fact that it can be used over the network using wired or wireless connections. The wireless specs that it abides by are the 802.11b/g standards and allow for WPA/WEP security. 
-
-
+	The currently used Temperature @lert WiFi sensor has accuracy of \pm.$5\,^{\circ}{\rm C}$. The max and minimum temperatures that the current sensor will calculate are -$10\,^{\circ}{\rm C}$ and +$85\,^{\circ}{\rm C}$. The current sensor also gives humidity readings. This is not high priority, but if we are able to implement it that would be desirable. The humidity readings that the current sensors give are between 10\% and 90\% relative humidity. This relative humidity has \pm3\% relative humidity accuracy One major feature of the sensor is the fact that it can be used over the network using wired or wireless connections. The wireless specs that it abides by are the 802.11b/g standards and allow for WPA/WEP security. These are the features that are used by the system that we need to implement on our client devices.
+	\newline
+	\indent
+	TODO: talk about the other features that the device has and how similar features only need to be implemented on the server side.
+	\newline
+	\indent
 \newpage
 
 	
@@ -42,9 +45,17 @@ The goal of this project is to create an easy to use and low cost temperature mo
 Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.. Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
 Git: Team members were more familiar with the workings of Git and could be used with a GUI.
 Sensor: Team members spent a considerable amount of time exploring possible sensors, with the requirements being that the final solution utilize temperature and humidity sensing. As a single package, multiple solutions were found, but are currently too expensive to make them feasible. Much research was done into finding ones with Dallas One-Wire capability. One-Wire is a protocol which identifies each device separately, and can query each device using a single wire. Currently, only the DS18B20 temperature sensor is being used. A fitting humidity sensor for less that 5 dollars has not been found yet, but is still being looked for.
-Stories -- Requirements
+We have also decided to separate the project into 4 main functional pieces which each need their required spikes. The flow of the normal communication is as displayed as below.
+\includegraphics{DataFlowFlowChart.PNG}
+\newpage
+\subsection*{Stories -- Requirements}
+\addcontentsline{toc}{subsection}{Stories -- Requirements}
 	This project requires a server running linux, we will be using Ubuntu on this system. We also require a temperature sensor of your choice. We will be interfacing with the Temperature @lert WiFi edition TM-WIFI220 as well as Raspberry Pi’s running rasberian. If you would like WiFi connectivity for your Raspberry Pi like we are going to, we will use a wireless receiver.
-Stories -- Functional
+	TODO: List the parts that we are going to use for the wireless reciever and the other parts
+
+\newpage
+\subsection*{Stories -- Functional}
+\addcontentsline{toc}{subsection}{Stories -- Functional}
 Use a temperature sensor to monitor the temperature of the servers room located on the CEAS campus.
 Check the humidity of the server rooms located on the CEAS campus.
 Send the data to a server to be checked.
