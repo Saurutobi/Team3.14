@@ -11,6 +11,8 @@
   -gets current ip address of raspPI
   -gets mac id of NIC
   -checks to see if new version of software is available
+  -also on load, reports that it has loaded via some flag i'm guessing.
+   maybe a column for a first loop. 
   
 2.) update program. i'm not sure how to go about this, but maybe
     since this program is separate from the config, it can just download
