@@ -1,6 +1,7 @@
 \documentclass{report}
 \usepackage[pdftex]{graphicx}
-
+\usepackage[english]{babel}
+\usepackage{float}
 
 \begin{document}
 
@@ -9,12 +10,12 @@
 
 \vspace*{\fill}
 \begin{center}
-testingTemperature Monitoring System \hspace*{\fill}
-by Mike Guzior, Jason Pearson \hspace*{\fill}
-Marcel Englmaier and Justin Koehler \hspace*{\fill}
-3/16/2014 \hspace*{\fill}
-Client: John Kapenga \hspace*{\fill}
-Advisor: John Kapenga \hspace*{\fill}
+Temperature Monitoring System \newline
+by Mike Guzior, Jason Pearson \newline
+Marcel Englmaier and Justin Koehler \newline
+3/16/2014 \newline
+Client: John Kapenga \newline
+Advisor: John Kapenga \newline
 \end{center}
 \vspace*{\fill}
 \end{titlepage}
@@ -24,29 +25,93 @@ Advisor: John Kapenga \hspace*{\fill}
 
 \subsection*{Abstract}
 \addcontentsline{toc}{subsection}{Abstract}
-The goal of this project is to create an easy to use and low cost temperature monitoring system for anyone to use. The web end will allow the user to login in and view room statistics, as well as set warnings on thresholds. With the thresholds we would allow the user to select actions based on the threshold such as sending a text when it reaches a certain temperature.  The room will contain a Raspberry Pi equipped with sensors which will use Ethernet to communicate to the web end and update information. The reason for using the Raspberry Pi’s is that we would be able to create a low cost sensor and be able to customize the code on the Pi as well. 
+The goal of this project is to create an easy to use and low cost temperature monitoring system for anyone to use. 
+The web end will allow the user to login in and view room statistics, as well as set warnings on thresholds. 
+With the thresholds we would allow the user to select actions based on the threshold such as sending a text when it reaches a certain temperature. 
+The room will contain a Raspberry Pi equipped with sensors which will use Ethernet to communicate to the web end and update information. 
+The reason for using the Raspberry Pi’s is that we would be able to create a low cost sensor and be able to customize the code on the Pi as well. 
 \newpage
 \subsection*{Background}
 \addcontentsline{toc}{subsection}{Background}
-	Western Michigan currently uses the Temperature @lert WiFi Edition to keep track of the temperature of rooms around campus. These sensors work very well but their major flaw is that they are very expensive. These sensors cost upwards of two hundred dollars per sensor and have many features that are neat, but unnecessary for our purposes. To alleviate this problem we proposed to create a server that would communicate with a network of home brewed sensor computers. The server was created by another Western Michigan Computer Science senior design team and it currently is used to communicate with the @lert sensors.  
+	Western Michigan currently uses the Temperature @lert WiFi Edition to keep track of the temperature of rooms around campus. 
+These sensors work very well but their major flaw is that they are very expensive. These sensors cost upwards of two hundred dollars per sensor and have many features that are neat, but unnecessary for our purposes. 
+To alleviate this problem we proposed to create a server that would communicate with a network of home brewed sensor computers. 
+The server was created by another Western Michigan Computer Science senior design team and it currently is used to communicate with the @lert sensors.  
 	\newline
 	\indent
-	The currently used Temperature @lert WiFi sensor has accuracy of \pm.$5\,^{\circ}{\rm C}$. The max and minimum temperatures that the current sensor will calculate are -$10\,^{\circ}{\rm C}$ and +$85\,^{\circ}{\rm C}$. The current sensor also gives humidity readings. This is not high priority, but if we are able to implement it that would be desirable. The humidity readings that the current sensors give are between 10\% and 90\% relative humidity. This relative humidity has \pm3\% relative humidity accuracy One major feature of the sensor is the fact that it can be used over the network using wired or wireless connections. The wireless specs that it abides by are the 802.11b/g standards and allow for WPA/WEP security. These are the features that are used by the system that we need to implement on our client devices.
+	The currently used Temperature @lert WiFi sensor has accuracy of $\pm$.$5\,^{\circ}{\rm C}$. The max and minimum temperatures that the current sensor will calculate are -$10\,^{\circ}{\rm C}$ and +$85\,^{\circ}{\rm C}$. The current sensor also gives humidity readings. This is not high priority, but if we are able to implement it that would be desirable.
+ The humidity readings that the current sensors give are between 10$\%$ and 90$\%$ relative humidity. 
+This relative humidity has $\pm$ 3$\%$ relative humidity accuracy One major feature of the sensor is the fact that it can be used over the network using wired or wireless connections. 
+The wireless specs that it abides by are the 802.11b/g standards and allow for WPA/WEP security. These are the features that are used by the system that we need to implement on our client devices.
 	\newline
 	\indent
 	TODO: talk about the other features that the device has and how similar features only need to be implemented on the server side.
 	\newline
 	\indent
+	TODO: talk about the initial site and talk about the design decisions made by the other senior design group
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{Website.PNG}}
+\caption{Initial View Of Site}
+\end{figure}
+\newpage
+	TODO: talk about the login process and how the user verification is done
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{LoginPage.PNG}}
+\caption{Login Page}
+\end{figure}
+\newpage
+	TODO: Talk about admin login page and what they have access to.
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddPage.PNG}}
+\caption{Add Page}
+\end{figure}
+\newpage
+	TODO: self explanitory
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddDevice.PNG}}
+\caption{Add Device To Network Page}
+\end{figure}
+\newpage
+	TODO: self explanitory
+
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddDeviceType.PNG}}
+\caption{Add Another Device Type}
+\end{figure}
+\newpage
+	TODO: self explanitory
+
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddRoomAssignment.PNG}}
+\caption{Page to Assign Users to Rooms}
+\end{figure}
+\newpage
+	TODO: self explanitory
+
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddRoom.PNG}}
+\caption{Adds a Room}
+\end{figure}
+\newpage
+	TODO: be sure to talk about the different levels of users
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddUser.PNG}}
+\caption{Page To Add Users}
+\end{figure}
 \newpage
 
 	
+
+\newpage
 \subsection*{Design Decisions}
 \addcontentsline{toc}{subsection}{Design Decisions}
-Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.. Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
-Git: Team members were more familiar with the workings of Git and could be used with a GUI.
-Sensor: Team members spent a considerable amount of time exploring possible sensors, with the requirements being that the final solution utilize temperature and humidity sensing. As a single package, multiple solutions were found, but are currently too expensive to make them feasible. Much research was done into finding ones with Dallas One-Wire capability. One-Wire is a protocol which identifies each device separately, and can query each device using a single wire. Currently, only the DS18B20 temperature sensor is being used. A fitting humidity sensor for less that 5 dollars has not been found yet, but is still being looked for.
+\begin{itemize}
+\item Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.. Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
+\item Git: Team members were more familiar with the workings of Git and could be used with a GUI.
+\item Sensor: Team members spent a considerable amount of time exploring possible sensors, with the requirements being that the final solution utilize temperature and humidity sensing. As a single package, multiple solutions were found, but are currently too expensive to make them feasible. Much research was done into finding ones with Dallas One-Wire capability. One-Wire is a protocol which identifies each device separately, and can query each device using a single wire. Currently, only the DS18B20 temperature sensor is being used. A fitting humidity sensor for less that 5 dollars has not been found yet, but is still being looked for.
+\end{itemize}
 We have also decided to separate the project into 4 main functional pieces which each need their required spikes. The flow of the normal communication is as displayed as below.
-\includegraphics{DataFlowFlowChart.PNG}
+TODO Fix the picture of the flow chart to meet the way that his laravell end was doing it
 \newpage
 \subsection*{Stories -- Requirements}
 \addcontentsline{toc}{subsection}{Stories -- Requirements}
@@ -70,14 +135,16 @@ Establish permissions for the various admins that will be monitoring the system.
 \newpage
 \subsection*{Resources}
 \addcontentsline{toc}{subsection}{Resources}
-Raspberry Pi
-Temperature Sensors
-Humidity Sensors
-Web Server
-Soldering Equipment
-Operating System loaded SD Cards with Rasperian
-Power connectors for Raspberry pi
-WiFi Connectors for Raspberry pi
+\begin{itemize}
+\item Raspberry Pi
+\item Temperature Sensors
+\item Humidity Sensors
+\item Web Server
+\item Soldering Equipment
+\item Operating System loaded SD Cards with Rasperian
+\item Power connectors for Raspberry pi
+\item WiFi Connectors for Raspberry pi
+\end{itemize}
 \newpage
 \subsection*{Feasibility}
 \addcontentsline{toc}{subsection}{Feasibility}
