@@ -11,6 +11,7 @@
 		lots of modularization
 		
 */
+#include "logging.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -26,6 +27,9 @@ int main()
 	b = GetAValue('b');
 	c = GetAValue('c');
 
+	#if LOG > 0
+		printf("Logging from Main\n About to call QuadPlus and QuadMinus\n\n");
+	#endif
 	
 	x1 = QuadraticPlus(a, b, c);
 	x2 = QuadraticMinus(a, b, c);

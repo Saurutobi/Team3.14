@@ -1,1 +1,1 @@
-#define LOG 0
+#define LOG 1
