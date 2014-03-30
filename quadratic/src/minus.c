@@ -4,7 +4,7 @@
 
 
 */
-
+#include "logging.h"
 #include <stdio.h>
 #include <math.h>
 
@@ -19,10 +19,18 @@ float QuadraticMinus(float a, float b, float c)
 	sqroot = SquareRoot(a, b, c);
 
 	if((pow(b, 2) - 4. * a * c) > 0)
+	{
 		x1 = (-b - sqroot) / (2 * a);
 
+		#if LOG > 0
+			printf("Logging for Quadratic Minus\n");
+			printf("\na = %f\nb = %f\nc = %f\n",a,b,c);
+			printf("x1 = %f\n", x1);
+		#endif
+	}	
 	else
+	{
 		printf("The result for quadratic minus is a non-real number\n");
-
+	}
 	return x1;
 }
