@@ -1,3 +1,7 @@
+/**
+	@file	sqrt.c
+	@brief	this calculates the sqrt part of the quadratic equation
+*/
 #include <stdio.h>
 #include <math.h>
 

@@ -1,4 +1,7 @@
 /**
+	@file	quadratic.h
+	@brief	headerfile for our main method
+
 	This is our implementation of a quadratic equation solver
 	using methods of the extreme programming.
 	Required things include

@@ -1,3 +1,7 @@
+/**
+	@file	cunit.h
+	@brief	This is part of CUnit which we use for our unit testing
+*/
 #include <stdio.h>
 #include <assert.h>
 #include <math.h> 

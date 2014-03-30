@@ -8,6 +8,7 @@
 
 float GetAValue(char a);
 
+///does the actual unit tests
 int main() {
 
 float result;

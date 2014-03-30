@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plus_2ec',['plus.c',['../plus_8c.html',1,'']]]
+  ['minus_2ec',['minus.c',['../minus_8c.html',1,'']]]
 ];

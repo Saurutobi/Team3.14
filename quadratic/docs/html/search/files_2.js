@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quadratic_2ec',['quadratic.c',['../quadratic_8c.html',1,'']]]
+  ['plus_2ec',['plus.c',['../plus_8c.html',1,'']]]
 ];

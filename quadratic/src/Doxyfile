@@ -23,7 +23,8 @@
 # built into libc) for the transcoding. See http://www.gnu.org/software/libiconv
 # for the list of possible encodings.
 # The default value is: UTF-8.
-
+SOURCE_BROWSER = YES
+ERBATIM_HEADERS = YES
 DOXYFILE_ENCODING      = UTF-8
 
 # The PROJECT_NAME tag is a single word (or a sequence of words surrounded by
@@ -774,7 +775,7 @@ INPUT_ENCODING         = UTF-8
 # *.md, *.mm, *.dox, *.py, *.f90, *.f, *.for, *.tcl, *.vhd, *.vhdl, *.ucf,
 # *.qsf, *.as and *.js.
 
-FILE_PATTERNS          =
+FILE_PATTERNS          = *.c *.h
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.

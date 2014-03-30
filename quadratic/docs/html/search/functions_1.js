@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['quadraticminus',['QuadraticMinus',['../minus_8c.html#a0f03f314cfe6bb49fcde79afeaacd53a',1,'QuadraticMinus(float a, float b, float c):&#160;minus.c'],['../t1_8c.html#a0f03f314cfe6bb49fcde79afeaacd53a',1,'QuadraticMinus(float a, float b, float c):&#160;minus.c']]],
-  ['quadraticplus',['QuadraticPlus',['../plus_8c.html#a18aad6f9ec2ab6408fc48cb52f39b75b',1,'QuadraticPlus(float a, float b, float c):&#160;plus.c'],['../t2_8c.html#a18aad6f9ec2ab6408fc48cb52f39b75b',1,'QuadraticPlus(float a, float b, float c):&#160;plus.c']]]
+  ['main',['main',['../t1_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;t1.c'],['../t2_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;t2.c'],['../t3_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;t3.c']]]
 ];
