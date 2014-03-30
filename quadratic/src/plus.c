@@ -1,3 +1,7 @@
+/**
+	@file	plus.c	
+	@brief	The + part of the +/- when solving for roots
+*/
 #include <stdio.h>
 #include <math.h>
 
@@ -14,7 +18,7 @@ float QuadraticPlus(float a, float b, float c)
 		x1 = (-b + sqroot) / (2 * a);
 	
 	else
-		printf("The result for x1 is a non-real number\n");
+		printf("The result for quadratic plus is a non-real number\n");
 	
 	return x1;
 }

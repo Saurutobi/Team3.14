@@ -1,3 +1,10 @@
+/**
+	@file	minus.c
+	@brief	Determines the - root of the +/- root situation
+
+
+*/
+
 #include <stdio.h>
 #include <math.h>
 
@@ -15,7 +22,7 @@ float QuadraticMinus(float a, float b, float c)
 		x1 = (-b - sqroot) / (2 * a);
 
 	else
-		printf("The result for x1 is a non-real number\n");
+		printf("The result for quadratic minus is a non-real number\n");
 
 	return x1;
 }

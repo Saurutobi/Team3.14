@@ -1,3 +1,7 @@
+/**
+	@file	t1.c
+	@brief	This code tests our Quadratic Minus code using Cunit
+*/
 #include <stdlib.h>
 #include "cunit.h"
 

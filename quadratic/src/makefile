@@ -1,6 +1,6 @@
 all:
 	gcc -c quadratic.c minus.c plus.c acceptInput.c sqrt.c -lm
-	gcc quadratic.o minus.o plus.o acceptInput.o  sqrt.o-lm -o solver.exe
+	gcc quadratic.o minus.o plus.o acceptInput.o sqrt.o -lm -o solver.exe
 clean:
 	rm *.o
 

@@ -1,3 +1,6 @@
+/**
+
+*/
 // cunit.c
 // The global constants for cunit and cunit_init(),
 // which should be called befoer using the unit test 

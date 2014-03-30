@@ -1,3 +1,7 @@
+/**
+	@file	t2.c
+	@brief	This program uses Cunit to test our QuadraticPlus code
+*/
 #include <stdlib.h>
 #include "cunit.h"
 

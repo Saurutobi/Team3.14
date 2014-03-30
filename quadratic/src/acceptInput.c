@@ -8,6 +8,7 @@ float GetAValue(char letter)
 	printf("\nEnter Value for %c", letter);
 	scanf("%f", &ReturnValue);
 	
+	///makes sure that the number is a valid float before running
 	if(TestFloat(ReturnValue) != 0.0)
 	{ 
 		printf("An invalid number has been found");
@@ -17,7 +18,7 @@ float GetAValue(char letter)
 }
 int TestFloat(float paramfloat)
 {
-	//IEEE standard says that this should return true if return value is NaN
+	///this builtin method should do all of our checking for float correctness
 	if(isnormal(paramfloat))
 	{
 		return 0;
