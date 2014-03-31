@@ -7,8 +7,8 @@
 
 var indexSectionsWithContent =
 {
-  0: "cgmpqst",
-  1: "cmpqst",
+  0: "cglmpqst",
+  1: "clmpqst",
   2: "gmq"
 };
 
