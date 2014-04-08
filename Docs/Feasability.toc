@@ -7,5 +7,6 @@
 \contentsline {subsection}{Spikes}{15}
 \contentsline {subsection}{Resources}{16}
 \contentsline {subsection}{Feasibility}{17}
-\contentsline {subsection}{Glossary}{18}
-\contentsline {subsection}{OwnerShip}{19}
+\contentsline {subsection}{References}{18}
+\contentsline {subsection}{Glossary}{19}
+\contentsline {subsection}{OwnerShip}{20}
