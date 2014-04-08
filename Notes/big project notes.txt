@@ -1,0 +1,59 @@
+Web page:
+Add Device Button, Logout Button, Account Information button, Device Admin Button
+
+List out all Devices the User can see
+List contains: Device #, Device Location, Temperature(In Green, Yellow, or Red), Humidity(In Green, Yellow, or Red)
+The Devices in the List are clickable and lead to a Device Form.
+
+Device Form:
+Shows Device information, name, location, time since last communication, graph, and users with access to device information.
+Administrator may change who may see the device. Admins cannot remove Admins. Admins can also change thresholds.
+Thresholds require a min and max for green temp, 2 yellow temps, and 2 red temps(yellow and red can be on both ends of green area)
+	When a device enters yellow or red, every user with access gets messages or such based on their settings
+Set a timeout for the device depending on how long there has been no contact. Send notification about this
+
+Add Device Form:
+Form shows you IP address and url so you can easily add new devices using code
+Form has a "switch button" to allow any device with the ip and access code to be added automatically, or
+	the button will require device registration through this form to work when device is plugged in for security, so that nobody can just add a device to the system
+New devices with settings not set are listed here so that you can set things. this info will then be pushed to client.
+
+Account Information Form:
+Shows you your account info, like registration date. gives ability to set new password.
+Set phone or email or both for warnings
+
+Device Admin Button:
+Exposes a page where you can send upgrades to specific devices to change code and customize. You can select whether to update from github, or
+	to push a custom update.
+
+
+Hardware End
+Make a program with easy variables to manipulate to give each device their own info.
+
+
+
+Will need:
+A Device Database-all device info and historical stuff
+A User Database
+
+
+
+graphs of history
+each room has an individual form which has graphs for that room
+	has device information: device name, device location, time device has been active, time since last report, device number, other info about room or device, users who can see device
+Devices should report once every 5 minutes unless temperature fluctuates more than 1Centigrade
+make software for linux on pc to manually send reports(temperatures, 
+	humidity, no communication for specified time for timeout testing)
+
+
+optional-shutdown command for servers, SECURITY for this
+add data from servers for their stuff
+
+Wifi
+Ethernet
+POE
+
+Alpha: Basic functionality
+Beta: login/security
+Release 1.0: graphs and such
+Release dos.0: advanced maintenance and advanced features
