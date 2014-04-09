@@ -1,8 +1,8 @@
 \select@language {english}
 \contentsline {subsection}{Abstract}{2}
 \contentsline {subsection}{Background}{3}
-\contentsline {subsection}{Design Decisions}{9}
-\contentsline {subsection}{Stories -- Requirements}{10}
+\contentsline {subsection}{Design Decisions}{11}
+\contentsline {subsection}{Stories -- Requirements}{12}
 \contentsline {subsection}{Stories -- Functional}{14}
 \contentsline {subsection}{Spikes}{15}
 \contentsline {subsection}{Resources}{16}
