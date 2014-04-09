@@ -27,7 +27,7 @@ Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was
  WMU’s engineering website explains that WMU has “state-of-the-art resources housed in a $\$$100 million high-tech facility”. 
 Sadly, our client has advised that this did not include any automated temperature or humidity sensors and reporting equipment in any of the rooms. 
  These are absolutely critical in rooms that maintain computer, technology, manufacturing, and scientific equipment to safeguard the investment and resources of the university.
- Our client advised that there had been an incident where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting.
+ Our client informed us that there had been an incident where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting.
 Since the fateful incident, WMU has had students implement several forms of reporting, and currently uses the Temperature @lert WiFi Edition to keep track of the temperature of rooms around campus. 
 These sensors work very well but their major flaw is that they are very expensive. These sensors cost upwards of three hundred dollars per sensor and have many features that are neat, but unnecessary for our purposes. 
 To alleviate this problem we proposed to create a server that would communicate with a network of home brewed, while reliable sensor computers. 
@@ -57,7 +57,8 @@ Once logged in there is much more functionallity for the graphing.
 \caption{Initial View Of Site}
 \end{figure}
 \newpage
-The login process is very basic at this time but in future release will utilize stricter security, data sanitization, and input verification, and will prevent against session hijacking, network eavesdropping, cross site scripting, and brute force attacks.  At this time the page will simply have a “Username” and “Password” field (along with a submit button) which will have functionality added that disables the browser from remembering or saving this information.  Our first “alpha” release will be using a test database with test users, test usernames, test passwords, and test data, so the security will not be an issue during this phase. When the user submits, the framework will reference the data to see if it matches what is in the database, and if it does, provide further access to the site, and if not, it will require the user to try again.  Session handling and potential cookies will be maintained by PHP sessions and session variables, which are handled by the CakePHP framework. 	
+The login process is very basic at this time but in future release will utilize stricter security, data sanitization, and input verification, and will prevent against session hijacking, network eavesdropping, cross site scripting, and brute force attacks.  At this time the page will simply have a “Username” and “Password” field (along with a submit button) which will have functionality added that disables the browser from remembering or saving this information. 
+Our first “alpha” release will be using a test database with test users, test usernames, test passwords, and test data, so the security will not be an issue during this phase. When the user submits, the framework will reference the data to see if it matches what is in the database, and if it does, provide further access to the site, and if not, it will require the user to try again.  Session handling and potential cookies will be maintained by PHP sessions and session variables, which are handled by the CakePHP framework. 	
 \newline
 \indent
 There will be only one login page, but based on whether the user successfully authenticates as an administrator or a simple user will determine the pages and views they have access to.  The admin will have access to the identical pages as the user, but will have an administrator functionality added to the pages, which will allow them to add new users, rooms, and devices, as well as delete or modify existing users, rooms, and devices. A regular user will have a list of devices, whereas an administrator will see the same list but will have a button above said list that takes the to an “add device” page.  The list will have an “edit” and “delete” button next to each device for administrators as well. The edit and delete pages will be similar to the add page, and will be basically the same for users, devices, and rooms. 
@@ -178,8 +179,13 @@ which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.
 \newpage
 \subsection*{Feasibility}
 \addcontentsline{toc}{subsection}{Feasibility}
-Feasibility
-	Based the cost of the hardware and the previous source code the feasibility of this project is high with many of the features being of low to mid risk. Extra features can be implemented very easily for future releases.
+Based the cost of the hardware and the previous source code the feasibility of this project is high with many of the features being of low to mid risk. 
+We had a very informative meeting with a member from the previous senior design teamwhere we saw how everything works and its limitations.
+Based on this meeting all our goals seem very reasonable and extra features can be implemented very easily for future releases.
+The biggest problem that we will encounter is the steep learning curve with the laravell php package.
+However, this will be overcame due to good documentation on their site and contacts with laravell experience.
+Being software oriented scientists the raspberry pi at first seemed like a daunting task. 
+However, Marcel has experience with hardware and this combined with good documentation will allow for us to overcome the hardware experience issues.
 \newpage
 \subsection*{References}
 \addcontentsline{toc}{subsection}{References}
