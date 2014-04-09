@@ -27,7 +27,7 @@ Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was
  WMU’s engineering website explains that WMU has “state-of-the-art resources housed in a $\$$100 million high-tech facility”. 
 Sadly, our client has advised that this did not include any automated temperature or humidity sensors and reporting equipment in any of the rooms. 
  These are absolutely critical in rooms that maintain computer, technology, manufacturing, and scientific equipment to safeguard the investment and resources of the university.
- Our client advised that there had been an incident where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting.
+ Our client informed us that there had been an incident where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting.
 Since the fateful incident, WMU has had students implement several forms of reporting, and currently uses the Temperature @lert WiFi Edition to keep track of the temperature of rooms around campus. 
 These sensors work very well but their major flaw is that they are very expensive. These sensors cost upwards of three hundred dollars per sensor and have many features that are neat, but unnecessary for our purposes. 
 To alleviate this problem we proposed to create a server that would communicate with a network of home brewed, while reliable sensor computers. 
@@ -54,7 +54,7 @@ This uses a framework that allows easy data viewing and little coding.
 We will probably use the same framework to impliment this graphing processs. 
 Once logged in there is much more functionallity for the graphing. 
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{Website.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.5]{Website.PNG}}
 \caption{Initial View Of Site}
 \end{figure}
 \newpage
@@ -72,7 +72,7 @@ The admin will have access to the identical pages as the user, but will have an 
 A regular user will have a list of devices, whereas an administrator will see the same list but will have a button above said list that takes the to an “add device” page.  
 The list will have an “edit” and “delete” button next to each device for administrators as well. The edit and delete pages will be similar to the add page, and will be basically the same for users, devices, and rooms. 
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{LoginPage.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.75]{LoginPage.PNG}}
 \caption{Login Page}
 \end{figure}
 \newpage
@@ -83,34 +83,34 @@ The password is not an editable field, as it either (to be decided later) to be 
 or there will be an email verification process that allows the user to create their own password. 
 Similarly for rooms and devices, appropriate fields will be listed and upon verification, will be added to the database. 
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddPage.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.5]{AddPage.PNG}}
 \caption{Add Page}
 \end{figure}
 \newpage
 
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddDevice.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.75]{AddDevice.PNG}}
 \caption{Add Device To Network Page}
 \end{figure}
 This is the page that will be displayed when adding a new physical device to the network
 \newpage
 
 %\begin{figure}[H]
-%\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddDeviceType.PNG}}
+%\makebox[\textwidth]{\includegraphics[scale=0.75]{AddDeviceType.PNG}}
 %\caption{Add Another Device Type}
 %\end{figure}
 %\newpage
 %	TODO: self explanitory
 %
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddRoomAssignment.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.75]{AddRoomAssignment.PNG}}
 \caption{Page to Assign Users to Rooms}
 \end{figure}
 Add an admin to oversee a server room
 \newpage
 
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AddRoom.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.75]{AddRoom.PNG}}
 \caption{Adds a Room}
 \end{figure}
 Add a server room to the list of rooms to monitor
@@ -128,7 +128,6 @@ A main admin will be in cotrol of the whole system. Can add and remove users and
 The middle admins will be able see the stats of the rooms they have access and will receive alerts for those rooms.
 \newline
 Users are only able to see the stats of each room. 
-%\newpage <- Do we need this line?	
 
 \newpage
 \subsection*{Design Decisions}
@@ -137,11 +136,7 @@ Users are only able to see the stats of each room.
 \item Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.. Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
 \item Git: Team members were more familiar with the workings of Git and could be used with a GUI.
 \item Sensor: Team members spent a considerable amount of time exploring possible sensors, with the requirements being that the final solution utilize temperature and humidity sensing. As a single package, multiple solutions were found, but are currently too expensive to make them feasible. Much research was done into finding ones with Dallas One-Wire capability. One-Wire is a protocol which identifies each device separately, and can query each device using a single wire. Currently, only the DS18B20 temperature sensor is being used. A fitting humidity sensor for less that 5 dollars has not been found yet, but is still being looked for.
-\item Cake PHP: We researched several languages to program our business logic and front end in, and we decided on PHP due to its high level
-of portability, its ease of use, learning, and implementation, and its cost. 
-The decision to use Cake PHP to rewrite the web application was made due to its very low learning curve in that it is written in PHP, for PHP, using the widely known design pattern of MVC. 
-It is designed to be nearly identical to Microsoft’s .NET MVC 5 framework, so is easy to adapt to from anyone that primarily uses Microsoft technologies, and is written in PHP so anyone that utilizes open source technologies like PHP will have an easy time learning and using it as well. 
-This project is designed to be accessible to anyone, so having this framework will be desirable by proponents of either closed or open source technologies. 
+\item Cake PHP: We researched several languages to program our business logic and front end in, and we decided on PHP due to its high level of portability, its ease of use, learning, and implementation, and its cost. Looking at Cake PHP we determined that though this is a very great framework the exsisting code should be used.
 \end{itemize}
 We have also decided to separate the project into 4 main functional pieces which each need their required spikes. The flow of the normal communication is as displayed as below.
 TODO Fix the picture of the flow chart to meet the way that his laravell end was doing it
@@ -150,7 +145,7 @@ TODO Fix the picture of the flow chart to meet the way that his laravell end was
 \addcontentsline{toc}{subsection}{Stories -- Requirements}
 This project requires a server running linux, and in our case we will be using Ubuntu on this system. The project will also require a web server that runs any 2.x version of Apache, which according to W3Techs is used by 58.70$\%$ of all websites as of March 30th, 2014.  The choice to utilize Apache 2.x-compliant technologies was made with the idea that the majority of web servers utilize this technology, so it will be accessible to the majority. We also require a temperature sensor of your choice. We will be interfacing with two devices at first, beginning with the Temperature @lert WiFi edition TM-WIFI220, seen here:
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{AlertWiFi.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.5]{AlertWiFi.PNG}}
 \caption{@lert WiFi edition TM-WIFI220}
 \end{figure}
  which has an initial cost of US $\$$300.00 +tax/shipping, a size footprint of H: 1.25”, W: 4.00”, L: 6.00”, an overall volume (excluding antennae) of 30 cubic inches, supports PoE, has a yearly estimated power usage of $\$$7.77 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is not able to by physically upgraded or added on to outside of its two available temperature and humidity sensors.
@@ -158,7 +153,7 @@ This project requires a server running linux, and in our case we will be using U
 \indent
 We are also designing our own sensing device that utilizes Raspberry Pi’s running rasberian, with a generic case it would appear as the following:
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[width=\paperwidth]{Rasp.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.5]{Rasp.PNG}}
 \caption{Example of Raspberry Pi}
 \end{figure}
 which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.80”, L: 3.80”, an overall volume (excluding antennae) of 10.64 cubic inches, supports PoE, has a yearly estimated power usage of $\$$5.89 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is fully upgradeable in any capacity, with example sensors such as light sensors (for knowing if a windowless room has its lights on or off), motion sensors (to indicate movement in the room), video/still camera (for security monitoring), or even a touchscreen (for things like giving the unit the ability to edit settings without connecting to a computer, or using as an employee timeclock as an example), and the possibilities are endless.
@@ -177,7 +172,7 @@ which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.
 \newpage
 \subsection*{Spikes}
 \addcontentsline{toc}{subsection}{Spikes}
-	To do these stories we will be creating spikes to show that critical sections are actually plausible. After we do this we combine the spikes and add minor code to complete the system. Some of our spikes are raspberry pi temperature retrieval code, raspberry to server communications, and sending emails to admins to name a few. 
+To do these stories we will be creating spikes to show that critical sections are actually plausible. After we do this we combine the spikes and add minor code to complete the system. Some of our spikes are raspberry pi temperature retrieval code, raspberry to server communications, and sending emails to admins to name a few. 
 \newpage
 \subsection*{Resources}
 \addcontentsline{toc}{subsection}{Resources}
@@ -194,16 +189,29 @@ which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.
 \newpage
 \subsection*{Feasibility}
 \addcontentsline{toc}{subsection}{Feasibility}
-Feasibility
-	Based the cost of the hardware and the previous source code the feasibility of this project is high with many of the features being of low to mid risk. Extra features can be implemented very easily for future releases.
-References
-	For everything raspberry pi we use these sites
-http://www.raspberrypi.org/
-http://www.raspbian.org/
-C Programming 2nd Edition
+Based the cost of the hardware and the previous source code the feasibility of this project is high with many of the features being of low to mid risk. 
+We had a very informative meeting with a member from the previous senior design teamwhere we saw how everything works and its limitations.
+Based on this meeting all our goals seem very reasonable and extra features can be implemented very easily for future releases.
+The biggest problem that we will encounter is the steep learning curve with the laravell php package.
+However, this will be overcame due to good documentation on their site and contacts with laravell experience.
+Being software oriented scientists the raspberry pi at first seemed like a daunting task. 
+However, Marcel has experience with hardware and this combined with good documentation will allow for us to overcome the hardware experience issues.
+
+\newpage
+\subsection*{References}
+\addcontentsline{toc}{subsection}{References}
+For everything raspberry pi we use these sites
+\begin{itemize}
+\item http://www.raspberrypi.org/
+\item http://www.raspbian.org/
+\item C Programming 2nd Edition
+\item http://www.adafruit.com/
+\end{itemize}
 For everything web server these are the sites we use
-	http://laravel.com/docs/quick
-http://www.w3schools.com/
+\begin{itemize}
+\item http://laravel.com/docs/quick
+\item http://www.w3schools.com/
+\end{itemize}
 \newpage
 \subsection*{Glossary}
 \addcontentsline{toc}{subsection}{Glossary}
