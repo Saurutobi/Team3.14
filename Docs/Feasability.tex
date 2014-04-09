@@ -109,13 +109,16 @@ Add a server room to the list of rooms to monitor
 %\end{figure}
 The page that will be displayed when adding a new user to the list of authorized admins
 \newline
-There will be three user levels
+There are three different levels of users.
 A main admin will be in cotrol of the whole system. Can add and remove users and middle admins, can see the entire system.
 \newline
 The middle admins will be able see the stats of the rooms they have access and will receive alerts for those rooms.
-\newline
 Users are only able to see the stats of each room. 
-	
+
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[scale=0.5]{ERDDiagram.png}}
+\caption{Entity Relationship Diagram}
+\end{figure}
 
 \newpage
 \subsection*{Design Decisions}
@@ -123,20 +126,36 @@ Users are only able to see the stats of each room.
 \begin{itemize}
 \item Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.. Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
 \item Git: Team members were more familiar with the workings of Git and could be used with a GUI.
-\item Sensor: Team members spent a considerable amount of time exploring possible sensors, with the requirements being that the final solution utilize temperature and humidity sensing. As a single package, multiple solutions were found, but are currently too expensive to make them feasible. Much research was done into finding ones with Dallas One-Wire capability. One-Wire is a protocol which identifies each device separately, and can query each device using a single wire. Currently, only the DS18B20 temperature sensor is being used. A fitting humidity sensor for less that 5 dollars has not been found yet, but is still being looked for.
-\item Cake PHP: We researched several languages to program our business logic and front end in, and we decided on PHP due to its high level of portability, its ease of use, learning, and implementation, and its cost. Looking at Cake PHP we determined that though this is a very great framework the exsisting code should be used.
+\item Sensor: For our case we will be using a humidity and temperature sensor that we found on adafruit's website.
+The sensor is called the DHT11 basic temperature-humidity sensor. 
+For easy reference it is currently product number 386.
+Although this sensor is cheap it has enough power to determine the temperature and humidity of a room easily.
+One limitation that the DHT11 has is it can only poll the temperature every two seconds. 
+\item Laravell: Although our team lacks experience with the laravell system we decided that using the old team's code would be worth the steep learning curve of the laravell system.
+\item Cake PHP: Looking at Cake PHP we determined that though this is a very great framework the exsisting code should be used.
 \end{itemize}
 We have also decided to separate the project into 4 main functional pieces which each need their required spikes. The flow of the normal communication is as displayed as below.
-TODO Fix the picture of the flow chart to meet the way that his laravell end was doing it
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[scale=0.5]{DataFlowFlowChart.PNG}}
+\caption{@lert WiFi edition TM-WIFI220}
+\end{figure}
+The first part in the process is getting the temperature from the device. 
+For the wifi @lert system this has been already done by the manufacture. 
+As for the Pi we have a program that will read the temperature and output it to standard output.
+To use this program we have created another program that runs the temperature reading program 
 \newpage
 \subsection*{Stories -- Requirements}
 \addcontentsline{toc}{subsection}{Stories -- Requirements}
-This project requires a server running linux, and in our case we will be using Ubuntu on this system. The project will also require a web server that runs any 2.x version of Apache, which according to W3Techs is used by 58.70$\%$ of all websites as of March 30th, 2014.  The choice to utilize Apache 2.x-compliant technologies was made with the idea that the majority of web servers utilize this technology, so it will be accessible to the majority. We also require a temperature sensor of your choice. We will be interfacing with two devices at first, beginning with the Temperature @lert WiFi edition TM-WIFI220, seen here:
+This project requires a server running linux, and in our case we will be using Ubuntu on this system. 
+The project will also require a web server that runs any 2.x version of Apache, which according to W3Techs is used by 58.70$\%$ of all websites as of March 30th, 2014.
+The choice to utilize Apache 2.x-compliant technologies was made with the idea that the majority of web servers utilize this technology, so it will be accessible to the majority. 
+We also require a temperature sensor of your choice. 
+We will be interfacing with two devices at first, beginning with the Temperature @lert WiFi edition TM-WIFI220, seen here:
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.5]{AlertWiFi.PNG}}
 \caption{@lert WiFi edition TM-WIFI220}
 \end{figure}
- which has an initial cost of US $\$$300.00 +tax/shipping, a size footprint of H: 1.25”, W: 4.00”, L: 6.00”, an overall volume (excluding antennae) of 30 cubic inches, supports PoE, has a yearly estimated power usage of $\$$7.77 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is not able to by physically upgraded or added on to outside of its two available temperature and humidity sensors.
+ which has an initial cost of US $\$$300.00 +tax/shipping, a size footprint of H: 1.25”, W: 4.00”, L: 6.00”, an overall volume (excluding antennae) of 30 cubic inches, supports PoE, has a yearly estimated power usage of $\$$7.77 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is not able to be physically upgraded or added on to outside of its two available temperature and humidity sensors.
 \newline
 \indent
 We are also designing our own sensing device that utilizes Raspberry Pi’s running rasberian, with a generic case it would appear as the following:
@@ -144,8 +163,10 @@ We are also designing our own sensing device that utilizes Raspberry Pi’s runn
 \makebox[\textwidth]{\includegraphics[scale=0.5]{Rasp.PNG}}
 \caption{Example of Raspberry Pi}
 \end{figure}
-which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.80”, L: 3.80”, an overall volume (excluding antennae) of 10.64 cubic inches, supports PoE, has a yearly estimated power usage of $\$$5.89 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is fully upgradeable in any capacity, with example sensors such as light sensors (for knowing if a windowless room has its lights on or off), motion sensors (to indicate movement in the room), video/still camera (for security monitoring), or even a touchscreen (for things like giving the unit the ability to edit settings without connecting to a computer, or using as an employee timeclock as an example), and the possibilities are endless.
-. If you would like WiFi connectivity for your Raspberry Pi like we are going to, we will use a wireless receiver.
+which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.80”, L: 3.80”, an overall volume (excluding antennae) of 10.64 cubic inches, supports PoE, has a yearly estimated power usage of $\$$5.89 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is fully upgradeable in any capacity.
+Some example upgrades could be light sensors (for knowing if a windowless room has its lights on or off), motion sensors (to indicate movement in the room), video/still camera (for security monitoring), or even a touchscreen (for things like giving the unit the ability to edit settings without connecting to a computer, or using as an employee timeclock as an example).
+The possibilities are endless.
+If you would like WiFi connectivity for your Raspberry Pi like we are going to, we will use a wireless receiver.
 \newpage
 \subsection*{Stories -- Functional}
 \addcontentsline{toc}{subsection}{Stories -- Functional}
@@ -156,11 +177,23 @@ which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.
 \item Use timers to make sure that communication with the servers are not lost
 \item Send text messages and emails to the server administrators to alert them of loss of server connection and temperatures that are higher than the recommended level.
 \item Establish permissions for the various admins that will be monitoring the system.
+\item Create documentation so that the next group of users can use the software
 \end {itemize}
 \newpage
 \subsection*{Spikes}
 \addcontentsline{toc}{subsection}{Spikes}
-To do these stories we will be creating spikes to show that critical sections are actually plausible. After we do this we combine the spikes and add minor code to complete the system. Some of our spikes are raspberry pi temperature retrieval code, raspberry to server communications, and sending emails to admins to name a few. 
+To do these stories we will be creating spikes to show that critical sections are actually plausible. 
+After we do this we combine the spikes and add minor code to complete the system.
+Some of our spikes include:
+\begin{itemize} 
+\item Raspberry pi temperature retrieval code
+\item Raspberry temperature to xml
+\item Sending emails to admins
+\item Sending text messages to admins
+\item Hosting a file for remote access on a pi
+\item Creating a driver for the laravell code for the pi 
+\item Connecting a raspberry pi to a wireless network
+\end{itemize}
 \newpage
 \subsection*{Resources}
 \addcontentsline{toc}{subsection}{Resources}
