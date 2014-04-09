@@ -21,6 +21,5 @@ void main(int argc, char * argv[])
 	{
 		int status;
 		(void)waitpid(pid,&status,0);
-		printf("we are back bitches");
 	}
 }
