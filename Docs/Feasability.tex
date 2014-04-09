@@ -2,7 +2,6 @@
 \usepackage[pdftex]{graphicx}
 \usepackage[english]{babel}
 \usepackage{float}
-
 \begin{document}
 \title{Temperature Monitoring System}
 \author{Mike Guzior, Jason Pearson, Marcel Englmaier and Justin Koehler}
@@ -150,12 +149,23 @@ One limitation that the DHT11 has is it can only poll the temperature every two 
 We have also decided to separate the project into 4 main functional pieces which each need their required spikes. The flow of the normal communication is as displayed as below.
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.5]{DataFlowFlowChart.PNG}}
-\caption{@lert WiFi edition TM-WIFI220}
+\caption{How the Data Goes Through The System}
 \end{figure}
 The first part in the process is getting the temperature from the device. 
 For the wifi @lert system this has been already done by the manufacture. 
 As for the Pi we have a program that will read the temperature and output it to standard output.
-To use this program we have created another program that runs the temperature reading program 
+We have two options we can either create our own custom version of the code the company supplied, or we can create a program that uses their code to get the temperature.
+Both of these options are viable and both equally easy to do. 
+However, both will need their respective spikes.
+\newline
+\indent
+The next step is to create a way for the devices to communicate with the server.
+Currently the @lert system does this by hosting an xml document that the server retrieves.
+This is easily possible on the raspberry pi. 
+The two options that we are looking at for enablig the hosting of the xml document are either apache or nginex.
+We will have spikes for both options and determine which will be the best for the low memory that a raspberry pi has.
+\newline
+\indent
 \newpage
 \subsection*{Stories -- Requirements}
 \addcontentsline{toc}{subsection}{Stories -- Requirements}
@@ -203,7 +213,8 @@ Some of our spikes include:
 \item Raspberry temperature to xml
 \item Sending emails to admins
 \item Sending text messages to admins
-\item Hosting a file for remote access on a pi
+\item Using Apache for hosting the xml document
+\item Using nginex for hosting the xml document
 \item Creating a driver for the laravell code for the pi 
 \item Connecting a raspberry pi to a wireless network
 \end{itemize}
