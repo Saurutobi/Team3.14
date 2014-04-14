@@ -162,7 +162,24 @@ The next step is to create a way for the devices to communicate with the server.
 Currently the @lert system does this by hosting an xml document that the server retrieves.
 This is easily possible on the raspberry pi. 
 The two options that we are looking at for enablig the hosting of the xml document are either apache or nginex.
-We will have spikes for both options and determine which will be the best for the low memory that a raspberry pi has.
+Another option is to not use a hosting program and to use a program that will give data to any requesting process.
+We will have spikes for all options and determine which will be the best for the low memory that a raspberry pi has.
+\newline
+\indent
+The third step is for the server to decode what data was recieved. 
+This done by the parser factory php task.
+What the parser factory does is it takes in a type and an ip.
+Then it does a switch statement based on the type and returns an object that contains the correct methods for that reader type.
+For our Raspberry Pi module we will need to make an object to parse its data and an entry in the ParserFactory to detect the new object.
+The object for the Raspberry Pi module will need to use the ITemperature Parser php interface in order to be used correctly.
+In theory this can all be done using the GUI that was created by the previous team, but both the GUI and the manual method should be tried.
+\newline
+\indent
+The final piece in the data retrieval process is the server parsing and using the data. 
+If we follow the guidelines that were established by the previous groups temeperature sensing unit the server should be able to treat them both the same with their respective data.
+We will be using the other groups code for graphing, mygraph.js.
+In this it reads in all the data for the devices. 
+Our device will simply be put in with the rest of the deveices and report itself with the other devices.
 \newline
 \indent
 \newpage
