@@ -5,7 +5,6 @@
 \begin{document}
 \title{Temperature Monitoring System}
 \author{Mike Guzior, Jason Pearson, Marcel Englmaier and Justin Koehler}
-\thanks{Client/Advisor: John Kapenga}
 \maketitle
 \tableofcontents
 \newpage
@@ -56,7 +55,6 @@ Once logged in there is much more functionallity for the graphing.
 \makebox[\textwidth]{\includegraphics[scale=0.5]{Website.PNG}}
 \caption{Initial View Of Site}
 \end{figure}
-\newpage
 The login process is very basic at this time but in future release will utilize stricter security, data sanitization, and input verification,
 and will prevent against session hijacking, network eavesdropping, cross site scripting, and brute force attacks. 
 At this time the page will simply have a “Username” and “Password” field (along with a submit button) which will have functionality
@@ -73,7 +71,6 @@ The list will have an “edit” and “delete” button next to each device for
 \makebox[\textwidth]{\includegraphics[scale=0.75]{LoginPage.PNG}}
 \caption{Login Page}
 \end{figure}
-\newpage
 The “Add” page will be basically the same for users, rooms, and devices. 
 The page for users will have an empty form with fields appropriate for each user that includes UserID (in WMU’s case, it would be the WIN ID) FirstName, LastName, UserName, EmailAddress, and PhoneNumber. 
 The Email and Phone fields will have a checkbox next to them that dictates whether that is a means of communication for alerts. 
@@ -84,35 +81,32 @@ Similarly for rooms and devices, appropriate fields will be listed and upon veri
 \makebox[\textwidth]{\includegraphics[scale=0.5]{AddPage.PNG}}
 \caption{Add Page}
 \end{figure}
-\newpage
+The following figure is the form used when adding a new device to the network.
+The IP address is a major need in this form because it tells the server where to look for the xml. 
+The alert and critical thresholds are for when to warn administrators for that room.
+The number of ports specifies simply the number of temperatures to expect coming from that device.
 
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.75]{AddDevice.PNG}}
 \caption{Add Device To Network Page}
 \end{figure}
-This is the page that will be displayed when adding a new physical device to the network
-\newpage
 
-%\begin{figure}[H]
-%\makebox[\textwidth]{\includegraphics[scale=0.75]{AddDeviceType.PNG}}
-%\caption{Add Another Device Type}
-%\end{figure}
-%\newpage
-%	TODO: self explanitory
-%
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[scale=0.75]{AddDeviceType.PNG}}
+\caption{Add Another Device Type}
+\end{figure}
+
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.75]{AddRoomAssignment.PNG}}
 \caption{Page to Assign Users to Rooms}
 \end{figure}
 Add an admin to oversee a server room
-\newpage
 
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.75]{AddRoom.PNG}}
 \caption{Adds a Room}
 \end{figure}
 Add a server room to the list of rooms to monitor
-\newpage
 
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.75]{AddUser.PNG}}
@@ -141,7 +135,15 @@ Users are only able to see the stats of each room.
 The sensor is called the DHT11 basic temperature-humidity sensor. 
 For easy reference it is currently product number 386.
 Although this sensor is cheap it has enough power to determine the temperature and humidity of a room easily.
-One limitation that the DHT11 has is it can only poll the temperature every two seconds. 
+One limitation that the DHT11 has is it can only poll the temperature every two seconds.
+Figure below is the DHT11.
+
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[scale=0.5]{tempsensor.jpg}}
+\caption{Temperature Sensing DHT11 Unit}
+\end{figure}
+
+
 \item Laravell: Although our team lacks experience with the laravell system we decided that using the old team's code would be worth the steep learning curve of the laravell system.
 \item Cake PHP: Looking at Cake PHP we determined that though this is a very great framework the exsisting code should be used.
 \end{itemize}

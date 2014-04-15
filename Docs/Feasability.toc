@@ -1,12 +1,12 @@
 \select@language {english}
 \contentsline {subsection}{Abstract}{2}
 \contentsline {subsection}{Background}{3}
-\contentsline {subsection}{Design Decisions}{13}
-\contentsline {subsection}{Stories -- Requirements}{15}
-\contentsline {subsection}{Stories -- Functional}{17}
-\contentsline {subsection}{Spikes}{18}
-\contentsline {subsection}{Resources}{19}
-\contentsline {subsection}{Feasibility}{20}
-\contentsline {subsection}{References}{21}
-\contentsline {subsection}{Glossary}{22}
-\contentsline {subsection}{OwnerShip}{23}
+\contentsline {subsection}{Design Decisions}{11}
+\contentsline {subsection}{Stories -- Requirements}{13}
+\contentsline {subsection}{Stories -- Functional}{15}
+\contentsline {subsection}{Spikes}{16}
+\contentsline {subsection}{Resources}{17}
+\contentsline {subsection}{Feasibility}{18}
+\contentsline {subsection}{References}{19}
+\contentsline {subsection}{Glossary}{20}
+\contentsline {subsection}{OwnerShip}{21}

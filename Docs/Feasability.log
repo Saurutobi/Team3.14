@@ -1,15 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.3.20)  14 APR 2014 11:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.1)  15 APR 2014 16:14
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**Feasability.tex
-(./Feasability.tex
+**L:/GIT/Team3.14/Docs/Feasability.tex
+(L:/GIT/Team3.14/Docs/Feasability.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
-aded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -25,31 +31,31 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count88
@@ -57,24 +63,28 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/english.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen105
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count90
 \float@exts=\toks15
@@ -82,9 +92,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks16
 \@floatcapt=\box27
 )
-No file Feasability.aux.
-\openout1 = `Feasability.aux'.
-
+(L:\GIT\Team3.14\Docs\Feasability.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
@@ -97,7 +105,9 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+
+("C:\Users\Jason Pearson\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.m
+kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
 \scratchdimen=\dimen106
@@ -110,79 +120,28 @@ LaTeX Font Info:    ... okay on input line 5.
 \MPnumerator=\count95
 \makeMPintoPDFobject=\count96
 \everyMPtoPDFconversion=\toks18
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 8.
+(Font)              <12> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 8.
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 8.
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 9.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 9.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 9.
-
-Overfull \hbox (11.91869pt too wide) in paragraph at lines 9--9
+Overfull \hbox (11.91869pt too wide) in paragraph at lines 8--8
  [][] 
  []
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 9.
-[1] (./Feasability.toc)
-\tf@toc=\write3
-\openout3 = `Feasability.toc'.
+[1
 
+{C:/Users/Jason Pearson/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(L:\GIT\Team3.14\Docs\Feasability.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+)
+\tf@toc=\write3
  [1
 
 ]
@@ -203,12 +162,12 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-<Website.PNG, id=22, 1201.48875pt x 537.50812pt>
+<Website.PNG, id=15, 1201.48875pt x 537.50812pt>
 File: Website.PNG Graphic file (type png)
  <use Website.PNG>
-Package pdftex.def Info: Website.PNG used on input line 56.
+Package pdftex.def Info: Website.PNG used on input line 55.
 (pdftex.def)             Requested size: 600.74292pt x 268.7534pt.
- [3] [4 <./Website.PNG>]
+ [3]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -245,13 +204,13 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- <LoginPage.PNG, id=33, 492.33937pt x 228.855pt>
-File: LoginPage.PNG Graphic file (type png)
 
-<use LoginPage.PNG>
-Package pdftex.def Info: LoginPage.PNG used on input line 74.
+<LoginPage.PNG, id=22, 492.33937pt x 228.855pt>
+File: LoginPage.PNG Graphic file (type png)
+ <use LoginPage.PNG>
+Package pdftex.def Info: LoginPage.PNG used on input line 71.
 (pdftex.def)             Requested size: 369.2536pt x 171.64082pt.
- [5 <./LoginPage.PNG>]
+ [4 <L:/GIT/Team3.14/Docs/Website.PNG>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -261,66 +220,83 @@ Missing character: There is no ù in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
-
-<AddPage.PNG, id=39, 798.73407pt x 566.86781pt>
+ <AddPage.PNG, id=27, 798.73407pt x 566.86781pt>
 File: AddPage.PNG Graphic file (type png)
- <use AddPage.PNG>
-Package pdftex.def Info: AddPage.PNG used on input line 85.
+
+<use AddPage.PNG>
+Package pdftex.def Info: AddPage.PNG used on input line 81.
 (pdftex.def)             Requested size: 399.36606pt x 283.43321pt.
- [6 <./AddPage.PNG>] <AddDevice.PNG, id=44, 487.06969pt x 331.2375pt>
+ [5 <L:/GIT/Team3.14/Docs/LoginPage.PNG>]
+<AddDevice.PNG, id=32, 487.06969pt x 331.2375pt>
 File: AddDevice.PNG Graphic file (type png)
  <use AddDevice.PNG>
-Package pdftex.def Info: AddDevice.PNG used on input line 91.
+Package pdftex.def Info: AddDevice.PNG used on input line 89.
 (pdftex.def)             Requested size: 365.30136pt x 248.4275pt.
+ [6 <L:/GIT/Team3.14/Docs/AddPage.PNG>]
+<AddDeviceType.PNG, id=38, 389.20406pt x 210.03468pt>
+File: AddDeviceType.PNG Graphic file (type png)
+ <use AddDeviceType.PNG>
+Package pdftex.def Info: AddDeviceType.PNG used on input line 94.
+(pdftex.def)             Requested size: 291.90233pt x 157.52562pt.
 
-[7 <./AddDevice.PNG>]
-<AddRoomAssignment.PNG, id=49, 377.15906pt x 250.68657pt>
+<AddRoomAssignment.PNG, id=39, 377.15906pt x 250.68657pt>
 File: AddRoomAssignment.PNG Graphic file (type png)
 
 <use AddRoomAssignment.PNG>
-Package pdftex.def Info: AddRoomAssignment.PNG used on input line 105.
+Package pdftex.def Info: AddRoomAssignment.PNG used on input line 99.
 (pdftex.def)             Requested size: 282.8686pt x 188.01445pt.
- [8 <./AddRoomAssignment.PNG>]
-<AddRoom.PNG, id=54, 457.71pt x 255.95625pt>
+ [7 <L:/GIT/Team3.14/Docs/AddDevice.PNG> <L:/GIT/Team3.14/Docs/AddDeviceType.PN
+G>] <AddRoom.PNG, id=45, 457.71pt x 255.95625pt>
 File: AddRoom.PNG Graphic file (type png)
- <use AddRoom.PNG>
-Package pdftex.def Info: AddRoom.PNG used on input line 112.
+
+<use AddRoom.PNG>
+Package pdftex.def Info: AddRoom.PNG used on input line 105.
 (pdftex.def)             Requested size: 343.28166pt x 191.9667pt.
- [9 <./AddRoom.PNG>] <AddUser.PNG, id=59, 411.03563pt x 323.70938pt>
+ <AddUser.PNG, id=46, 411.03563pt x 323.70938pt>
 File: AddUser.PNG Graphic file (type png)
- <use AddUser.PNG>
-Package pdftex.def Info: AddUser.PNG used on input line 119.
-(pdftex.def)             Requested size: 614.295pt x 483.8242pt.
- [10 <./AddUser.PNG>] <ERDDiagram.png, id=64, 691.58376pt x 949.5475pt>
+
+<use AddUser.PNG>
+Package pdftex.def Info: AddUser.PNG used on input line 111.
+(pdftex.def)             Requested size: 308.27596pt x 242.78143pt.
+ [8 <L:/GIT/Team3.14/Docs/AddRoomAssignment.PNG> <L:/GIT/Team3.14/Docs/AddRoom.
+PNG>] <ERDDiagram.png, id=52, 691.58376pt x 949.5475pt>
 File: ERDDiagram.png Graphic file (type png)
 
 <use ERDDiagram.png>
-Package pdftex.def Info: ERDDiagram.png used on input line 131.
+Package pdftex.def Info: ERDDiagram.png used on input line 123.
 (pdftex.def)             Requested size: 345.79103pt x 474.77258pt.
- [11] [12 <./ERDDiagram.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 139.
+ [9 <L:/GIT/Team3.14/Docs/AddUser.PNG>] [10 <L:/GIT/Team3.14/Docs/ERDDiagram.pn
+g>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
 
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 139.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-<DataFlowFlowChart.PNG, id=72, 791.20593pt x 218.31563pt>
+<tempsensor.jpg, id=60, 292.09125pt x 219.219pt>
+File: tempsensor.jpg Graphic file (type jpg)
+ <use tempsensor.jpg>
+Package pdftex.def Info: tempsensor.jpg used on input line 141.
+(pdftex.def)             Requested size: 146.04526pt x 109.60922pt.
+
+<DataFlowFlowChart.PNG, id=61, 791.20593pt x 218.31563pt>
 File: DataFlowFlowChart.PNG Graphic file (type png)
 
 <use DataFlowFlowChart.PNG>
 Package pdftex.def Info: DataFlowFlowChart.PNG used on input line 151.
 (pdftex.def)             Requested size: 395.60199pt x 109.15753pt.
- [13 <./DataFlowFlowChart.PNG>] [14]
-<AlertWiFi.PNG, id=80, 501.875pt x 308.15125pt>
+ [11 <L:/GIT/Team3.14/Docs/tempsensor.jpg>] [12 <L:/GIT/Team3.14/Docs/DataFlowF
+lowChart.PNG>]
+<AlertWiFi.PNG, id=70, 501.875pt x 308.15125pt>
 File: AlertWiFi.PNG Graphic file (type png)
  <use AlertWiFi.PNG>
-Package pdftex.def Info: AlertWiFi.PNG used on input line 178.
+Package pdftex.def Info: AlertWiFi.PNG used on input line 195.
 (pdftex.def)             Requested size: 250.93687pt x 154.07524pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -335,12 +311,12 @@ Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
 
-<Rasp.PNG, id=81, 803.0pt x 602.25pt>
+<Rasp.PNG, id=71, 803.0pt x 602.25pt>
 File: Rasp.PNG Graphic file (type png)
  <use Rasp.PNG>
-Package pdftex.def Info: Rasp.PNG used on input line 186.
+Package pdftex.def Info: Rasp.PNG used on input line 203.
 (pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
- [15 <./AlertWiFi.PNG>]
+ [13 <L:/GIT/Team3.14/Docs/AlertWiFi.PNG>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
@@ -350,8 +326,8 @@ Missing character: There is no ù in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
-
-[16 <./Rasp.PNG>] [17] [18] [19] [20] [21]
+ [14 <L:/GIT/Team3.14/Docs/Rasp.PNG>] [15] [16] [17] [18]
+[19]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -361,7 +337,7 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [22]
+ [20]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ú in font cmr10!
@@ -374,29 +350,26 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [23] (./Feasability.aux) ) 
+ [21] (L:\GIT\Team3.14\Docs\Feasability.aux) ) 
 Here is how much of TeX's memory you used:
- 1951 strings out of 495059
- 27104 string characters out of 3182030
- 86159 words of memory out of 3000000
- 5111 multiletter control sequences out of 15000+200000
- 8808 words of font info for 31 fonts, out of 3000000 for 9000
- 14 hyphenation exceptions out of 8191
- 38i,8n,23p,632b,231s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Feasability.pdf (25 pages, 373658 bytes).
+ 1603 strings out of 493921
+ 21223 string characters out of 3144853
+ 77927 words of memory out of 3000000
+ 4901 multiletter control sequences out of 15000+200000
+ 7896 words of font info for 28 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,8n,21p,654b,285s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb>
+Output written on Feasability.pdf (22 pages, 814701 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
