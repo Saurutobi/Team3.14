@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.1)  15 APR 2014 16:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.1)  17 APR 2014 22:37
 entering extended mode
 **L:/GIT/Team3.14/Docs/Feasability.tex
 (L:/GIT/Team3.14/Docs/Feasability.tex
@@ -210,71 +210,62 @@ File: LoginPage.PNG Graphic file (type png)
  <use LoginPage.PNG>
 Package pdftex.def Info: LoginPage.PNG used on input line 71.
 (pdftex.def)             Requested size: 369.2536pt x 171.64082pt.
- [4 <L:/GIT/Team3.14/Docs/Website.PNG>]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
- <AddPage.PNG, id=27, 798.73407pt x 566.86781pt>
+ [4 <L:/GIT/Team3.14/Docs/Website.PNG>] [5 <L:/GIT/Team3.14/Docs/LoginPage.PNG>
+]
+<AddPage.PNG, id=31, 798.73407pt x 566.86781pt>
 File: AddPage.PNG Graphic file (type png)
-
-<use AddPage.PNG>
-Package pdftex.def Info: AddPage.PNG used on input line 81.
+ <use AddPage.PNG>
+Package pdftex.def Info: AddPage.PNG used on input line 84.
 (pdftex.def)             Requested size: 399.36606pt x 283.43321pt.
- [5 <L:/GIT/Team3.14/Docs/LoginPage.PNG>]
+
 <AddDevice.PNG, id=32, 487.06969pt x 331.2375pt>
 File: AddDevice.PNG Graphic file (type png)
  <use AddDevice.PNG>
-Package pdftex.def Info: AddDevice.PNG used on input line 89.
+Package pdftex.def Info: AddDevice.PNG used on input line 94.
 (pdftex.def)             Requested size: 365.30136pt x 248.4275pt.
  [6 <L:/GIT/Team3.14/Docs/AddPage.PNG>]
 <AddDeviceType.PNG, id=38, 389.20406pt x 210.03468pt>
 File: AddDeviceType.PNG Graphic file (type png)
  <use AddDeviceType.PNG>
-Package pdftex.def Info: AddDeviceType.PNG used on input line 94.
+Package pdftex.def Info: AddDeviceType.PNG used on input line 99.
 (pdftex.def)             Requested size: 291.90233pt x 157.52562pt.
 
 <AddRoomAssignment.PNG, id=39, 377.15906pt x 250.68657pt>
 File: AddRoomAssignment.PNG Graphic file (type png)
 
 <use AddRoomAssignment.PNG>
-Package pdftex.def Info: AddRoomAssignment.PNG used on input line 99.
+Package pdftex.def Info: AddRoomAssignment.PNG used on input line 104.
 (pdftex.def)             Requested size: 282.8686pt x 188.01445pt.
  [7 <L:/GIT/Team3.14/Docs/AddDevice.PNG> <L:/GIT/Team3.14/Docs/AddDeviceType.PN
 G>] <AddRoom.PNG, id=45, 457.71pt x 255.95625pt>
 File: AddRoom.PNG Graphic file (type png)
 
 <use AddRoom.PNG>
-Package pdftex.def Info: AddRoom.PNG used on input line 105.
+Package pdftex.def Info: AddRoom.PNG used on input line 109.
 (pdftex.def)             Requested size: 343.28166pt x 191.9667pt.
  <AddUser.PNG, id=46, 411.03563pt x 323.70938pt>
 File: AddUser.PNG Graphic file (type png)
 
 <use AddUser.PNG>
-Package pdftex.def Info: AddUser.PNG used on input line 111.
+Package pdftex.def Info: AddUser.PNG used on input line 125.
 (pdftex.def)             Requested size: 308.27596pt x 242.78143pt.
  [8 <L:/GIT/Team3.14/Docs/AddRoomAssignment.PNG> <L:/GIT/Team3.14/Docs/AddRoom.
 PNG>] <ERDDiagram.png, id=52, 691.58376pt x 949.5475pt>
 File: ERDDiagram.png Graphic file (type png)
 
 <use ERDDiagram.png>
-Package pdftex.def Info: ERDDiagram.png used on input line 123.
-(pdftex.def)             Requested size: 345.79103pt x 474.77258pt.
+Package pdftex.def Info: ERDDiagram.png used on input line 131.
+(pdftex.def)             Requested size: 242.05794pt x 332.3466pt.
  [9 <L:/GIT/Team3.14/Docs/AddUser.PNG>] [10 <L:/GIT/Team3.14/Docs/ERDDiagram.pn
 g>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 139.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 139.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -282,21 +273,21 @@ Missing character: There is no ô in font cmr10!
 <tempsensor.jpg, id=60, 292.09125pt x 219.219pt>
 File: tempsensor.jpg Graphic file (type jpg)
  <use tempsensor.jpg>
-Package pdftex.def Info: tempsensor.jpg used on input line 141.
+Package pdftex.def Info: tempsensor.jpg used on input line 149.
 (pdftex.def)             Requested size: 146.04526pt x 109.60922pt.
 
 <DataFlowFlowChart.PNG, id=61, 791.20593pt x 218.31563pt>
 File: DataFlowFlowChart.PNG Graphic file (type png)
 
 <use DataFlowFlowChart.PNG>
-Package pdftex.def Info: DataFlowFlowChart.PNG used on input line 151.
+Package pdftex.def Info: DataFlowFlowChart.PNG used on input line 159.
 (pdftex.def)             Requested size: 395.60199pt x 109.15753pt.
  [11 <L:/GIT/Team3.14/Docs/tempsensor.jpg>] [12 <L:/GIT/Team3.14/Docs/DataFlowF
 lowChart.PNG>]
 <AlertWiFi.PNG, id=70, 501.875pt x 308.15125pt>
 File: AlertWiFi.PNG Graphic file (type png)
  <use AlertWiFi.PNG>
-Package pdftex.def Info: AlertWiFi.PNG used on input line 195.
+Package pdftex.def Info: AlertWiFi.PNG used on input line 204.
 (pdftex.def)             Requested size: 250.93687pt x 154.07524pt.
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -314,8 +305,8 @@ Missing character: There is no ô in font cmr10!
 <Rasp.PNG, id=71, 803.0pt x 602.25pt>
 File: Rasp.PNG Graphic file (type png)
  <use Rasp.PNG>
-Package pdftex.def Info: Rasp.PNG used on input line 203.
-(pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
+Package pdftex.def Info: Rasp.PNG used on input line 212.
+(pdftex.def)             Requested size: 281.05421pt x 210.79065pt.
  [13 <L:/GIT/Team3.14/Docs/AlertWiFi.PNG>]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
@@ -367,7 +358,7 @@ nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
 pe1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmsy7.pfb>
-Output written on Feasability.pdf (22 pages, 814701 bytes).
+Output written on Feasability.pdf (22 pages, 814820 bytes).
 PDF statistics:
  124 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
