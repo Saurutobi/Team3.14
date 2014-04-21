@@ -3,7 +3,7 @@
 //  15-January-2012
 //  Dom and Gert
 //
-//  Updated to run correctly and dispense xml files by Justin Koehler of Team 3.14 on 04-18-2014
+
 
 // Access from ARM Running Linux
 
@@ -126,18 +126,18 @@ int readDHT(int type, int pin)
 				data[j/8] |= 1;
 			}	
 			j++;
-    		}
-  }
+    	}
+	}
 
 
-#ifdef DEBUG 
-for (int i=3; i<bitidx; i+=2) 
-{
-	printf("bit %d: %d\n", i-3, bits[i]);
-	printf("bit %d: %d (%d)\n", i-2, bits[i+1], bits[i+1] > 200);
-}
-#endif
-
+	#ifdef DEBUG 
+	for (int i=3; i<bitidx; i+=2) 
+	{
+		printf("bit %d: %d\n", i-3, bits[i]);
+		printf("bit %d: %d (%d)\n", i-2, bits[i+1], bits[i+1] > 200);
+	}
+	#endif
+	
 
 	if ( (j >= 39) && (data[4] == ((data[0] + data[1] + data[2] + data[3]) & 0xFF)) ) 
 	{
@@ -148,10 +148,15 @@ for (int i=3; i<bitidx; i+=2)
 
 		time ( &time_raw_format );
 		time_struct = localtime ( &time_raw_format );
-	 	strftime (timeBuf,100,"%m/%d/%Y %I:%M:%s",time_struct);
+	 	strftime (timeBuf,100,"%m/%d/%Y %I:%M:%S",time_struct);
+		
+		FILE *fp;
+		fp = freopen("/var/www/xmlfeed.xml", "w", stdout);
 
-		printf("<currentConditions><deviceName>My Device</deviceName><readingDateTime>%s</readingDateTime><tempUnits>Fahrenheit</tempUnits><form>1TH</form><ports><port number=\"1\" name=\"Port 1\"><condition type=\"temperature\"><currentReading>%d</currentReading><highLimit>85</highLimit><lowLimit>10</lowLimit><alarmStatus>0</alarmStatus><prevAlarmStatus>0</prevAlarmStatus></condition><condition type=\"humidity\"><currentReading>%d</currentReading><highLimit>85</highLimit><lowLimit>10</lowLimit><alarmStatus>0</alarmStatus><prevAlarmStatus>0</prevAlarmStatus></condition></port></ports><errorReadingSensor>0</errorReadingSensor></currentConditions>\n", timeBuf, (((data[2] * 9) / 5) + 32) , data[0]);
+		printf("<?xml version='1.0' encoding='UTF-8'?>\n<currentConditions>\n<deviceName>My Device</deviceName>\n<readingDateTime>%s</readingDateTime>\n<tempUnits>Fahrenheit</tempUnits>\n<form>1TH</form>\n<ports>\n  <port number=\"1\" name=\"Port 1\">\n    <condition type=\"temperature\">\n      <currentReading>%d.0</currentReading>\n      <highLimit>85</highLimit>\n      <lowLimit>10</lowLimit>\n      <alarmStatus>0</alarmStatus>\n      <prevAlarmStatus>0</prevAlarmStatus>\n    </condition>\n    <condition type=\"humidity\">\n      <currentReading>%d</currentReading>\n      <highLimit>85</highLimit>\n      <lowLimit>10</lowLimit>\n      <alarmStatus>0</alarmStatus>\n      <prevAlarmStatus>0</prevAlarmStatus>\n    </condition>\n  </port>\n</ports>\n<errorReadingSensor>0</errorReadingSensor>\n</currentConditions>\n", timeBuf, (((data[2] * 9) / 5) + 32) , data[0]);
 
+		fclose(fp);
+		
 		return 1;
 	}
 
