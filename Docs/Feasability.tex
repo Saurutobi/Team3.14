@@ -95,15 +95,14 @@ The number of ports specifies simply the number of temperatures to expect coming
 \caption{Add Device To Network Page}
 \end{figure}
 
+
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.75]{AddDeviceType.PNG}}
 \caption{Add Another Device Type}
 \end{figure}
 
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.75]{AddRoomAssignment.PNG}}
-\caption{Page to Assign Users to Rooms}
-\end{figure}
+The following page is used to add a room to the monitoring system.
+The main purpose of a room is to group sensors together and make it easier to distribute work amoung the administrators.
 
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.75]{AddRoom.PNG}}
@@ -136,7 +135,9 @@ The password does have minimal requirements for good passwords.
 \subsection*{Design Decisions}
 \addcontentsline{toc}{subsection}{Design Decisions}
 \begin{itemize}
-\item Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.. Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
+\item Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. 
+Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.
+Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
 \item Git: Team members were more familiar with the workings of Git and could be used with a GUI.
 \item Sensor: For our case we will be using a humidity and temperature sensor that we found on adafruit's website.
 The sensor is called the DHT11 basic temperature-humidity sensor. 
@@ -198,7 +199,8 @@ Our device will simply be put in with the rest of the deveices and report itself
 This project requires a server running linux, and in our case we will be using Ubuntu on this system. 
 The project will also require a web server that runs any 2.x version of Apache, which according to W3Techs is used by 58.70$\%$ of all websites as of March 30th, 2014.
 The choice to utilize Apache 2.x-compliant technologies was made with the idea that the majority of web servers utilize this technology, so it will be accessible to the majority. 
-We also require a temperature sensor of your choice. 
+We also require a temperature sensor of your choice.
+We will be using the DHT11 and our tutorials will be using this part. 
 We will be interfacing with two devices at first, beginning with the Temperature @lert WiFi edition TM-WIFI220, seen here:
 \begin{figure}[H]
 \makebox[\textwidth]{\includegraphics[scale=0.5]{AlertWiFi.PNG}}
@@ -224,6 +226,7 @@ If you would like WiFi connectivity for your Raspberry Pi like we are going to, 
 \begin {itemize}
 \item Use a temperature sensor to monitor the temperature of the servers room located on the CEAS campus.
 \item Check the humidity of the server rooms located on the CEAS campus.
+\item Graph the humidty and temperatures of the rooms.
 \item Send the data to a server to be checked.
 \item Use timers to make sure that communication with the servers are not lost
 \item Send text messages and emails to the server administrators to alert them of loss of server connection and temperatures that are higher than the recommended level.
@@ -238,16 +241,49 @@ If you would like WiFi connectivity for your Raspberry Pi like we are going to, 
 To do these stories we will be creating spikes to show that critical sections are actually plausible. 
 After we do this we combine the spikes and add minor code to complete the system.
 Some of our spikes include:
-\begin{itemize} 
-\item Raspberry pi temperature retrieval code
-\item Raspberry temperature to xml
-\item Sending emails to admins
-\item Sending text messages to admins
-\item Using Apache for hosting the xml document
-\item Using nginex for hosting the xml document
-\item Creating a driver for the laravell code for the pi 
-\item Connecting a raspberry pi to a wireless network
-\end{itemize}
+\newline
+Connecting the temperature sensor:
+\newline
+\indent
+Below is our development version of the temperature sensor setup.
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[scale=0.15]{fullsetup.jpg}}
+\caption{Current Setup For Temperature Sensor}
+\end{figure}
+In the future when the project leaves the development process we would like to create a much easier way to connect the sensor and make the design more sleek.
+\newline
+Raspberry pi temperature retrieval code:
+\newline
+\indent
+We have completed this spike by using code from the adafruit website.
+After examining this code we wrote our own driver for the temperature monitor that better fits our needs.
+See the figure after the wireless network spike for proof of concept for getting the temperature.
+\newline
+Raspberry temperature to xml:
+\newline
+\indent
+Our code for retrieving the code off of the raspberry pi immediatly writes the data to the xml code that is needed to transmit the temperature over the network. 
+\newline
+Using Apache for hosting the xml document:
+\newline
+\indent
+A lot of people use raspberry pi's to host websites using apache so hosting a simple XML document was very easy to accomplish by following one of the numerous guides around the internet.
+\newline
+Creating a driver for the laravell code for the pi:
+\newline
+\indent
+Based on the laravell code that was handed down to us it was easy to create another module for the raspberry pi.
+\newline
+Connecting a raspberry pi to a wireless network:
+\newline
+\indent
+Once we plugged in the wireless adapter it seemed to work right off the bat.
+This was expected because it was provided by adafruit who makes the raspberry pi's.
+We also tested with other brand wireless connectors which worked equally well.
+\begin{figure}[H]
+\makebox[\textwidth]{\includegraphics[scale=0.75]{ssh_to_pi.PNG}}
+\caption{SSH Over Wireless Network And Sensor Data Retrieval}
+\end{figure}
 \newpage
 
 
