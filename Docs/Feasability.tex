@@ -21,7 +21,7 @@ The reason for using the Raspberry Pi’s is that we would be able to create a l
 Our client has many needs that have been unmet for various reasons, with problems in their current situation, and our project provides solutions to those needs and provides resolutions to their problems.
 \newline
 \indent
-Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was built in 2003 at a cost of $\$$72.5 million and is the home of the Western Michigan University College of Engineering and Applied Sciences (CEAS for short). 
+  Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was built in 2003 at a cost of $\$$72.5 million and is the home of the Western Michigan University College of Engineering and Applied Sciences (CEAS for short). 
  WMU’s engineering website explains that WMU has “state-of-the-art resources housed in a $\$$100 million high-tech facility”. 
 Sadly, our client has advised that this did not include any automated temperature or humidity sensors and reporting equipment in any of the rooms. 
  These are absolutely critical in rooms that maintain computer, technology, manufacturing, and scientific equipment to safeguard the investment and resources of the university.  There are many risks that computer equipment face as the spent their entire life conducting electricity and being made of rust-prone metals. Standard servers are recommended to be kept at an average temperature of 22°C or less, with automatic shut-off or critical shutdown temperature maximums of 35°C. They must also be kept dry as any condensate will not only short any circuit boards it touches, but cause the servers themselves to rust, as well as the metal racks that support them. Aside from rusts and shorts, excess humidity is a cause of molding and mildewing which is unhealthy for personnel and students, and also damages hardware and clogs air filters. There are many factors that provoke the need for this monitoring, from the downtime of a website, to the security networks that safeguard a campus, the need to have digital phones online, to safeguard data that would be lost in a failure, to the overall cost of the hardware. As an example, one server cluster with the moniker "Thor" has a hardware value of $400,000 which would result in an excessive loss for the university if it were damaged. 
@@ -48,6 +48,7 @@ These are the features that are used by the system that we need to implement on 
 \indent
 The website that we inherited from the previous team initial page looks like the following figure. 
 On this page it shows a graph of all the temperatures that are currently being tracked. 
+It does not currently do anything with humidity.  We will be evolving the site to include this information in future releases. 
 This uses a framework that allows easy data viewing and little coding. 
 We will probably use the same framework to implement this graphing process. 
 Once logged in there is much more functionality for the graphing. 
@@ -238,7 +239,10 @@ If you would like Wi-Fi connectivity for your Raspberry Pi like we are going to,
 \makebox[\textwidth]{\includegraphics[scale=0.5]{product_comparison.PNG}}
 \caption{A comparison of prosumer-grade sensor devices with the Team 3.14 RaspberryPi.}
 \end{figure}
+\newline
   Our research indicates that at a very minimum, a one-rack server room would require five sensors: one at the front-bottom of the rack (or top if it was top-cooled) to monitor the intake, one at the back top of the rack to monitor the outtake, one in the center of the room, one at the end of the room furthest from the cooling units, and one next to the cooling unit. With the current temperature sensors that WMU uses, this would be a $1500 investment, with one unit costing $300.  With our units, it would be a total cost of $300, so you could go the route of putting ten sensors in the room to cover all possible hot zones for the cost of two of the current sensors. The possibilities are endless with the reduced cost and easy availability of the units. 
+\newline
+  In future releases, we also will implement mobile and tablet versions of the site.  We have not yet begun to research any frameworks or API's for this yet but we are aware of some such as Foundation 5 which will automatically make your site look appropriate based on design standards for the different platforms. 
 \newpage
 
 
@@ -278,7 +282,7 @@ Raspberry pi temperature retrieval code:
 \indent
 We have completed this spike by using code from the Adafruit website.
 After examining this code we wrote our own driver for the temperature monitor that better fits our needs.
-See the figure after the wireless network spike for proof of concept for getting the temperature.
+See the figure after the wireless network spike for proof of concept for getting the temperature. The figure shows the results of running the Adafruit driver, which has a success rate of actually getting the temperature of one out of six tries.  This was unacceptable to us, so our custom driver has a 100% success rate, which is not shown as it just works perfectly.
 \newline
 Raspberry temperature to xml:
 \newline
@@ -351,6 +355,9 @@ For everything web server these are the sites we use
 \begin{itemize}
 \item http://laravel.com/docs/quick
 \item http://www.w3schools.com/
+\item http://www.noip.com
+\item httpd:apache.org
+\item http://www.w3.org
 \end{itemize}
 \newpage
 \subsection*{Glossary}
