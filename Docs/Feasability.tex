@@ -10,7 +10,7 @@
 \newpage
 \subsection*{Abstract}
 \addcontentsline{toc}{subsection}{Abstract}
-The goal of this project is to create an easy to use and low cost temperature monitoring system for anyone to use. 
+\Large The goal of this project is to create an easy to use and low cost temperature monitoring system for anyone to use. 
 The web end will allow the user to login in and view room statistics, as well as set warnings on thresholds. 
 With the thresholds we would allow the user to select actions based on the threshold such as sending a text when it reaches a certain temperature. 
 The room will contain a Raspberry Pi equipped with sensors which will use Ethernet to communicate to the web end and update information. 
@@ -24,8 +24,8 @@ Our client has many needs that have been unmet for various reasons, with problem
   Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was built in 2003 at a cost of $\$$72.5 million and is the home of the Western Michigan University College of Engineering and Applied Sciences (CEAS for short). 
  WMU’s engineering website explains that WMU has “state-of-the-art resources housed in a $\$$100 million high-tech facility”. 
 Sadly, our client has advised that this did not include any automated temperature or humidity sensors and reporting equipment in any of the rooms. 
- These are absolutely critical in rooms that maintain computer, technology, manufacturing, and scientific equipment to safeguard the investment and resources of the university.  There are many risks that computer equipment face as the spent their entire life conducting electricity and being made of rust-prone metals. Standard servers are recommended to be kept at an average temperature of 22°C or less, with automatic shut-off or critical shutdown temperature maximums of 35°C. They must also be kept dry as any condensate will not only short any circuit boards it touches, but cause the servers themselves to rust, as well as the metal racks that support them. Aside from rusts and shorts, excess humidity is a cause of molding and mildewing which is unhealthy for personnel and students, and also damages hardware and clogs air filters. There are many factors that provoke the need for this monitoring, from the downtime of a website, to the security networks that safeguard a campus, the need to have digital phones online, to safeguard data that would be lost in a failure, to the overall cost of the hardware. As an example, one server cluster with the moniker "Thor" has a hardware value of $400,000 which would result in an excessive loss for the university if it were damaged. 
- Our client informed us that there have been several incidences where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting. One such incident where the temperature increased without staff knowing resulted in a ~$500,000 loss. A previous loss due to humidity occurred when the humidity rose to the point of condensation and large steel papermaking rolls generated a layer of surface rust, rendering it unusable until it was repaired or replaced, causing monetary damages and downtime. 
+ These are absolutely critical in rooms that maintain computer, technology, manufacturing, and scientific equipment to safeguard the investment and resources of the university.  There are many risks that computer equipment face as the spent their entire life conducting electricity and being made of rust-prone metals. Standard servers are recommended to be kept at an average temperature of 22°C or less, with automatic shut-off or critical shutdown temperature maximums of 35°C. They must also be kept dry as any condensate will not only short any circuit boards it touches, but cause the servers themselves to rust, as well as the metal racks that support them. Aside from rusts and shorts, excess humidity is a cause of molding and mildewing which is unhealthy for personnel and students, and also damages hardware and clogs air filters. There are many factors that provoke the need for this monitoring, from the downtime of a website, to the security networks that safeguard a campus, the need to have digital phones online, to safeguard data that would be lost in a failure, to the overall cost of the hardware. As an example, one server cluster with the moniker "Thor" has a hardware value of $\$$400,000 which would result in an excessive loss for the university if it were damaged. 
+ Our client informed us that there have been several incidences where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting. One such incident where the temperature increased without staff knowing resulted in a ~$\$$500,000 loss. A previous loss due to humidity occurred when the humidity rose to the point of condensation and large steel papermaking rolls generated a layer of surface rust, rendering it unusable until it was repaired or replaced, causing monetary damages and downtime. 
 Since the fateful incident, WMU has had students implement several forms of reporting, and currently uses the Temperature @lert WiFi Edition to keep track of the temperature of rooms around campus. 
 These sensors work very well but their major flaw is that they are very expensive. These sensors cost upwards of three hundred dollars per sensor and have many features that are neat, but unnecessary for our purposes. 
 To alleviate this problem we proposed to create a server that would communicate with a network of home brewed, while reliable sensor computers. 
@@ -161,7 +161,7 @@ Figure below is the DHT11.
 With the limitations previously mentioned, we will be exploring other sensor alternatives. There are many others that very in price, accuracy, range, and resolution, and those we have looked into are in the chart below. The sensor that the Temperature @lert device that WMU provided us uses the DS18B20 sensor, which has a comparable cost and much greater resolution. Our team is currently working on modifying an existing driver or building our own for use with our Raspberry Pi. The DS18B20 has a low cost to begin with, but can be bought in bulk for further reduced prices.  Due to their small size, it would be extremely quick and easy to bind/wrap either the DHT11, DHT22, or DS18B20 into a cable that would have an RJ-45 connector on the end, whereas it would be just as easy to have our custom 3d-printed RaspberryPi case have an RJ-45 jack so there would be no direct wiring/soldering to the RaspberryPi, and the sensors could be removed on a whim for storage, transport, or replacement should a single sensor go bad. The DHT11 and DHT22 have one great advantage over the DS18B20 in that the latter does not contain a humidity sensor, hence the smaller package.
 
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.75]{sensor_comparison.jpg}}
+\makebox[\textwidth]{\includegraphics[scale=0.75]{sensor_comparison.PNG}}
 \caption{Alternative Sensors to DHT11}
 \end{figure}
 
@@ -218,7 +218,7 @@ We also require a temperature sensor of your choice.
 We will be using the DHT11 and our tutorials will be using this part. 
 We will be interfacing with two devices at first, beginning with the Temperature @lert WiFi edition TM-WIFI220, seen here:
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.5]{AlertWiFi.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.5]{AlertWiFi.jpg}}
 \caption{@lert WiFi edition TM-WIFI220}
 \end{figure}
  which has an initial cost of US $\$$300.00 +tax/shipping, a size footprint of H: 1.25”, W: 4.00”, L: 6.00”, an overall volume (excluding antennae) of 30 cubic inches, supports PoE, has a yearly estimated power usage of $\$$7.77 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is not able to be physically upgraded or added on to outside of its two available temperature and humidity sensors.
@@ -226,7 +226,7 @@ We will be interfacing with two devices at first, beginning with the Temperature
 \indent
 We are also designing our own sensing device that utilizes Raspberry Pi’s running Raspbian, with a generic case it would appear as the following:
 \begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.35]{Rasp.PNG}}
+\makebox[\textwidth]{\includegraphics[scale=0.35]{Rasp.jpg}}
 \caption{Example of Raspberry Pi}
 \end{figure}
 which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.80”, L: 3.80”, an overall volume (excluding antennae) of 10.64 cubic inches, could potentially support Power over Ethernet (PoE), has a yearly estimated power usage of $\$$5.89 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is fully upgradeable in any capacity.
@@ -239,8 +239,8 @@ If you would like Wi-Fi connectivity for your Raspberry Pi like we are going to,
 \makebox[\textwidth]{\includegraphics[scale=0.5]{product_comparison.PNG}}
 \caption{A comparison of prosumer-grade sensor devices with the Team 3.14 RaspberryPi.}
 \end{figure}
-\newline
-  Our research indicates that at a very minimum, a one-rack server room would require five sensors: one at the front-bottom of the rack (or top if it was top-cooled) to monitor the intake, one at the back top of the rack to monitor the outtake, one in the center of the room, one at the end of the room furthest from the cooling units, and one next to the cooling unit. With the current temperature sensors that WMU uses, this would be a $1500 investment, with one unit costing $300.  With our units, it would be a total cost of $300, so you could go the route of putting ten sensors in the room to cover all possible hot zones for the cost of two of the current sensors. The possibilities are endless with the reduced cost and easy availability of the units. 
+
+  Our research indicates that at a very minimum, a one-rack server room would require five sensors: one at the front-bottom of the rack (or top if it was top-cooled) to monitor the intake, one at the back top of the rack to monitor the outtake, one in the center of the room, one at the end of the room furthest from the cooling units, and one next to the cooling unit. With the current temperature sensors that WMU uses, this would be a $\$$1500 investment, with one unit costing $\$$300.  With our units, it would be a total cost of $\$$300, so you could go the route of putting ten sensors in the room to cover all possible hot zones for the cost of two of the current sensors. The possibilities are endless with the reduced cost and easy availability of the units. 
 \newline
   In future releases, we also will implement mobile and tablet versions of the site.  We have not yet begun to research any frameworks or API's for this yet but we are aware of some such as Foundation 5 which will automatically make your site look appropriate based on design standards for the different platforms. 
 \newpage
