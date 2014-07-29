@@ -1,0 +1,25 @@
+To do:
+
+1.) commit current raspberry pi files for backup
+
+2.) create script to build the raspberry pi from a fresh install of raspbian, including:
+  - install apache
+  - create cronjob
+  - place driver in correct place
+  
+3.) create script to build webserver from fresh ubuntu 14.04 LTS install, including:
+  - install apache
+  - install php/mcrypt
+  - install mysql
+  - copy site to appropriate directory
+    - with application.php file that has a blank key
+  - generate key
+  - create cronjobs
+  - run migrations
+  
+  - maybe make the script interactive, asking for sudo access, asking what GPIO, what sensor
+    - make it so when it runs it'll be like "do you want a full install or to make changes", not sure
+  
+4.) build new laravel 4 version of our site
+
+5.) finish DHT11/DHT22/AM2302 driver
