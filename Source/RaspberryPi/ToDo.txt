@@ -15,6 +15,8 @@ To do:
     - with application.php file that has a blank key
   - generate key
   - create cronjobs
+    - database backups!!!
+    - site stuff
   - run migrations
   
   - maybe make the script interactive, asking for sudo access, asking what GPIO, what sensor
@@ -23,3 +25,5 @@ To do:
 4.) build new laravel 4 version of our site
 
 5.) finish DHT11/DHT22/AM2302 driver
+
+6.) write some git/svn scripts because I'm tired of typing stuff out each time
