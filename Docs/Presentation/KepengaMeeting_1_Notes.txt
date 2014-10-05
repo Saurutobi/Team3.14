@@ -1,0 +1,55 @@
+1.) Create a test site that 
+  
+  a.) has (I'll guess just a C program that generates say, 1000, test files
+    (example http://cs.wmich.edu/~j5koehler1/testSensors/sensor1.xml,
+    then sensor2.xml, etc) for us to create a similar 1000 connections
+    on with our site. 
+ 
+  b.) the test site should also run a cronjob once a minute that goes through
+    and updates each of the 1000 xml files with a new value (i'm guessing it
+    could rng a decision to either add or subtract say, 0.1 degrees each minute.
+    We could have it set a threshold where if it does trigger a critical value,
+    it resets after say, 5 minutes back to the middle value (so if it has a low
+    critical of 4 degrees C, and a high critical of 40, then it can reset to 22
+    degrees.  I'm not sure, that just sounds like a good place to start.
+    
+
+2.) add logging to the pi itself
+
+
+3.) document:
+  
+  a.) how to make a new driver on the pi
+  
+  b.) how to make a new api plugin for the site that connects to a new device
+  
+
+4.) write stories (prioritizing them by most useful):
+  
+  a.) of support for multiple rooms
+  
+  b.) of the sensor and location data being stored on the server database
+  
+  c.) of grouping sensors for reporting/texting
+  
+  d.) of admins getting assigned to rooms/sensors/groups
+    i.) he wants a group admin (essentially non-root)
+    ii.) overall admin (essentially root)
+  
+  e.) of text message options to group admin
+  
+  f.) to ponder whether anyone can see a graph and sensor data, or if that needs
+    a login.
+    
+  g.) of how our site can connect to *our* sensor AND other sensors like the one
+    given to us
+    
+  h.) of how our box can connect to the server meant for the boxes Kapenga gave us
+    and the legality of such an action
+    
+
+5.) need to add testing for:
+  
+  a.) race conditions
+  
+  b.) emergencies
