@@ -1,0 +1,71 @@
+
+<?php \Laravel\Section::start('title'); ?>
+<title>Tempest</title>
+<?php \Laravel\Section::stop(); ?>
+
+
+<?php \Laravel\Section::start('include'); ?>
+	<script src="<?php echo  URL::to_asset("js/jquery-1.9.1.min.js") ; ?>"></script>
+	<script src="<?php echo  URL::to_asset("js/highstock.js") ; ?>"></script>
+
+	<script src="<?php echo  URL::to_asset("js/themes/gray.js") ; ?>"></script>
+	<script src="<?php echo  URL::to_asset("js/mygraph.js") ; ?>"></script>
+
+	<script src="<?php echo  URL::to_asset("js/GraphRoom.js") ; ?>"></script>
+	<script src="<?php echo  URL::to_asset("js/GraphDeltas.js") ; ?>"></script>
+
+
+
+<?php \Laravel\Section::stop(); ?>
+
+
+<?php \Laravel\Section::start('content'); ?>
+
+	<h3>click on a room name to view its graph</h3>
+	<h3>click on a port number to view its daily highs and lows</h3>
+	<div class = "graphs" id="temperatures_over_time"></div>
+<?php \Laravel\Section::stop(); ?>
+
+
+<?php \Laravel\Section::start('glance'); ?>
+
+	<?php foreach($rooms as $room): ?>
+		<h3 class=headerbar id=<?php echo $room->name; ?>><?php echo $room->name; ?></h3>
+		<table class="deviceGlance">
+			<?php foreach($devices as $device): ?>
+				
+				<?php if($room->id == $device->room_id): ?>
+					<tr>
+						<td class= "<?php echo $device->status; ?>" >
+						<?php if ($device->status === "OK"): ?>
+							<?php echo HTML::image("img/veryicon.com/Matt_Ball/png/GreenBall.png", "OK", array('id' => 'ok'));; ?>
+						<?php elseif ($device->status === "WARNING"): ?>
+							<?php echo HTML::image("img/veryicon.com/Matt_Ball/png/YellowBall.png", "WARNING", array('id' => 'warning'));; ?>
+						<?php elseif ($device-> status === "ALERT"): ?>
+							<?php echo HTML::image("img/veryicon.com/Matt_Ball/png/RedBall.png", "ALERT", array('id' => 'alert'));; ?>
+						<?php elseif ($device-> status === "CRITICAL"): ?>
+							<?php echo HTML::image("img/veryicon.com/Matt_Ball/png/RedBall.png", "CRITICAL", array('id' => 'critical'));; ?>
+						<?php elseif ($device-> status === "C_N_C"): ?>
+							<?php echo HTML::image("img/veryicon.com/Matt_Ball/png/MrBomb.png", "C_N_C", array('id' => 'c_n_c'));; ?>
+						<?php endif; ?>
+						</td>
+						<td><?php echo $device->name; ?></td>
+					</tr>
+
+					<?php for( $i = 0; $i < sizeof($deltas) ; $i++ ): ?> 
+						<?php if($deltas[$i]->device_id == $device->id): ?>
+						<tr>
+							<td class=port id="<?php echo $device->id; ?> <?php echo $deltas[$i]->port; ?>"><?php echo $deltas[$i]->port; ?></td>
+							<td> <?php echo $deltas[$i]->close; ?></td>
+						</tr>
+						<?php endif; ?> 
+					<?php endfor; ?>
+
+
+				<?php endif; ?>
+
+			<?php endforeach; ?>
+		</table>
+	<?php endforeach; ?>
+<?php \Laravel\Section::stop(); ?>
+<?php echo view('layouts.default')->with(get_defined_vars())->render(); ?>
