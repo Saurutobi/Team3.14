@@ -69,10 +69,10 @@ return array(
 
 		'mysql' => array(
 			'driver'   => 'mysql',
-			'host'     => 'dbase.cs.wmich.edu',
-			'database' => 'team_314_tempest_db',
-			'username' => 'j5koehler1',
-			'password' => 'changem3',
+			'host'     => '127.0.0.1',
+			'database' => 'tempest',
+			'username' => 'root',
+			'password' => 'Changem3',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 		),

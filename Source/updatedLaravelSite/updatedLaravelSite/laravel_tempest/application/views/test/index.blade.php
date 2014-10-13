@@ -1,1 +1,0 @@
-<h1>well, you're here at least, i guess, now find somewhere better to be</h1>

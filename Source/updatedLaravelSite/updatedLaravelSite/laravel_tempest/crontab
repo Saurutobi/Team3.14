@@ -1,1 +1,0 @@
-*/5 * * * * php /unified/x/xbh9241/www/laravel_tempest/artisan get_temperatures

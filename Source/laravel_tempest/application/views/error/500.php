@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>Error 500 - Internal Server Error</title>
-	<link rel="shortcut icon" href="https://cs.wmich.edu/~j5koehler1/images.jpg" />
 	<meta name="viewport" content="width=device-width">
 	<style type="text/css">
 		@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
@@ -101,11 +100,11 @@
 	<div class="wrapper">
 		<div class="error-spacer"></div>
 		<div role="main" class="main">
-			<?php $messages = array('Such ouch.', 'Much worries.', 'So whoops.'); ?>
+			<?php $messages = array('Ouch.', 'Oh no!', 'Whoops!'); ?>
 
 			<h1><?php echo $messages[mt_rand(0, 2)]; ?></h1>
 
-			<h2>Team 3.14 Server Error: 500 (Internal Server Error)</h2>
+			<h2>Server Error: 500 (Internal Server Error)</h2>
 
 			<hr>
 

@@ -19,6 +19,7 @@ class ParserFactory
 		{
 			return new Sample_Data_Generator('dummy argument');
 		}
+
 		else
 		{
 			Log::write('error', $type . " not supported.");
