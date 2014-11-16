@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/Saurutobi/Team3.14/!svn/ver/131/trunk/Source/SensorBoxSite/config/initializers
+END
+new_rails_defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/Saurutobi/Team3.14/!svn/ver/131/trunk/Source/SensorBoxSite/config/initializers/new_rails_defaults.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/Saurutobi/Team3.14/!svn/ver/131/trunk/Source/SensorBoxSite/config/initializers/mime_types.rb
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/Saurutobi/Team3.14/!svn/ver/131/trunk/Source/SensorBoxSite/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/Saurutobi/Team3.14/!svn/ver/131/trunk/Source/SensorBoxSite/config/initializers/session_store.rb
+END
+cookie_verification_secret.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/Saurutobi/Team3.14/!svn/ver/131/trunk/Source/SensorBoxSite/config/initializers/cookie_verification_secret.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/Saurutobi/Team3.14/!svn/ver/131/trunk/Source/SensorBoxSite/config/initializers/backtrace_silencers.rb
+END

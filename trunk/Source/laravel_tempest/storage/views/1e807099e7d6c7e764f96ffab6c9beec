@@ -1,0 +1,93 @@
+
+<?php \Laravel\Section::start('title'); ?>
+<title>Environment Management</title>
+<?php \Laravel\Section::stop(); ?>
+
+
+<?php \Laravel\Section::start('include'); ?>
+	<script src="<?php echo  URL::to_asset("js/index.js") ; ?>"></script>	
+	<script src="<?php echo  URL::to_asset("js/home.js") ; ?>"></script>
+	
+
+
+<?php \Laravel\Section::stop(); ?>
+
+
+<?php \Laravel\Section::start('content'); ?>
+	<div class="roomSection">
+		<?php foreach($rooms as $room): ?>
+			<?php 
+				$roomDeviceCount = 0;
+				foreach($devices as $device)
+				{
+					if($room->id == $device->room_id)
+					{
+						++$roomDeviceCount;
+					}
+				}				
+			?>
+			<?php if($roomDeviceCount > 0): ?>
+			<div class="row">
+				<div class="col-md-12 collapsableContainer">
+					<div class="panel-heading collapsableHeader" id="<?php echo $room->name; ?>"><span><?php echo $room->name; ?></span></div>
+					<div class="collapsableContent">						
+						<!-- devices -->
+						
+						<div class="col-md-4">
+							<div class="panel panel-success">
+								<ul class="list-group">
+									<?php foreach($devices as $device): ?>
+										<?php if($room->id == $device->room_id): ?>
+											<?php if ($device->status === "OK"): ?>
+												<li class="list-group-item list-group-item-success">
+											<?php elseif ($device->status === "WARNING"): ?>
+												<li class="list-group-item list-group-item-warning">
+											<?php else: ?>
+												<li class="list-group-item list-group-item-danger">
+											<?php endif; ?>
+													<div class="liSpan">
+														<span class="leftSpan"><?php echo $device->name; ?></span>
+														<?php foreach($tempDeltas as $delta): ?>
+															<?php if($device->id == $delta->device_id): ?>
+																<span><?php echo round($delta->close, 1) ?>°F</span>
+															<?php endif; ?>
+														<?php endforeach; ?>
+														<?php foreach($humDeltas as $delta): ?>
+															<?php if($device->id == $delta->device_id): ?>
+																<span><?php echo round($delta->close, 1) ?>%</span>
+															<?php endif; ?>
+														<?php endforeach; ?>
+														<?php if ($device-> status === "C_N_C"): ?>
+															<span class="label label-danger">Offline</span>
+														<?php else: ?>
+															<span class="label label-success">Online</span>
+														<?php endif; ?>
+													</div>
+												</li>
+										<?php endif; ?>
+									<?php endforeach; ?>
+								</ul>
+							</div>
+						</div>
+					
+						<!-- charts -->
+						
+						<div class="col-md-8">
+							<div id="tempChart<?php echo $room->name; ?>" style="width:auto; height:100%;"></div>
+							<div id="humChart<?php echo $room->name; ?>" style="width:auto; height: 100%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</div>
+<?php \Laravel\Section::stop(); ?>
+
+
+<?php \Laravel\Section::start('glance'); ?>
+
+	
+<?php \Laravel\Section::stop(); ?>
+
+<?php echo view('layouts.default')->with(get_defined_vars())->render(); ?>

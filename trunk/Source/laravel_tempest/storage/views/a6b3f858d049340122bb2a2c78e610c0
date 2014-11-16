@@ -1,0 +1,98 @@
+
+<?php \Laravel\Section::start('title'); ?>
+<title>Add User</title>
+<?php \Laravel\Section::stop(); ?>
+
+<?php \Laravel\Section::start('content'); ?>
+<h3>Add New User</h3>
+<?php echo  Form::open('create_user', 'POST'); ; ?>
+
+    <?php echo Form::token();; ?>
+
+
+<table>
+    <tr>
+        <td><?php echo  Form::label('username', 'Name:'); ; ?></td>
+        <td><?php echo  Form::text('username', Input::old('username')); ; ?></td>
+        <td>
+            <?php if($errors->has('username')): ?>
+        <?php foreach($errors->get('username', "<p class='error'>:message</p>" ) as $error): ?>
+            <?php echo $error; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+        </td>
+    </tr>
+
+
+        <tr>
+        <td><?php echo  Form::label('email', 'E-mail:'); ; ?></td>
+        <td><?php echo  Form::email('email', Input::old('email')); ; ?></td>
+        <td>
+            <?php if($errors->has('email')): ?>
+        <?php foreach($errors->get('email', "<p class='error'>:message</p>") as $error): ?>
+            <?php echo $error; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+        </td>
+    </tr>
+
+        <tr>
+        <td><?php echo  Form::label('phone', 'Phone #:'); ; ?></td>
+        <td><?php echo  Form::telephone('phone', Input::old('phone')); ; ?></td>
+        <td>
+            <?php if($errors->has('phone')): ?>
+        <?php foreach($errors->get('phone', "<p class='error'>:message</p>") as $error): ?>
+            <?php echo $error; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+        </td>
+    </tr>
+
+
+        <tr>
+        <td><?php echo  Form::label('carrier', 'Carrier:');; ?></td>
+        <td><?php echo  Form::select('carrier', $carriers, Input::old('carrier')); ; ?></td>
+        <td>
+                <?php if($errors->has('carrier')): ?>
+        <?php foreach($errors->get('carrier', "<p class='error'>:message</p>") as $error): ?>
+            <?php echo $error; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+        </td>
+    </tr>
+
+        <tr>
+        <td><?php echo  Form::label('password', 'Password:'); ; ?></td>
+        <td><?php echo  Form::password('new_password'); ; ?></td>
+        <td>
+            <?php if($errors->has('new_password')): ?>
+        <?php foreach($errors->get('new_password', "<p class='error'>:message</p>" ) as $error): ?>
+            <?php echo $error; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+        </td>
+    </tr>
+
+    <tr>
+        <td><?php echo  Form::label('confirm_password', 'Confirm Password:'); ; ?></td>
+        <td><?php echo  Form::password('new_password_confirmation'); ; ?></td>
+        <td>
+            <?php if($errors->has('new_password_confirmation')): ?>
+        <?php foreach($errors->get('new_password_confirmation', "<p class='error'>:message</p>" ) as $error): ?>
+            <?php echo $error; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+        </td>
+    </tr>
+
+    <tr>
+    <td><?php echo  Form::label('is_admin', 'is admin?'); ; ?></td>
+        <td><?php echo Form::checkbox('is_admin', 1);; ?></td>
+    </tr>
+</table>
+
+    <?php echo  Form::submit('submit'); ; ?>
+
+<?php echo  Form::close(); ; ?>
+<?php \Laravel\Section::stop(); ?>
+<?php echo view('layouts.default')->with(get_defined_vars())->render(); ?>

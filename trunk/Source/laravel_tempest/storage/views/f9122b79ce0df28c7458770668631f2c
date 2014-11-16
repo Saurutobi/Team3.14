@@ -1,0 +1,38 @@
+
+
+<?php \Laravel\Section::start('title'); ?>
+<title>Edit Room</title>
+<?php \Laravel\Section::stop(); ?>
+
+
+
+<?php \Laravel\Section::start('content'); ?>
+<h3>Edit Room <?php echo $room->name; ?> </h3>
+<?php echo  Form::open('update_room', 'POST'); ; ?>
+
+<?php echo Form::token();; ?>
+
+	<?php echo  Form::hidden('id', $room->id); ; ?>
+
+	
+
+	<table>
+	<tr>
+        <td><?php echo  Form::label('name', 'Name:'); ; ?></td>
+        <td><?php echo  Form::text('name', Input::old('name', $room->name)); ; ?></td>
+        <td>
+            <?php if($errors->has('name')): ?>
+                <?php foreach($errors->get('name', "<p class='error'>:message</p>" ) as $error): ?>
+                    <?php echo $error; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </td>
+    </tr>
+    </table>
+
+        <?php echo  Form::submit('submit'); ; ?>
+
+<?php echo  Form::close(); ; ?>
+<?php \Laravel\Section::stop(); ?>
+
+<?php echo view('layouts.default')->with(get_defined_vars())->render(); ?>

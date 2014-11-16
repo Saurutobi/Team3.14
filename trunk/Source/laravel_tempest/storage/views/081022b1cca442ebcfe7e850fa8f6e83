@@ -1,0 +1,30 @@
+
+<?php \Laravel\Section::start('title'); ?>
+<title>Add Device Type</title>
+<?php \Laravel\Section::stop(); ?>
+
+<?php \Laravel\Section::start('content'); ?>
+<h3>Add New Device Type</h3>
+<?php echo  Form::open('create_devicetype', 'POST'); ; ?>
+
+<?php echo Form::token();; ?>
+
+<table>
+    <tr>
+        <td><?php echo  Form::label('name', 'New Device Type'); ; ?></td>
+        <td><?php echo  Form::text('name', Input::old('name')); ; ?></td>
+        <td>
+            <?php if($errors->has('name')): ?>
+        <?php foreach($errors->get('name', "<p class='error'>:message</p>" ) as $error): ?>
+            <?php echo $error; ?>
+        <?php endforeach; ?>
+    <?php endif; ?>
+    <td>
+    </tr>
+</table>
+    <?php echo  Form::submit('submit'); ; ?>
+
+<?php echo  Form::close(); ; ?>
+<?php \Laravel\Section::stop(); ?>
+
+<?php echo view('layouts.default')->with(get_defined_vars())->render(); ?>

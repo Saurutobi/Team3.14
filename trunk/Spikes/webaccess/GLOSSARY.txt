@@ -1,0 +1,8 @@
+As a placeholder, from "Pragmatic Version Control with Subversion": 
+
+Create one more top-level file called GLOSSARY . Make it a
+habit to document all project-specific jargon in this file.
+Not only will this make it easier for future developers
+when they’re trying to work out what a “wibble channel”
+is, but it will also guide the project team when it comes
+to naming classes, methods, and variables.

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/Saurutobi/Team3.14/!svn/ver/49/trunk/Spikes/webaccess/db
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/Saurutobi/Team3.14/!svn/ver/43/trunk/Spikes/webaccess/db/README.txt
+END
+rooms.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/Saurutobi/Team3.14/!svn/ver/36/trunk/Spikes/webaccess/db/rooms.sql
+END
+buildings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/Saurutobi/Team3.14/!svn/ver/35/trunk/Spikes/webaccess/db/buildings.sql
+END
+userAlertEmails.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/Saurutobi/Team3.14/!svn/ver/42/trunk/Spikes/webaccess/db/userAlertEmails.sql
+END
+users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/Saurutobi/Team3.14/!svn/ver/41/trunk/Spikes/webaccess/db/users.sql
+END
+devices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/Saurutobi/Team3.14/!svn/ver/37/trunk/Spikes/webaccess/db/devices.sql
+END
+userAlertPhones.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/Saurutobi/Team3.14/!svn/ver/40/trunk/Spikes/webaccess/db/userAlertPhones.sql
+END
+createDatabase.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/Saurutobi/Team3.14/!svn/ver/49/trunk/Spikes/webaccess/db/createDatabase.sql
+END

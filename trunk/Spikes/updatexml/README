@@ -1,0 +1,2 @@
+this is a spike to show that we can exec a program ( in our case the reader later) 
+then redirect its output to standard out

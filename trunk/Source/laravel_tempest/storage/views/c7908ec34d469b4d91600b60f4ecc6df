@@ -1,0 +1,33 @@
+
+<?php \Laravel\Section::start('title'); ?>
+<title>Project Tempest</title>
+<?php \Laravel\Section::stop(); ?>
+
+<?php \Laravel\Section::start('content'); ?>
+<h3>Add New Assignment</h3>
+<?php echo  Form::open('create_assignment', 'POST'); ; ?>
+
+	<?php echo Form::token();; ?>
+
+<table>
+
+	<tr class='tableform'>
+    	<td><?php echo  Form::label('user', 'User'); ; ?></td>
+    	<td><?php echo  Form::select('user_id', $users); ; ?></td>
+    </tr>
+
+    <tr class='tableform'>
+    	<td><?php echo  Form::label('room_id', 'Location'); ; ?></td>
+    	<td><?php echo  Form::select('room_id', $rooms); ; ?></td>
+    </tr>
+    
+    <tr class='tableform'>
+    	<td><?php echo  Form::submit('Submit'); ; ?></td>
+    </tr>
+
+</table>
+
+<?php echo  Form::close(); ; ?>
+<?php \Laravel\Section::stop(); ?>
+
+<?php echo view('layouts.default')->with(get_defined_vars())->render(); ?>
