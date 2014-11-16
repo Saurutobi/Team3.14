@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<?php echo \Laravel\Section::yield('title'); ?>
+	<?php echo  HTML::style('css/style.css') ; ?>
+	<?php echo \Laravel\Section::yield('include'); ?>
+</head>
+
+<body>
+	<div id="header">
+		<h1>Project Temp.e.s.t.</h1>
+		<h3>CEAS Server Room Temperature Monitoring Center</h3>
+		
+		<div id="login">
+		<?php if(Auth::user()): ?>
+			<a>welcome, <?php echo Auth::user()->username; ?></a>
+			<a><?php echo HTML::link('logout', 'logout'); ?></a>
+		<?php else: ?>
+			<a><?php echo HTML::link('login', 'login'); ?></a>
+		<?php endif; ?>
+		</div>
+
+		<ul>
+			<li> <?php echo HTML::link('home', 'Home'); ?> </li>
+			<li> <?php echo HTML::link('details', 'Details'); ?> </li>
+		</ul>
+	</div>
+
+	<div id="left_sidebar">
+		<h3>At a Glance</h3>
+		<div class="at_a_glance_menu">
+			<?php echo \Laravel\Section::yield('glance'); ?>
+		</div>
+	</div>
+	<div id="main_content">	
+		<div class="error">
+			<h2>
+				<?php  echo Session::get('error');  ?>
+			</h2>
+		</div>
+
+		<div class="message">
+			<h3>
+				<?php  echo Session::get('message');  ?>
+			</h3>
+		</div>
+
+		<?php echo \Laravel\Section::yield('content'); ?>
+	</div>
+
+	<div id="footer">
+	</div>
+</body>
+</html>

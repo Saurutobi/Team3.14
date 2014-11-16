@@ -1,0 +1,13 @@
+\select@language {english}
+\contentsline {subsection}{Abstract}{2}
+\contentsline {subsection}{Background}{3}
+\contentsline {subsection}{Design Decisions}{14}
+\contentsline {subsection}{Stories -- Requirements}{19}
+\contentsline {subsection}{Stories -- Functional}{23}
+\contentsline {subsection}{Testing}{24}
+\contentsline {subsection}{Security Issues}{24}
+\contentsline {subsection}{Resources}{24}
+\contentsline {subsection}{Feasibility}{25}
+\contentsline {subsection}{References}{26}
+\contentsline {subsection}{Glossary}{27}
+\contentsline {subsection}{Ownership}{28}

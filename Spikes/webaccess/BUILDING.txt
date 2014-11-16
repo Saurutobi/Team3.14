@@ -1,0 +1,8 @@
+As a placeholder, from "Pragmatic Version Control with Subversion": 
+
+Create another top-level file called BUILDING , containing
+simple hints to future code archaeologists who have the
+unenviable task of rebuilding this project from source.
+Because you’ll be automating the build, this document
+will be short; Figure 10.2 on the next page shows an
+example.
