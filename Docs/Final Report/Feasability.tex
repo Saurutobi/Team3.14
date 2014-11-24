@@ -4,18 +4,11 @@
 \usepackage{float}
 \begin{document}
 \title{Temperature Monitoring System}
-\author{Mike Guzior, Jason Pearson, Marcel Englmaier and Justin Koehler}
+\author{Jason Pearson, Marcel Englmaier and Justin Koehler}
 \maketitle
 \tableofcontents
 \newpage
-\subsection*{Abstract}
-\addcontentsline{toc}{subsection}{Abstract}
-\Large The goal of this project is to create an easy to use and low cost temperature monitoring system for anyone to use. 
-The web end will allow the user to login in and view room statistics, as well as set warnings on thresholds. 
-With the thresholds we would allow the user to select actions based on the threshold such as sending a text when it reaches a certain temperature. 
-The room will contain a Raspberry Pi equipped with sensors which will use Ethernet to communicate to the web end and update information. 
-The reason for using the Raspberry Pi’s is that we would be able to create a low cost sensor and be able to customize the code on the Pi as well. 
-\newpage
+
 \subsection*{Background}
 \addcontentsline{toc}{subsection}{Background}
 Our client has many needs that have been unmet for various reasons, with problems in their current situation, and our project provides solutions to those needs and provides resolutions to their problems.
@@ -133,6 +126,10 @@ The password does have minimal requirements for good passwords.
 \end{figure}
 
 \newpage
+\subsection*{Design}
+\addcontentsline{toc}{subsection}{Design}
+
+\newpage
 \subsection*{Design Decisions}
 \addcontentsline{toc}{subsection}{Design Decisions}
 \begin{itemize}
@@ -208,67 +205,26 @@ Our device will simply be put in with the rest of the devices and report itself 
 \newline
 \indent
 \newpage
-
-\subsection*{Stories -- Requirements}
-\addcontentsline{toc}{subsection}{Stories -- Requirements}
-This project requires a server running Linux, and in our case we will be using Ubuntu on this system. 
-The project will also require a web server that runs any 2.x version of Apache, which according to W3Techs is used by 58.70$\%$ of all websites as of March 30th, 2014.
-The choice to utilize Apache 2.x-compliant technologies was made with the idea that the majority of web servers utilize this technology, so it will be accessible to the majority. 
-We also require a temperature sensor of your choice.
-We will be using the DHT11 and our tutorials will be using this part. 
-We will be interfacing with two devices at first, beginning with the Temperature @lert WiFi edition TM-WIFI220, seen here:
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.5]{AlertWiFi.jpg}}
-\caption{@lert WiFi edition TM-WIFI220}
-\end{figure}
- which has an initial cost of US $\$$300.00 +tax/shipping, a size footprint of H: 1.25”, W: 4.00”, L: 6.00”, an overall volume (excluding antennae) of 30 cubic inches, supports PoE, has a yearly estimated power usage of $\$$7.77 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is not able to be physically upgraded or added on to outside of its two available temperature and humidity sensors.
-\newline
-\indent
-We are also designing our own sensing device that utilizes Raspberry Pi’s running Raspbian, with a generic case it would appear as the following:
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.35]{Rasp.jpg}}
-\caption{Example of Raspberry Pi}
-\end{figure}
-which has an initial cost of US $\$$61.47, a size footprint of H: 1.00”, W: 2.80”, L: 3.80”, an overall volume (excluding antennae) of 10.64 cubic inches, could potentially support Power over Ethernet (PoE), has a yearly estimated power usage of $\$$5.89 (based on 24 hour use @ $\$$0.1348 per kilowatt hour, and as is fully upgradeable in any capacity.
-Some example upgrades could be light sensors (for knowing if a windowless room has its lights on or off), motion sensors (to indicate movement in the room), video/still camera (for security monitoring), or even a touch screen (for things like giving the unit the ability to edit settings without connecting to a computer, or using as an employee time clock as an example).
-The possibilities are endless.
-If you would like Wi-Fi connectivity for your Raspberry Pi like we are going to, we will use a wireless receiver. With the wireless functionality, this requires the unit to simply be plugged in to a power outlet as no physical network connection is required. The Wi-Fi at CEAS has extremely poor signal in places due to several factors including metal anti-theft grates that inadvertently shield them, as well as the very thick concrete walls. If the client desired, a future release of the unit could include an optional network port so that it could be wireless and wired for network connectivity redundancy in the cases that the Wi-Fi signal is poor as the unit is placed in a signal dead zone, or that the Wi-Fi goes out but the LAN would still be active.  Either way the system would alert the designated users if the units lost connectivity.
-\newline
-  As the Temp @lert is $\$$300 per unit, and our RaspberryPi is $\$$60, that is a cost savings of 80%.  When compared to other companies products, it is an even greater cost savings as seen here:
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.5]{product_comparison.PNG}}
-\caption{A comparison of prosumer-grade sensor devices with the Team 3.14 RaspberryPi.}
-\end{figure}
-
-  Our research indicates that at a very minimum, a one-rack server room would require five sensors: one at the front-bottom of the rack (or top if it was top-cooled) to monitor the intake, one at the back top of the rack to monitor the outtake, one in the center of the room, one at the end of the room furthest from the cooling units, and one next to the cooling unit. With the current temperature sensors that WMU uses, this would be a $\$$1500 investment, with one unit costing $\$$300.  With our units, it would be a total cost of $\$$300, so you could go the route of putting ten sensors in the room to cover all possible hot zones for the cost of two of the current sensors. The possibilities are endless with the reduced cost and easy availability of the units. 
-\newline
-  In future releases, we also will implement mobile and tablet versions of the site.  We have not yet begun to research any frameworks or API's for this yet but we are aware of some such as Foundation 5 which will automatically make your site look appropriate based on design standards for the different platforms. 
+\subsection*{Implementation}
+\addcontentsline{toc}{subsection}{Implementation}
 \newpage
-
-
-\subsection*{Stories -- Functional}
-\addcontentsline{toc}{subsection}{Stories -- Functional}
-\begin {itemize}
-\item Use a temperature sensor to monitor the temperature of the servers room located on the CEAS campus.
-\item Check the humidity of the server rooms located on the CEAS campus.
-\item Graph the humidity and temperatures of the rooms.
-\item Send the data to a server to be checked.
-\item Use timers to make sure that communication with the servers are not lost
-\item Send text messages and emails to the server administrators to alert them of loss of server connection and temperatures that are higher than the recommended level.
-\item Establish permissions for the various administrators that will be monitoring the system.
-\item Create documentation so that the next group of users can use the software
-\end {itemize}
-\newpage
-
 
 \subsection*{Testing}
 \addcontentsline{toc}{subsection}{Testing}
-\subsection*{Security Issues}
-\addcontentsline{toc}{subsection}{Security Issues}
+\newpage
 
+\subsection*{Security}
+\addcontentsline{toc}{subsection}{Security}
+\newpage
+
+\subsection*{Maintenance}
+\addcontentsline{toc}{subsection}{Security}
+\newpage
 
 \subsection*{Resources}
-\addcontentsline{toc}{subsection}{Resources}
+\addcontentsline{toc}{subsection}{Maintenance}
+\newpage
+
 \begin{itemize}
 \item Raspberry Pi
 \item Temperature Sensors
@@ -280,17 +236,8 @@ If you would like Wi-Fi connectivity for your Raspberry Pi like we are going to,
 \item WiFi Connectors for Raspberry pi
 \end{itemize}
 \newpage
-\subsection*{Feasibility}
-\addcontentsline{toc}{subsection}{Feasibility}
-Based the cost of the hardware and the previous source code the feasibility of this project is high with many of the features being of low to mid risk. 
-We had a very informative meeting with a member from the previous senior design team where we saw how everything works and its limitations.
-Based on this meeting all our goals seem very reasonable and extra features can be implemented very easily for future releases.
-The biggest problem that we will encounter is the steep learning curve with the Laravel PHP package.
-However, this will be overcame due to good documentation on their site and contacts with Laravel experience.
-Being software oriented scientists the raspberry pi at first seemed like a daunting task. 
-However, Marcel has experience with hardware and this combined with good documentation will allow for us to overcome the hardware experience issues.
 
-\newpage
+
 \subsection*{References}
 \addcontentsline{toc}{subsection}{References}
 For everything raspberry pi we use these sites
