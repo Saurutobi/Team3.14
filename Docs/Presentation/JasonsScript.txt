@@ -1,0 +1,48 @@
+Thank you Justin
+Hello my name is Jason Pearson and I will be going over the project's design
+*click*
+Depicted in the diagram behind me you can see that users interact with the server and the server can provide multiple means of communication back such as showing the website, sending text or sending email hence the 3 arrows pointing to the user. On the other side of the server we can see three sensors. two are raspberry pi's and one is the temperture @lert sensor. Now taking a closer look at the server and the pi devices we get a diagram like this.
+*click*
+On the left you can see the linux server as before, but now you can also see the LAMP stack and how it all works together to create a website for apache to host. And on the right there is a single pi with the sensor connection there.
+*click*
+Lets take a look at the sensor and pi communication. As you know we use python and the adafruit driver library to talk to the device. the driver responds with its current temperature and we write that output to an XML file. That xml file is hosted by apache on the raspberry pi. how often the data is polled from the sensor is determined by the user when they first setup the program on the device
+*click*
+For the pi and server communication all that we have to do is download the xml data from the pi and parse it. To parse it we have a different driver for each device type that fetches the data out of the file and stores in the database. from here the server will analise the data and determine if it is too hot and needs to send out texts or emails. The data is stored in a database for historical viewing as well.
+*click*
+There are two different types of users that are allowed on the system. There are administrators who have the ability to create and modify users and assign users to rooms. There are also users who are assigned to rooms. When a person is assigned to a room they recieve texts and/or emails when the room gets too hot. Administrators can also be assigned to a room such as admin 1 here is assignedd to room 4
+*click*
+Now how did we impliment these features
+*click*
+First we have the device unassembled. Banana is for scale. You can see the sd card the wireless sensor and temperature sensor.
+*click*
+Next is the fully assembled version of the device with the case on it. Only thing missing is the wall adapter which is just a standard micro usb. Most people have one its just an android phone charger
+*click*
+As you saw before here is an old version of the site. Pretty much we have rooms on the left side and graph of everything on the right. 
+*click*
+Here is our new version of the site. We have all 3 different rooms here and we have across the top home admin and logout tabs.
+*click*
+After clicking on the tab it expands with what sensors are in that room. The green in the top left shows the current temperature and humidity and also if the device is online or not. And on the right we ahve graphs of temperature and humidity.
+*click*
+Going to the admin panel we have a very similar setup where each of the administration tasks is in its own collapsed area.
+*click*
+Here we have the rooms tab. In the rooms tab we can add, delete, and edit rooms.
+*click*
+Here we have the devices tab where it has the device id the name of the device its location, ip address, type, the number of sensors on it what tempeatures we should send  emails out at and its currrent status
+*click*
+Here is where an admin could add delete or update another user
+*click*
+This area is where an administrator can assign users to rooms to recieve notifications when something happens in those rooms
+*click*
+This area is for adding more devices and specifing what a device is that way it knows what driver to use to parse the xml
+*click*
+Like justin had said bootstrap was used because of its help for mobile support. Here is the oldsite on mobile. You can't really tell whats going on and when you zoom in on the graph the site acted unpredictably. 
+*click*
+Now on the web you can see it is almost an identical interface to the desktop version of the site.
+*click*
+It still supports clicking on the graph to see history as well as showing both temperature and humidity graphs and current tempreature and humidity at the top.
+*click*
+The admin panel works just as it did before with tabs for each task. 
+*click*
+Here we have the device panel which because it is so long cannot fit on a mobile device. However it slides seemlesssly when you scroll to the side allowing for a better mobile experience.
+*click*
+And here of course other areas of the admin panel. I am going to pass it off to marcel who will be covering testing of the project
