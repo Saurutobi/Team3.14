@@ -3,7 +3,7 @@
 \usepackage[english]{babel}
 \usepackage{float}
 \begin{document}
-\title{Temperature Monitoring System}
+\title{Temperature and Humidity Monitoring System}
 \author{Jason Pearson, Marcel Englmaier and Justin Koehler}
 \maketitle
 \tableofcontents
@@ -11,7 +11,7 @@
 
 \subsection*{Background}
 \addcontentsline{toc}{subsection}{Background}
-Our client has many needs that have been unmet for various reasons, with problems in their current situation, and our project provides solutions to those needs and provides resolutions to their problems.
+Our client has many needs that have been unmet for various reasons. With problems in their current situation, and our project provides solutions to those needs and to provide resolutions to their problems.
 \newline
 \indent
   Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was built in 2003 at a cost of $\$$72.5 million and is the home of the Western Michigan University College of Engineering and Applied Sciences (CEAS for short). 
@@ -132,78 +132,7 @@ The password does have minimal requirements for good passwords.
 \newpage
 \subsection*{Design Decisions}
 \addcontentsline{toc}{subsection}{Design Decisions}
-\begin{itemize}
-\item Raspberry Pi: We decided to use the to connect to the temperature and humidity sensor because it is cost efficient and is able to send and receive data from the monitoring server. 
-Other alternatives we looked at are the Arduino and the MSP430, but we ended up deciding on the raspberry pi because there was more documentation and had all the required hardware in one bundle.
-Also Raspberry Pi’s require less hardware configuration allowing a end user with less hardware skills to still be able to utilize our project.
-\item Git: Team members were more familiar with the workings of Git and could be used with a GUI.
-\item Sensor: For our case we will be using a humidity and temperature sensor that we found on Adafruit's website.
-The sensor is called the DHT11 basic temperature-humidity sensor. 
-For easy reference it is currently product number 386.
-Although this sensor is cheap it has enough power to determine the temperature and humidity of a room easily.
-Several limitations that the DHT11 has is it can only poll the temperature every 3-5 seconds and has a resolution of $1\,^{\circ}{\rm C}$ with an accuracy of $\pm$.$2\,^{\circ}{\rm C}$. 
-Figure below is the DHT11.
-
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.5]{tempsensor.jpg}}
-\caption{Temperature Sensing DHT11 Unit.}
-\end{figure}
-
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.5]{ds18b20.jpg}}
-\caption{A DS18B20 sensor for size comparison.}
-\end{figure}
-
-
-With the limitations previously mentioned, we will be exploring other sensor alternatives. There are many others that very in price, accuracy, range, and resolution, and those we have looked into are in the chart below. The sensor that the Temperature @lert device that WMU provided us uses the DS18B20 sensor, which has a comparable cost and much greater resolution. Our team is currently working on modifying an existing driver or building our own for use with our Raspberry Pi. The DS18B20 has a low cost to begin with, but can be bought in bulk for further reduced prices.  Due to their small size, it would be extremely quick and easy to bind/wrap either the DHT11, DHT22, or DS18B20 into a cable that would have an RJ-45 connector on the end, whereas it would be just as easy to have our custom 3d-printed RaspberryPi case have an RJ-45 jack so there would be no direct wiring/soldering to the RaspberryPi, and the sensors could be removed on a whim for storage, transport, or replacement should a single sensor go bad. The DHT11 and DHT22 have one great advantage over the DS18B20 in that the latter does not contain a humidity sensor, hence the smaller package.
-
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.75]{sensor_comparison.PNG}}
-\caption{Alternative Sensors to DHT11}
-\end{figure}
-
-
-
-\item Laravel: Although our team lacks experience with the Laravel system we decided that using the old team's code would be worth the steep learning curve of the Laravel system.
-\item Cake PHP: Looking at Cake PHP we determined that though this is a very great framework the existing code should be used.
-\end{itemize}
-We have also decided to separate the project into 4 main functional pieces which each need their required spikes. The flow of the normal communication is as displayed as below.
-\begin{figure}[H]
-\makebox[\textwidth]{\includegraphics[scale=0.5]{DataFlowFlowChart.PNG}}
-\caption{How the Data Goes Through The System}
-\end{figure}
-The first part in the process is getting the temperature from the device. 
-For the WiFi @lert system this has been already done by the manufacture. 
-As for the Pi we have a program that will read the temperature and output it to standard output.
-We have two options we can either create our own custom version of the code the company supplied, or we can create a program that uses their code to get the temperature.
-Both of these options are viable and both equally easy to do. 
-However, both will need their respective spikes.
-\newline
-\indent
-The next step is to create a way for the devices to communicate with the server.
-Currently the @lert system does this by hosting an xml document that the server retrieves.
-Our current prototype of the raspberry pi has duplicated this functionality and does require a separate parser.
-The two options that we are looking at for enabling the hosting of the xml document are either apache or Nginx.
-Another option is to not use a hosting program and to use a program that will give data to any requesting process.
-We will have spikes for all options and determine which will be the best for the low memory that a raspberry pi has.
-\newline
-\indent
-The third step is for the server to decode what data was received. 
-This done by the parser factory PHP task.
-What the parser factory does is it takes in a type and an IP address.
-Then it does a switch statement based on the type and returns an object that contains the correct methods for that reader type.
-For our Raspberry Pi module we will need to make an object to parse its data and an entry in the ParserFactory to detect the new object.
-The object for the Raspberry Pi module will need to use the ITemperature Parser PHP interface in order to be used correctly.
-In theory this can all be done using the GUI that was created by the previous team, but both the GUI and the manual method should be tried.
-\newline
-\indent
-The final piece in the data retrieval process is the server parsing and using the data. 
-If we follow the guidelines that were established by the previous groups temperature sensing unit the server should be able to treat them both the same with their respective data.
-We will be using the other groups code for graphing, mygraph.js.
-In this it reads in all the data for the devices. 
-Our device will simply be put in with the rest of the devices and report itself with the other devices.
-\newline
-\indent
+	
 \newpage
 \subsection*{Implementation}
 \addcontentsline{toc}{subsection}{Implementation}
@@ -211,8 +140,20 @@ Our device will simply be put in with the rest of the devices and report itself 
 
 \subsection*{Testing}
 \addcontentsline{toc}{subsection}{Testing}
-\newpage
+There are two types of testing that we used in this project unit testing and functional testing. Unit Testing is a must because it will allow the user to test every feature when a new patch comes out and allows after each upgrade to check if the features still work. Unit tests cannot be used to check everything so there must also be functional tests that show the site is reacting correctly and can handle loads properly.
+\newline
+\indent
+Unit tests for this project are ran through the command line and use laravel's testing framework. 
+\newline
+\indent
+There were many different functional tests that we ran to test full functionality of our project. A few tests that we ran include
+\begin {itemize}
+\item E-mail Alerts
+\item Text Message Alerts
+\item 
+\end {itemize}
 
+\newpage
 \subsection*{Security}
 \addcontentsline{toc}{subsection}{Security}
 \newpage
@@ -220,6 +161,14 @@ Our device will simply be put in with the rest of the devices and report itself 
 \subsection*{Maintenance}
 \addcontentsline{toc}{subsection}{Security}
 \newpage
+After the completion of this project the current senior design team will offer no maintenance. All modifications will be done by the staff at Western Michigan University and anyone else who uses the project. This being said there are modifications that we had planned but didn't have time to get to that could be added to increase the user experience for the project. These include
+\begin {itemize}
+\item Adding a secure layer between the pi and the server
+\item Adding historical data logging to the Raspberry Pi
+\item Creating a way to retrieve historical data from the device if it was down for a period
+\item Upgrading the user control area to have group administration
+\item Making a program that would poll servers for their data and add it to a graph
+\end {itemize}
 
 \subsection*{Resources}
 \addcontentsline{toc}{subsection}{Maintenance}
@@ -232,8 +181,9 @@ Our device will simply be put in with the rest of the devices and report itself 
 \item Web Server
 \item Soldering Equipment
 \item Operating System loaded SD Cards with Raspbian
-\item Power connectors for Raspberry pi
+\item Power Connectors for Raspberry pi
 \item WiFi Connectors for Raspberry pi
+\item External Server to Host Website
 \end{itemize}
 \newpage
 
@@ -254,6 +204,7 @@ For everything web server these are the sites we use
 \item http://www.noip.com
 \item httpd:apache.org
 \item http://www.w3.org
+\item http://aws.amazon.com/
 \end{itemize}
 \newpage
 \subsection*{Glossary}
@@ -287,6 +238,8 @@ The GNU license and will be open source and will be hosted for all to access and
 As this project is being developed as a Senior Design project for Western Michigan University (WMU) at the direction of Dr. John Kapenga, WMU will retain the intellectual rights to the software.
 \item [Non-Disclosure Agreement (NDA)] \hfill \\
 No non-disclosure agreement is being used at this time.  The project is maintained on GitHub, which is freely and openly accessible to anyone who wishes to view it, and is thus tracked by search engines such as Google, where it is able to be searched for by anyone on the planet.
+\item [Warranty] \hfill \\
+A maintenance document has been created for the project. Other than that document and this document no other outside assistance is required by the members of this project.
 \end{description}
 
 \end{document}
