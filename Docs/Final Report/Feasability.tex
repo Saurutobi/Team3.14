@@ -126,18 +126,61 @@ The password does have minimal requirements for good passwords.
 \end{figure}
 
 \newpage
+\subsection*{Design Decisions}
+\addcontentsline{toc}{subsection}{Design Decisions}
+
+\newpage
 \subsection*{Design}
 \addcontentsline{toc}{subsection}{Design}
 
 \newpage
-\subsection*{Design Decisions}
-\addcontentsline{toc}{subsection}{Design Decisions}
-	
-\newpage
+
 \subsection*{Implementation}
 \addcontentsline{toc}{subsection}{Implementation}
+Now how did this design turn out. Before all the old site vital areas were shown. Now after implementing BootStrap we have a completely different front end.
+Here is the initial view of the site once a user has logged in.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{firstlogin.PNG}}
+	\caption{After Logging In}
+\end{figure}
 \newpage
-
+Now when a user clicks on the tab it will expand to show what the current temperature and humidity are. Next to that is the status of the machine i.e. okay or critical. Upon mousing over the graph it will give the temperature or humidity at that time in history. See the next figure.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{opentabfirst.PNG}}
+	\caption{Open Tab and Data}
+\end{figure}
+\newpage
+These tabs are the same for each room and will show all appropriate data for each room. Next is the new and improved administration panel. 
+On this panel there are five different tabs rooms, devices, users, room assignments and device types. All of these different devices the administrator is able to create, update and delete anything in those tabs. 
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{adminpaneldesktop.PNG}}
+	\caption{First View of Administration Panel}
+\end{figure}
+\newpage
+The rooms tab has just those options and only has room name as its only parameter. See the next figure for the rooms user interface.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{roomsdesktop.PNG}}
+	\caption{View of the Rooms Tab}
+\end{figure}
+\newpage
+The next tab devices tab. This tab shows the device id, name, location, ip address, type of device, number of ports on the device, warning, alert and critical temperatures, and lastly status. The administrator can add, remove and update devices. 
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{devicesdesktop.PNG}}
+	\caption{Device Administration}
+\end{figure}
+\newpage
+The users tab allows new users and administrators to be created as well as updating and deleting users. This tab also allows verification of the users email and phone alerts. For a verification the user receives a text or email with a verification code that that the user types in the code and this allows the system to verify that the text or email went through.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{usersdesktop.PNG}}
+	\caption{User Administration}
+\end{figure}
+\newpage
+The room assignments tab is very important. This is where administrators assign users to rooms. When a user is assigned to a room they will receive alerts when temperature benchmarks are reached.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{roomassignmentsdesktop.PNG}}
+	\caption{User Room Assignments}
+\end{figure}
+\newpage
 \subsection*{Testing}
 \addcontentsline{toc}{subsection}{Testing}
 There are two types of testing that we used in this project unit testing and functional testing. Unit Testing is a must because it will allow the user to test every feature when a new patch comes out and allows after each upgrade to check if the features still work. Unit tests cannot be used to check everything so there must also be functional tests that show the site is reacting correctly and can handle loads properly.
