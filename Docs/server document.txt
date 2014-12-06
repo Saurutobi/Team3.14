@@ -1,0 +1,8 @@
+Part A - Installation - Starting with a fresh Ubuntu 12.04 LTS install:
+1.) Install LAMP
+	$ sudo apt-get update
+	$ sudo apt-get install lamp-server^
+2.) Install PHP5 Mcrypt extension
+	$ sudo apt-get install mcrypt php5-mcrypt
+	$ sudo service apache2 restart
+
