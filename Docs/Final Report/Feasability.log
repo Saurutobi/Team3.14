@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.8)  9 DEC 2014 00:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.8)  9 DEC 2014 02:49
 entering extended mode
 **Feasability.tex
 
@@ -278,61 +278,75 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
 
-[13] [14] [15] [16] [17] [18] [19] [20]
+[13] [14] <frameworks2.png, id=78, 489.32813pt x 301.125pt>
+File: frameworks2.png Graphic file (type png)
+
+<use frameworks2.png>
+Package pdftex.def Info: frameworks2.png used on input line 198.
+(pdftex.def)             Requested size: 366.99518pt x 225.84319pt.
+ [15 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/fra
+meworks2.png>] [16] [17] [18]
+<dickbutt.jpg, id=93, 301.125pt x 301.125pt>
+File: dickbutt.jpg Graphic file (type jpg)
+ <use dickbutt.jpg>
+Package pdftex.def Info: dickbutt.jpg used on input line 262.
+(pdftex.def)             Requested size: 225.84319pt x 225.84319pt.
+ [19 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/dic
+kbutt.jpg>]
 <firstlogin.PNG, id=97, 612.67702pt x 444.40657pt>
 File: firstlogin.PNG Graphic file (type png)
  <use firstlogin.PNG>
-Package pdftex.def Info: firstlogin.PNG used on input line 236.
+Package pdftex.def Info: firstlogin.PNG used on input line 271.
 (pdftex.def)             Requested size: 459.50664pt x 333.30411pt.
 
-[21 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/firs
+[20 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/firs
 tlogin.PNG>] <opentabfirst.PNG, id=102, 615.91298pt x 446.56387pt>
 File: opentabfirst.PNG Graphic file (type png)
 
 <use opentabfirst.PNG>
-Package pdftex.def Info: opentabfirst.PNG used on input line 243.
+Package pdftex.def Info: opentabfirst.PNG used on input line 279.
 (pdftex.def)             Requested size: 461.9336pt x 334.92207pt.
- [22 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/ope
+ [21 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/ope
 ntabfirst.PNG>]
 <adminpaneldesktop.PNG, id=107, 602.42584pt x 436.78511pt>
 File: adminpaneldesktop.PNG Graphic file (type png)
 
 <use adminpaneldesktop.PNG>
-Package pdftex.def Info: adminpaneldesktop.PNG used on input line 251.
+Package pdftex.def Info: adminpaneldesktop.PNG used on input line 287.
 (pdftex.def)             Requested size: 451.81827pt x 327.58803pt.
- [23 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/adm
+ [22 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/adm
 inpaneldesktop.PNG>]
 <roomsdesktop.PNG, id=112, 604.72986pt x 438.93398pt>
 File: roomsdesktop.PNG Graphic file (type png)
  <use roomsdesktop.PNG>
-Package pdftex.def Info: roomsdesktop.PNG used on input line 258.
+Package pdftex.def Info: roomsdesktop.PNG used on input line 295.
 (pdftex.def)             Requested size: 453.54628pt x 329.19968pt.
 
-[24 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/room
-sdesktop.PNG>] <devicesdesktop.PNG, id=118, 613.75568pt x 444.94589pt>
+[23 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/room
+sdesktop.PNG>] <devicesdesktop.PNG, id=117, 613.75568pt x 444.94589pt>
 File: devicesdesktop.PNG Graphic file (type png)
 
 <use devicesdesktop.PNG>
-Package pdftex.def Info: devicesdesktop.PNG used on input line 265.
+Package pdftex.def Info: devicesdesktop.PNG used on input line 303.
 (pdftex.def)             Requested size: 460.31561pt x 333.7086pt.
- [25 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/dev
+ [24 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/dev
 icesdesktop.PNG>]
 <usersdesktop.PNG, id=123, 619.45714pt x 449.37811pt>
 File: usersdesktop.PNG Graphic file (type png)
  <use usersdesktop.PNG>
-Package pdftex.def Info: usersdesktop.PNG used on input line 272.
+Package pdftex.def Info: usersdesktop.PNG used on input line 311.
 (pdftex.def)             Requested size: 464.59172pt x 337.03276pt.
 
-[26 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/user
+[25 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/user
 sdesktop.PNG>] <roomassignmentsdesktop.PNG, id=128, 620.54391pt x 449.92151pt>
 File: roomassignmentsdesktop.PNG Graphic file (type png)
 
 <use roomassignmentsdesktop.PNG>
-Package pdftex.def Info: roomassignmentsdesktop.PNG used on input line 279.
+Package pdftex.def Info: roomassignmentsdesktop.PNG used on input line 319.
 (pdftex.def)             Requested size: 465.40678pt x 337.4403pt.
- [27 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/roo
-massignmentsdesktop.PNG>] [28] [29] [30]
-[31] [32]
+ [26 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/roo
+massignmentsdesktop.PNG>] [27] [28] [29]
+[30] [31]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -342,27 +356,27 @@ Missing character: There is no œ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
+ [32]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no œ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no  in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no œ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no  in font cmr10!
  [33]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no œ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no  in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no œ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no  in font cmr10!
- [34]
 ("C:\Users\Saurutobi\My Files\LbKStudios\Git\Team3.14\Docs\Final Report\Feasabi
 lity.aux") ) 
 Here is how much of TeX's memory you used:
- 1631 strings out of 493921
- 22183 string characters out of 3144864
+ 1642 strings out of 493921
+ 22360 string characters out of 3144864
  81927 words of memory out of 3000000
- 4925 multiletter control sequences out of 15000+200000
+ 4933 multiletter control sequences out of 15000+200000
  7896 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,8n,21p,1579b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -373,9 +387,9 @@ x12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Feasability.pdf (35 pages, 1566752 bytes).
+Output written on Feasability.pdf (34 pages, 1769267 bytes).
 PDF statistics:
  178 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

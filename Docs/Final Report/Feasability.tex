@@ -193,51 +193,87 @@ In contrast, using a wireless connection opens us up to a wide range of uses. Wh
 	\textbf{Software, Web Framework}
 \end{center}
 \indent
-Laravel dickbutts here
+For our web framework, we had many choices. We had options ranging from Ruby on Rails, to Tomcat, to CakePHP, and even to code in raw PHP without a framework. In the end, we decided to use Laravel. We did extensive research, and found, according to the graph below, that Laravel has the most market share of all PHP web frameworks.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{frameworks2.png}}
+	\caption{The Market Share of Web Frameworks}
+\end{figure}
+\indent
+Having over a quarter market share over all other PHP web frameworks means that Laravel is doing something right. It also means that people trust Laravel, and because of this, there is quite a lot of documentation.
+\newline
+\indent
+We did have a few more specific reasons for choosing Laravel over our other options. One of the biggest reasons we chose Laravel is because it has industry-standard security measures, that, when implemented properly, can lead to a very secure web site. In addition, Laravel is a little older, and has had time to mature and work out bugs. Therefore, Laravel provides an incredibly reliable Model-View-Controller system. As an added bonus, it's even open source!
 \newpage
 
 \begin{center}
 	\textbf{Software, Sensor Unit Programming Language}
 \end{center}
 \indent
-python dickbutts here
+Our RaspberryPi sensor unit requires some form of programming language. This decision should have been a rather simple decision, but during test, we had some issues. The manufacturer of our DHT22 sensing unit provides libraries for us to use to interface with the DHT22. During testing, we had some problems occur while trying to read data off of the DHT22. Originally, we used the C programming language to write the code which reads the DHT22. While C is incredibly fast, it requires compilation, which turns out wasn't the worst of our issues. While polling the DHT22 for measurements, it took the program anywhere from one to 15 tries to properly read the data. In our eyes, that isn't very reliable.
+\newline
+\indent
+We decided to give Python a try. Python is a slow language but it doesn't require compilation. It is also extremely reliable, as the program we wrote reads the measurements properly the first time, every time. While it is slow, waiting about two seconds for an updated measurement is something our client was willing to live with, as the propagation of that data to the user-facing front end still takes time, and waiting an extra few seconds will not impact any hardware any more.
 \newpage
 
 \begin{center}
-	\textbf{Software, Web Site Setup}
+	\textbf{Server}
 \end{center}
 \indent
-LAMP dickbutts here
-\newpage
-
-\begin{center}
-	\textbf{Server, Site Hosting}
-\end{center}
+For our server setup, we had to make a few decisions.
+\begin{itemize}
+	\item What Operating System should we use?
+	\item What Web Server should we use?
+	\item What Database technology should we use?
+	\item What Framework should we use?
+	\item Where do we host the web server?
+\end{itemize}
+These questions are all equally important. We first had to pick the Operating System. We had the choice between Windows, a rather expensive option, and Linux, a very free option. We decided to go for the Linux system because of the cost and because it is open source.
+\newline
 \indent
-AWS dickbutts here
+Once we had our Operating System chosen, we made the decision to use a set of technologies that are very commonly used. It's called a LAMP stack, and stands for Linux, Apache, MySQL, and PHP. We had other options for each of these technologies. We could have used a web server called nginx, but the documentation and historical evidence of Apache working was already there. There were other database technologies that we could have used, but MySQL is free, powerful, and well documented. Finally, our reasoning behind PHP was explained in the Web Framework Design Decisions.
+\newline
+\indent
+Finally, we had to choose where we wanted to host our website. We had options available to use like Microsoft Azure, Linode, or DigitalOcean. We opted for Amazon Web Services(AWS).
+\newline
+\indent
+Our primary reason for picking AWS was that it is free for the first year, and then only \textdollar10 per month. In addition, we can easily migrate our virtual machine with great ease, and the uptime for any AWS service is more than 99.95\%. As an added bonus, AWS gives us unlimited bandwidth at no extra charge. Even though our web site and server doesn't use much data at all, a heavy user load can add up quickly.
 \newpage
 
 \begin{center}
 	\textbf{Web Site, Design and Styling}
 \end{center}
 \indent
-Bootstrap dickbutts here
+The existing web site that we took over from the previous team did not look nice at all. The buttons were ugly, the styling was poor, and the colors were mismatched. Furthermore, it was not mobile-compatibly at all. We had to find a solution.
+\newline
+\indent
+We decided to tackle the graphs on the pages first. The existing web site used High Charts, which is a rather useful graphing library. As it turns out, the version that was being used was outdated and old. We updated it, and most of the problems that existed were gone. The updated version provided mobile support, scaled well, and looked much cleaner.
+\newline
+\indent
+There were alternative for us to use. We could have scrapped High Charts altogether and gone with commonly used libraries like Google Charts, or Chart.js. We also thought about using the YUI, the Yahoo User Interface Library. All of these are used often across many different implementations, but we decided to stick with High Charts because it worked and provided all the functionality we required without a massive re-write of the main pages.
+\newline
+\indent
+Along with an updated and cleaner charting library, we decided to scrap most of the existing styling on the web site. We wanted our web site to be accessible across all devices, and the existing site didn't provide that. We looked at using jQuery Mobile, which is slow, and Foundation, which is not insanely popular. We opted to go with a library called Bootstrap. Bootstrap is open source, widely used, and well documented. It's also incredibly easy of use and modify. It relies on a basic set of class tags which propogate and scale incredibly well. Once we finished implementing Bootstrap, the website became usable on any device and looked really nice.
 \newpage
 
 \subsection*{Design}
 \addcontentsline{toc}{subsection}{Design}
+do your poops here
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{dickbutt.jpg}}
+\end{figure}
 \newpage
 
 \subsection*{Implementation}
 \addcontentsline{toc}{subsection}{Implementation}
-Now how did this design turn out. Before all the old site vital areas were shown. Now after implementing BootStrap we have a completely different front end.
-Here is the initial view of the site once a user has logged in.
+\indent
+Now how did this design turn out. Before all the old site vital areas were shown. Now after implementing BootStrap we have a completely different front end. Here is the initial view of the site once a user has logged in.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{firstlogin.PNG}}
 	\caption{After Logging In}
 \end{figure}
 \newpage
 
+\indent
 Now when a user clicks on the tab it will expand to show what the current temperature and humidity are. Next to that is the status of the machine i.e. okay or critical. Upon mousing over the graph it will give the temperature or humidity at that time in history. See the next figure.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{opentabfirst.PNG}}
@@ -245,14 +281,15 @@ Now when a user clicks on the tab it will expand to show what the current temper
 \end{figure}
 \newpage
 
-These tabs are the same for each room and will show all appropriate data for each room. Next is the new and improved administration panel. 
-On this panel there are five different tabs rooms, devices, users, room assignments and device types. All of these different devices the administrator is able to create, update and delete anything in those tabs. 
+\indent
+These tabs are the same for each room and will show all appropriate data for each room. Next is the new and improved administration panel. On this panel there are five different tabs rooms, devices, users, room assignments and device types. All of these different devices the administrator is able to create, update and delete anything in those tabs. 
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{adminpaneldesktop.PNG}}
 	\caption{First View of Administration Panel}
 \end{figure}
 \newpage
 
+\indent
 The rooms tab has just those options and only has room name as its only parameter. See the next figure for the rooms user interface.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{roomsdesktop.PNG}}
@@ -260,6 +297,7 @@ The rooms tab has just those options and only has room name as its only paramete
 \end{figure}
 \newpage
 
+\indent
 The next tab devices tab. This tab shows the device id, name, location, ip address, type of device, number of ports on the device, warning, alert and critical temperatures, and lastly status. The administrator can add, remove and update devices. 
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{devicesdesktop.PNG}}
@@ -267,6 +305,7 @@ The next tab devices tab. This tab shows the device id, name, location, ip addre
 \end{figure}
 \newpage
 
+\indent
 The users tab allows new users and administrators to be created as well as updating and deleting users. This tab also allows verification of the users email and phone alerts. For a verification the user receives a text or email with a verification code that that the user types in the code and this allows the system to verify that the text or email went through.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{usersdesktop.PNG}}
@@ -274,6 +313,7 @@ The users tab allows new users and administrators to be created as well as updat
 \end{figure}
 \newpage
 
+\indent
 The room assignments tab is very important. This is where administrators assign users to rooms. When a user is assigned to a room they will receive alerts when temperature benchmarks are reached.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{roomassignmentsdesktop.PNG}}
@@ -283,6 +323,7 @@ The room assignments tab is very important. This is where administrators assign 
 
 \subsection*{Testing}
 \addcontentsline{toc}{subsection}{Testing}
+\indent
 There are two types of testing that we used in this project unit testing and functional testing. Unit Testing is a must because it will allow the user to test every feature when a new patch comes out and allows after each upgrade to check if the features still work. Unit tests cannot be used to check everything so there must also be functional tests that show the site is reacting correctly and can handle loads properly.
 \newline
 \indent
@@ -290,41 +331,46 @@ Unit tests for this project are ran through the command line and use laravel's t
 \newline
 \indent
 There were many different functional tests that we ran to test full functionality of our project. A few tests that we ran include
-\begin {itemize}
-\item E-mail Alerts
-\item Text Message Alerts
-\item 
-\end {itemize}
-
+\begin{itemize}
+	\item E-mail Alerts
+	\item Text Message Alerts
+	\item Virtual Sensors to test the web site's reporting and usability
+\end{itemize}
 \newpage
+
 \subsection*{Security}
 \addcontentsline{toc}{subsection}{Security}
 \newpage
 
 \subsection*{Maintenance}
 \addcontentsline{toc}{subsection}{Maintenance}
+\indent
 After the completion of this project the current senior design team will offer no maintenance. All modifications will be done by the staff at Western Michigan University and anyone else who uses the project. This being said there are modifications that we had planned but didn't have time to get to that could be added to increase the user experience for the project. These include
-\begin {itemize}
-\item Adding a secure layer between the pi and the server
-\item Adding historical data logging to the Raspberry Pi
-\item Creating a way to retrieve historical data from the device if it was down for a period
-\item Upgrading the user control area to have group administration
-\item Making a program that would poll servers for their data and add it to a graph
-\end {itemize}
+\begin{itemize}
+	\item Adding a secure layer between the pi and the server,
+	\item Adding historical data logging to the Raspberry Pi,
+	\item Creating a way to retrieve historical data from the device if it was down for a period,
+	\item Upgrading the user control area to have group administration,
+	\item Making a program that would poll servers for their data and add it to a graph.
+\end{itemize}
+We plan on working on implementing these features, and modifying the project with our own ideas in the coming future, gut we do not guarantee any finished products. We will, however, offer our work to the client upon completion of a stable version and successful testing.
+\newline
+\indent
+In addition, we have created multiple guides and how-to manuals for installing and building the sensor unit, and for putting the server together.
 \newpage
 
 \subsection*{Resources}
 \addcontentsline{toc}{subsection}{Maintenance}
 
 \begin{itemize}
-\item Raspberry Pi
-\item Temperature Sensor(s)
-\item Humidity Sensor(s)
-\item Web Server, preferably externally hosted
-\item Soldering Equipment
-\item SD card(s) loaded with the Raspbian Operating System
-\item Power Connector(s) for Raspberry Pi
-\item WiFi usb dongle for Raspberry Pi
+	\item Raspberry Pi
+	\item Temperature Sensor(s)
+	\item Humidity Sensor(s)
+	\item Web Server, preferably externally hosted
+	\item Soldering Equipment
+	\item SD card(s) loaded with the Raspbian Operating System
+	\item Power Connector(s) for Raspberry Pi
+	\item WiFi usb dongle for Raspberry Pi
 \end{itemize}
 \newpage
 
@@ -332,53 +378,53 @@ After the completion of this project the current senior design team will offer n
 \addcontentsline{toc}{subsection}{References}
 For everything raspberry pi we use these sites
 \begin{itemize}
-\item http://www.raspberrypi.org/
-\item http://www.raspbian.org/
-\item C Programming 2nd Edition
-\item http://www.adafruit.com/
+	\item http://www.raspberrypi.org/
+	\item http://www.raspbian.org/
+	\item C Programming 2nd Edition
+	\item http://www.adafruit.com/
 \end{itemize}
 For everything web server related these are the sites we use
 \begin{itemize}
-\item http://laravel.com/docs/quick
-\item http://www.w3schools.com/
-\item http://www.noip.com
-\item http://httpd.apache.org/
-\item http://www.w3.org
-\item http://aws.amazon.com/
+	\item http://laravel.com/docs/quick
+	\item http://www.w3schools.com/
+	\item http://www.noip.com
+	\item http://httpd.apache.org/
+	\item http://www.w3.org
+	\item http://aws.amazon.com/
 \end{itemize}
 \newpage
 
 \subsection*{Glossary}
 \addcontentsline{toc}{subsection}{Glossary}
 \begin{description}
-\item [GUI] \hfill \\
-Graphical User Interface. The windows a user interacts with.
-\item [MSP430] \hfill \\
-A 16-bit microcontroller platform made by Texas Instruments.
-\item [Raspberry Pi] \hfill \\
- A credit-card-sized single-board computer developed by the Raspberry Pi Foundation.
-\item [Arduino] \hfill \\
-A series of microcontrollers that are very commonly used for computer to real world communications.
-\item [Raspbian] \hfill \\
- A Debian based operating system that we will use for our Raspberry Pi’s
-\item [CEAS] \hfill \\
-College of Engineering and Applied Sciences at Western Michigan University.
-\item [PHP] \hfill \\
-A recursive acronym for “PHP Hypertext Preprocessor” - the web programming language being used.
+	\item [GUI] \hfill \\
+		Graphical User Interface. The windows a user interacts with.
+	\item [MSP430 Launchpad] \hfill \\
+		A 16-bit microcontroller platform made by Texas Instruments.
+	\item [RaspberryPi] \hfill \\
+		A credit-card-sized single-board computer developed by the Raspberry Pi Foundation.
+	\item [Arduino] \hfill \\
+		A series of microcontrollers that are very commonly used for computer to real world communications.
+	\item [Raspbian] \hfill \\
+		A Debian based operating system that we will use for our Raspberry Pi’s
+	\item [CEAS] \hfill \\
+		College of Engineering and Applied Sciences at Western Michigan University.
+	\item [PHP] \hfill \\
+		A recursive acronym for “PHP Hypertext Preprocessor” - the web programming language being used.
 \end{description}
 \newpage
 
 \subsection*{Ownership}
 \addcontentsline{toc}{subsection}{Ownership}
 \begin{description}
-\item [Licenses] \hfill \\
-Our project is under several licenses. PHP is a free, open source, software released under the PHP License. Laravel is licensed under the MIT license and per the agreement we are “free to modify, distribute and re-publish the source code on the condition that the copyright notices are left intact”. In the event that our project was used to generate revenue, or be sold as a standalone software package, the license permits us “to incorporate Laravel into any commercial or closed source application”. The GNU license for our project is open source and will be hosted for all to access and modify as they desire on GitHub.com.
-\item [Intellectual Property (IP)] \hfill \\
-As this project is being developed as a Senior Design project for Western Michigan University (WMU) under the direction of Dr. John Kapenga, WMU will retain the intellectual rights to the software.
-\item [Non-Disclosure Agreement (NDA)] \hfill \\
-No non-disclosure agreement is being used at this time. The project is maintained on GitHub.com, which is freely and openly accessible to anyone who wishes to view it, and is thus tracked by search engines such as Google, where it is able to be searched for by anyone on the planet.
-\item [Warranty] \hfill \\
-A maintenance document has been created for the project. Other than that document and this document no other outside assistance is required by the members of this project, and no warranty is given or implied.
+	\item [Licenses] \hfill \\
+		Our project is under several licenses. PHP is a free, open source, software released under the PHP License. Laravel is licensed under the MIT license and per the agreement we are “free to modify, distribute and re-publish the source code on the condition that the copyright notices are left intact”. In the event that our project was used to generate revenue, or be sold as a standalone software package, the license permits us “to incorporate Laravel into any commercial or closed source application”. The GNU license for our project is open source and will be hosted for all to access and modify as they desire on GitHub.com.
+	\item [Intellectual Property (IP)] \hfill \\
+		As this project is being developed as a Senior Design project for Western Michigan University (WMU) under the direction of Dr. John Kapenga, WMU will retain the intellectual rights to the software.
+	\item [Non-Disclosure Agreement (NDA)] \hfill \\
+		No non-disclosure agreement is being used at this time. The project is maintained on GitHub.com, which is freely and openly accessible to anyone who wishes to view it, and is thus tracked by search engines such as Google, where it is able to be searched for by anyone on the planet.
+	\item [Warranty] \hfill \\
+		A maintenance document has been created for the project. Other than that document and this document no other outside assistance is required by the members of this project, and no warranty is given or implied.
 \end{description}
 
 \end{document}
