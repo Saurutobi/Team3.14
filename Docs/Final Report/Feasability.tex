@@ -11,6 +11,7 @@
 
 \subsection*{Background}
 \addcontentsline{toc}{subsection}{Background}
+\indent
 Our client has many needs that have been unmet for various reasons. Existing problems make the current situation work improperly. Our project provides solutions to those needs and provides resolutions to their problems.
 \newline
 \indent
@@ -99,9 +100,6 @@ The the third level of user is the regualar user. This user can see the graph of
 \newline
 \indent
 There is a final type of user which requires no logging in. This option of user can only see the main page. It is beneficial to have it this way in case an administrator wants to quick check things and doesn't want to bother with logging in.
-\newpage
-
-
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{AddUser.PNG}}
 	\caption{Page To Add Users}
@@ -120,11 +118,114 @@ Above is the database diagram of the existing web site. We decided to not make m
 
 \subsection*{Design Decisions}
 \addcontentsline{toc}{subsection}{Design Decisions}
-
+\begin{center}
+	\textbf{Hardware, The Microprocessor}
+\end{center}
+\indent
+There were multiple options for microprocessors we could use. After some research, we narrowed down our list of possible units to these three: the RaspberryPi, the MSP430 Launchpad, and the Arduino Leonardo.
+\newline
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.50]{raspberripi.png}}
+	\caption{The RaspberryPi}
+\end{figure}
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.50]{msp430.png}}
+	\caption{The MSP430 Launchpad}
+\end{figure}
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.50]{arduino.png}}
+	\caption{The Arduino Leonardo}
+\end{figure}
+\indent
+Each of these devices had their own benefits. The MSP430 Launchpad was the cheapest option while the RaspberryPi was the most expensive option. A big problem with the MSP430 Launchpad is that is offers almost no features. It may be cheap, but the time, effort, and money we would need to put in to this device to connect it to the internet made it unusable to us.
+\newline
+\indent
+The Arduino Leonardo was our second option. It came with many features. It was widely documented and widely used. But, the Arduino Leonardo face the same problem that the MSP430 Launchpad has: it isn't easily or cheaply connected to the internet.
+\newline
+\indent
+Finally, the RaspberryPi. The RaspberryPi is heavily used and offers much documentation. In addition, it comes with multiple USB ports, an ethernet jack, and the ability to run a full Linux Operating System. This all comes in a \textdollar35 package. All we needed was to buy a \textdollar5 SD card to host the Operating System.
 \newpage
+
+\begin{center}
+	\textbf{Hardware, The Sensors}
+\end{center}
+\indent
+Our client asked us to use both temperature and humidity sensors. We found many sensors:
+\begin{itemize}
+	\item TMP36 Analog Temperature Sensor
+	\item DS18B20 Digital Temperature Sensor
+	\item AM2315 Digital Temperature Sensor
+	\item DHT11 Sensor Unit
+	\item DHT22 Sensor Unit
+\end{itemize}
+These sensor are all very good sensors in their own regard. We first looked at using two different sensors, and began by searching for temperature sensors.
+\newline
+\indent
+The TMP36 was the first temperature sensor we looked at. It is cheap, and fast. It's also analog. Because it is an analog sensor, it requires calibration for each individual sensor. This is too much work and can cause reliablitiy issues, so we did not go with the TMP36.
+\newline
+\indent
+The DS18B20 and AM2315 sensors were the next sensors we looked at. Both are digital, and require no calibration. We immediately removed the AM2315 from our list because it costs \textdollar30. We purchased a few DS18B20 sensors to do some preliminary testing. It is slow, requiring about a second to return proper data.
+\newline
+\indent
+As we'd found our temperature sensor, we began looking for a humidity sensor. All of the ones we found received terrible reviews and we ignored them altogether. Then, we stumbled upon the DHT11 Sensor Unit. This sensor reads both temperature and humidity and is digital. It is about 3 times more expensive than a DS18B20 but is just as slow.
+\newline
+\indent
+After testing for a few weeks, we began looking at the accuracy of our DHT11. As it turns out, the DHT11 is about 4 times worse in terms of accuracy than the existing \textdollar300 Temperature@lert units in place. We soon found out that the DHT11 has a big bother, the DHT22. It performs the same functions as the DHT11, but has a wider range of sensing, and is just as accurate as the existing Temperature@lert units. While the DHT22 is \textdollar5, it is very powerful and inscredibly accurate, and we decided to use the DHT22 for our final sensor.
+\newpage
+
+\begin{center}
+	\textbf{Hardware, Enabling Internet Connectivity}
+\end{center}
+\indent
+We had two options for connecting our RaspberryPi sensors to the internet: a wireless or a wired connection. Both options we available to us by our Client.
+\newline
+\indent
+Using the wired connection approach, we would be able to run the RaspberryPi using Power-over-Ethernet(PoE). All of WMU's ethernet cables in the CEAS building are PoE capable. The problem with this approach is the RaspberryPi doesn't allow PoE. We would need a PoE splitter attached to the RaspberryPi to remove the power from the ethernet cable and convert is to USB power which the RaspberryPi accepts. The benefits of PoE is that the RaspberryPi would not need an AC power unit.
+\newline
+\indent
+Another drawback of using a wired connection would be the need to run an ethernet cable to wherever the RaspberryPi will be located. This is very inconvenient for moving the sensor units around and for cable cleanliness in general.
+\newline
+\indent
+In contrast, using a wireless connection opens us up to a wide range of uses. While the USB wireless unit does cost about \textdollar10, this was a cost we were willing to incur. The wireless adapter we chose is a generic 802.11n adapter, but it is backwards compatible with the 802.11a/b/g protocols. Using a wireless adapter, we can move the sensor unit around to any location we require it to be, and because the 802.11n protocol is a long range protocol, we can go quite a distance from a wireless internet access point.
+\newpage
+
+\begin{center}
+	\textbf{Software, Web Framework}
+\end{center}
+\indent
+Laravel dickbutts here
+\newpage
+
+\begin{center}
+	\textbf{Software, Sensor Unit Programming Language}
+\end{center}
+\indent
+python dickbutts here
+\newpage
+
+\begin{center}
+	\textbf{Software, Web Site Setup}
+\end{center}
+\indent
+LAMP dickbutts here
+\newpage
+
+\begin{center}
+	\textbf{Server, Site Hosting}
+\end{center}
+\indent
+AWS dickbutts here
+\newpage
+
+\begin{center}
+	\textbf{Web Site, Design and Styling}
+\end{center}
+\indent
+Bootstrap dickbutts here
+\newpage
+
 \subsection*{Design}
 \addcontentsline{toc}{subsection}{Design}
-
 \newpage
 
 \subsection*{Implementation}
@@ -136,12 +237,14 @@ Here is the initial view of the site once a user has logged in.
 	\caption{After Logging In}
 \end{figure}
 \newpage
+
 Now when a user clicks on the tab it will expand to show what the current temperature and humidity are. Next to that is the status of the machine i.e. okay or critical. Upon mousing over the graph it will give the temperature or humidity at that time in history. See the next figure.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{opentabfirst.PNG}}
 	\caption{Open Tab and Data}
 \end{figure}
 \newpage
+
 These tabs are the same for each room and will show all appropriate data for each room. Next is the new and improved administration panel. 
 On this panel there are five different tabs rooms, devices, users, room assignments and device types. All of these different devices the administrator is able to create, update and delete anything in those tabs. 
 \begin{figure}[H]
@@ -149,30 +252,35 @@ On this panel there are five different tabs rooms, devices, users, room assignme
 	\caption{First View of Administration Panel}
 \end{figure}
 \newpage
+
 The rooms tab has just those options and only has room name as its only parameter. See the next figure for the rooms user interface.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{roomsdesktop.PNG}}
 	\caption{View of the Rooms Tab}
 \end{figure}
 \newpage
+
 The next tab devices tab. This tab shows the device id, name, location, ip address, type of device, number of ports on the device, warning, alert and critical temperatures, and lastly status. The administrator can add, remove and update devices. 
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{devicesdesktop.PNG}}
 	\caption{Device Administration}
 \end{figure}
 \newpage
+
 The users tab allows new users and administrators to be created as well as updating and deleting users. This tab also allows verification of the users email and phone alerts. For a verification the user receives a text or email with a verification code that that the user types in the code and this allows the system to verify that the text or email went through.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{usersdesktop.PNG}}
 	\caption{User Administration}
 \end{figure}
 \newpage
+
 The room assignments tab is very important. This is where administrators assign users to rooms. When a user is assigned to a room they will receive alerts when temperature benchmarks are reached.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{roomassignmentsdesktop.PNG}}
 	\caption{User Room Assignments}
 \end{figure}
 \newpage
+
 \subsection*{Testing}
 \addcontentsline{toc}{subsection}{Testing}
 There are two types of testing that we used in this project unit testing and functional testing. Unit Testing is a must because it will allow the user to test every feature when a new patch comes out and allows after each upgrade to check if the features still work. Unit tests cannot be used to check everything so there must also be functional tests that show the site is reacting correctly and can handle loads properly.
@@ -191,11 +299,8 @@ There were many different functional tests that we ran to test full functionalit
 \newpage
 \subsection*{Security}
 \addcontentsline{toc}{subsection}{Security}
-
-
-
-
 \newpage
+
 \subsection*{Maintenance}
 \addcontentsline{toc}{subsection}{Maintenance}
 After the completion of this project the current senior design team will offer no maintenance. All modifications will be done by the staff at Western Michigan University and anyone else who uses the project. This being said there are modifications that we had planned but didn't have time to get to that could be added to increase the user experience for the project. These include
@@ -213,17 +318,15 @@ After the completion of this project the current senior design team will offer n
 
 \begin{itemize}
 \item Raspberry Pi
-\item Temperature Sensors
-\item Humidity Sensors
-\item Web Server
+\item Temperature Sensor(s)
+\item Humidity Sensor(s)
+\item Web Server, preferably externally hosted
 \item Soldering Equipment
-\item Operating System loaded SD Cards with Raspbian
-\item Power Connectors for Raspberry pi
-\item WiFi Connectors for Raspberry pi
-\item External Server to Host Website
+\item SD card(s) loaded with the Raspbian Operating System
+\item Power Connector(s) for Raspberry Pi
+\item WiFi usb dongle for Raspberry Pi
 \end{itemize}
 \newpage
-
 
 \subsection*{References}
 \addcontentsline{toc}{subsection}{References}
@@ -234,16 +337,17 @@ For everything raspberry pi we use these sites
 \item C Programming 2nd Edition
 \item http://www.adafruit.com/
 \end{itemize}
-For everything web server these are the sites we use
+For everything web server related these are the sites we use
 \begin{itemize}
 \item http://laravel.com/docs/quick
 \item http://www.w3schools.com/
 \item http://www.noip.com
-\item httpd:apache.org
+\item http://httpd.apache.org/
 \item http://www.w3.org
 \item http://aws.amazon.com/
 \end{itemize}
 \newpage
+
 \subsection*{Glossary}
 \addcontentsline{toc}{subsection}{Glossary}
 \begin{description}
@@ -263,20 +367,18 @@ College of Engineering and Applied Sciences at Western Michigan University.
 A recursive acronym for “PHP Hypertext Preprocessor” - the web programming language being used.
 \end{description}
 \newpage
+
 \subsection*{Ownership}
 \addcontentsline{toc}{subsection}{Ownership}
 \begin{description}
 \item [Licenses] \hfill \\
-Our project will be under several licenses. PHP is a free open source software released under the PHP License.
-Laravel is licensed under the MIT license and per the agreement we are “free to modify, distribute and re-publish the source code on the condition that the copyright notices are left intact”.
-In the event that our project was used to generate revenue, or be sold as a standalone software package, the license permits us “to incorporate Laravel into any commercial or closed source application”.  
-The GNU license and will be open source and will be hosted for all to access and modify as they desire on GitHub.
+Our project is under several licenses. PHP is a free, open source, software released under the PHP License. Laravel is licensed under the MIT license and per the agreement we are “free to modify, distribute and re-publish the source code on the condition that the copyright notices are left intact”. In the event that our project was used to generate revenue, or be sold as a standalone software package, the license permits us “to incorporate Laravel into any commercial or closed source application”. The GNU license for our project is open source and will be hosted for all to access and modify as they desire on GitHub.com.
 \item [Intellectual Property (IP)] \hfill \\
-As this project is being developed as a Senior Design project for Western Michigan University (WMU) at the direction of Dr. John Kapenga, WMU will retain the intellectual rights to the software.
+As this project is being developed as a Senior Design project for Western Michigan University (WMU) under the direction of Dr. John Kapenga, WMU will retain the intellectual rights to the software.
 \item [Non-Disclosure Agreement (NDA)] \hfill \\
-No non-disclosure agreement is being used at this time.  The project is maintained on GitHub, which is freely and openly accessible to anyone who wishes to view it, and is thus tracked by search engines such as Google, where it is able to be searched for by anyone on the planet.
+No non-disclosure agreement is being used at this time. The project is maintained on GitHub.com, which is freely and openly accessible to anyone who wishes to view it, and is thus tracked by search engines such as Google, where it is able to be searched for by anyone on the planet.
 \item [Warranty] \hfill \\
-A maintenance document has been created for the project. Other than that document and this document no other outside assistance is required by the members of this project.
+A maintenance document has been created for the project. Other than that document and this document no other outside assistance is required by the members of this project, and no warranty is given or implied.
 \end{description}
 
 \end{document}
