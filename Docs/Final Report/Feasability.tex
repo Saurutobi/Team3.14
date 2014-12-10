@@ -4,7 +4,7 @@
 \usepackage{float}
 \begin{document}
 \title{Temperature and Humidity Monitoring System}
-\author{Marcel Englmaier, Justin Koehler, and Jason Pearson}
+\author{Jason Pearson, Justin Koehler, and Marcel Englmaier}
 \maketitle
 \tableofcontents
 \newpage
@@ -12,17 +12,18 @@
 \subsection*{Background}
 \addcontentsline{toc}{subsection}{Background}
 \indent
-Our client has many needs that have been unmet for various reasons. Existing problems make the current situation work improperly. Our project provides solutions to those needs and provides resolutions to their problems.
+\indent
+Our client has many needs that have been unmet for various reasons. Existing problems make the current situation work improperly. Our project provides solutions to those needs and resolutions to their problems.
 \newline
 \indent
-Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was built in 2003 at a cost of $\$$72.5 million and is the home of the Western Michigan University College of Engineering and Applied Sciences (CEAS for short). WMU’s engineering website explains that WMU has “state-of-the-art resources housed in a $\$$100 million high-tech facility”. Sadly, our client has advised that this did not include any automated temperature or humidity sensors and reporting equipment in any of the rooms. 
-These are absolutely critical in rooms that maintain computer, technology, manufacturing, and scientific equipment to safeguard the investment and resources of the university.  There are many risks that computer equipment face as they spend their entire life conducting electricity and being made of rust-prone metals. Standard servers are recommended to be kept at an average temperature of $25\,^{\circ}{\rm C}$ or less, with automatic shut-off or critical shutdown temperature maximums of $35\,^{\circ}{\rm C}$. They must also be kept dry as any condensation will not only short any circuit boards it touches, but cause the servers themselves to rust, as well as the metal racks that support them. Aside from rusts and shorts, excess humidity is a cause of molding and mildewing which is unhealthy for personnel and students, and also damages hardware and clogs air filters.
+Per Wikipedia, Western Michigan University's (WMU for short) Parkview campus was built in 2003 at a cost of $\$$72.5 million and is the home of the Western Michigan University College of Engineering and Applied Sciences (CEAS for short). WMU’s engineering website explains that WMU has “state-of-the-art resources housed in a $\$$100 million high-tech facility”. Sadly, our client has told us that this did not include any automated temperature or humidity sensors and reporting equipment in any of the rooms. 
+These are absolutely critical in rooms that maintain computers, technology, manufacturing, and scientific equipment to safeguard the investment and resources of the university.  There are many risks that computer equipment face as they spend their entire life conducting electricity and being made of rust-prone metals. Standard servers are recommended to be kept at an average temperature of $25\,^{\circ}{\rm C}$ or less, with automatic shut-off or critical shutdown temperature maximums of $35\,^{\circ}{\rm C}$. They must also be kept dry as any condensation will not only short any circuit boards it touches, but cause the servers themselves to rust, as well as the metal racks that support them. Aside from rusts and shorts, excess humidity is a cause of molding and mildewing which is unhealthy for personnel and students, and also damages hardware and clogs air filters. Even in non extreme cases we need to be on lookout for temperature and humidity rises as they can reduce the lifespan of machinery as well.
 \newline
 \indent
-There are many factors that provoke the need for this monitoring, from the downtime of a website, to the security networks that safeguard a campus, the need to have digital phones online, to safeguard data that would be lost in a failure, to the overall cost of the hardware. As an example, one server cluster with the moniker "Thor" has a hardware value of $\$$400,000 which would result in an excessive loss for the university and to research done by many departments if it were damaged.
+There are many factors that provoke the need for this monitoring such as the uptime of a server, security networks that safeguard a campus, keeping digital phones online, and to safeguard data. As an example, one server cluster with the moniker "Thor" has a hardware value of $\$$400,000 which would result in an excessive loss for the university and to research done by many departments if it were damaged.
 \newline
 \indent
-Our client informed us that there have been several incidents where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting. One such incident where the temperature increased without staff knowing resulted in a ~$\$$500,000 loss. A previous loss due to humidity occurred when the humidity rose to the point of condensation and large steel paper rolls accrued a layer of surface rust, rendering it useless. It needed to be replaced, causing monetary damages and downtime.
+Our client informed us that there have been several incidents where the temperature of servers increased unhindered to the point that equipment was destroyed due to this lack of automated environment reporting. One such incident where the temperature increased without staff knowing resulted in a ~$\$$500,000 loss. A previous loss due to humidity occurred when the humidity rose to the point of condensation and large steel paper rollers accrued a layer of surface rust. This made the roller unusable and needed to be replaced, causing not only monetary costs but downtime as well.
 \newline
 \indent
 Since these fateful incidents, WMU has had students implement several forms of reporting, and currently uses the a device called "Temperature@lert WiFi Edition" to keep track of the temperature of rooms around campus. These sensors work very well but their major flaw is that they are very expensive. These sensors cost upwards of three hundred dollars per sensor and have many features that are useful, but unnecessary for our purposes. These devices also lack a very important feature: a central management system to view all the sensors. To alleviate this problem we proposed to create a web site that would communicate with a network of reliable, home brewed sensor units. This website was originally created by another WMU Computer Science Senior Design team and it currently is used to communicate with the Temperature@lert sensors.
@@ -90,16 +91,13 @@ The below figure shows the page where a new room can be added.
 \newpage
 
 \indent
-There are three different levels of users. The highest level of user is the main system administrator, or "master admin". This administrator is in control of the whole system. Their permissions include all the powers of the normal room administrator, but are able make and demote normal room administrators. 
+There are two different levels of users within the project. One level is the users and the higher level is the administrators.
 \newline
 \indent
-The second tier of user is the normal room administrator. The room administrators are able see the stats of the rooms they have access and will receive alerts for those rooms. These administrators are able to add new users, add new devices, add new rooms, and change settings for these items.
+The administrators are in charge of handling all room assignments as well as creating, updating and deleting users, devices, rooms and device types. These administrators also are able to be assigned to rooms just like a normal user.
 \newline
 \indent
-The the third level of user is the regualar user. This user can see the graph of data on the front page and login. They also receive alerts, but are not able to change any settings.
-\newline
-\indent
-There is a final type of user which requires no logging in. This option of user can only see the main page. It is beneficial to have it this way in case an administrator wants to quick check things and doesn't want to bother with logging in.
+The normal user can see the graph of data on the front page and login. They also receive alerts, but are not able to change any settings with the devices etc.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{AddUser.PNG}}
 	\caption{Page To Add Users}
@@ -113,7 +111,7 @@ Above is the form for adding a new user. The required fields are name, email, an
 	\caption{Entity Relationship Diagram}
 \end{figure}
 \indent
-Above is the database diagram of the existing web site. We decided to not make minor changes because the database was designed in a manner that didn't allow humidity recording without adding another table
+Above is the old database diagram of the web site. We decided to not make minor changes because the database was designed in a manner that didn't allow humidity recording without adding another table
 \newpage
 
 \subsection*{Design Decisions}
@@ -196,7 +194,7 @@ In contrast, using a wireless connection opens us up to a wide range of uses. Wh
 For our web framework, we had many choices. We had options ranging from Ruby on Rails, to Tomcat, to CakePHP, and even to code in raw PHP without a framework. In the end, we decided to use Laravel. We did extensive research, and found, according to the graph below, that Laravel has the most market share of all PHP web frameworks.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{frameworks2.png}}
-	\caption{The Market Share of Web Frameworks}
+	\caption{The Market Share of PHP Web Frameworks}
 \end{figure}
 \indent
 Having over a quarter market share over all other PHP web frameworks means that Laravel is doing something right. It also means that people trust Laravel, and because of this, there is quite a lot of documentation.
@@ -246,33 +244,47 @@ Our primary reason for picking AWS was that it is free for the first year, and t
 The existing web site that we took over from the previous team did not look nice at all. The buttons were ugly, the styling was poor, and the colors were mismatched. Furthermore, it was not mobile-compatibly at all. We had to find a solution.
 \newline
 \indent
-We decided to tackle the graphs on the pages first. The existing web site used High Charts, which is a rather useful graphing library. As it turns out, the version that was being used was outdated and old. We updated it, and most of the problems that existed were gone. The updated version provided mobile support, scaled well, and looked much cleaner.
+We decided to tackle the graphs on the pages first. The existing web site used High Charts, which is a rather useful graphing library. As it turns out, the version that was being used was quite outdated. We updated it, and most of the problems that existed were gone. The updated version provided mobile support, scaled well, and looked much cleaner.
 \newline
 \indent
-There were alternative for us to use. We could have scrapped High Charts altogether and gone with commonly used libraries like Google Charts, or Chart.js. We also thought about using the YUI, the Yahoo User Interface Library. All of these are used often across many different implementations, but we decided to stick with High Charts because it worked and provided all the functionality we required without a massive re-write of the main pages.
+There were alternatives for us to use. We could have scrapped High Charts altogether and gone with commonly used libraries like Google Charts, or Chart.js. We also thought about using the YUI, the Yahoo User Interface Library. All of these are used often across many different implementations, but we decided to stick with High Charts because it worked and provided all the functionality we required without a massive re-write of the main pages.
 \newline
 \indent
-Along with an updated and cleaner charting library, we decided to scrap most of the existing styling on the web site. We wanted our web site to be accessible across all devices, and the existing site didn't provide that. We looked at using jQuery Mobile, which is slow, and Foundation, which is not insanely popular. We opted to go with a library called Bootstrap. Bootstrap is open source, widely used, and well documented. It's also incredibly easy of use and modify. It relies on a basic set of class tags which propogate and scale incredibly well. Once we finished implementing Bootstrap, the website became usable on any device and looked really nice.
+Along with an updated and cleaner charting library, we decided to scrap most of the existing styling on the web site. We wanted our web site to be accessible across all devices, and the existing site didn't provide that. We looked at using jQuery Mobile, which can be slow, and Foundation, which is not insanely popular. We opted to go with a library called Bootstrap. Bootstrap is open source, widely used, and well documented. It's also incredibly easy to use and modify. One of our group members also had extensive experience using Bootstrap which contributed greatly to this choice as well. Bootstrap relies on a basic set of class tags which propagate and scale incredibly well. Once we finished implementing Bootstrap, the website became usable on any device and looked really nice.
 \newpage
 
 \subsection*{Design}
 \addcontentsline{toc}{subsection}{Design}
-do your poops here
+\indent
+\indent
+Next we shall look at how the pieces interact with each other to create the system. First we will look at an overview of how the server, the user and the devices interact and how they are setup. 
+\newline
+\indent
+On the right we have different rooms that are set up. Each room has sensors in it of any type. Each sensor hosts an xml document that shows the current information about the sensor. The central management server then on a routine basis will go out and fetch data from these sources and respond accordingly ie text or email if a threshold has been reached. The user can also view the website and it will interact with the user appropriately that way.
 \begin{figure}[H]
-	\makebox[\textwidth]{\includegraphics[scale=0.75]{dickbutt.jpg}}
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{overlook.png}}
+	\caption{Overlook of the User, Server, and Device Relations}
 \end{figure}
-\newpage
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{zoomed.png}}
+	\caption{Closer Look of Server and Raspberry Pi}
+\end{figure}
+\indent
+Now to take a closer look at the interactions between the custom built raspberry pi sensing unit and the Linux central management system. On the Linux side we have the LAMP stack. Our laravel framework depends on this stack to function appropriately. When the time comes laravel will need to update the current temperature that a device has. So it will download the XML file from the device and send it through the driver for that device type. After that it will store the data in the database and based on the constraints for that device determine what the status of the device is and if it needs to react to its temperature. 
+\newline
+\indent
+Meanwhile on the Raspberry Pi side we have the Pi communicating with the sensor. To communicate with the sensor we use a library provided by the sensor's  manufacturer and python. Originally we used C to talk to the device, but C talked so fast to the device it didn't have time to determine the current temperature and humidity before being asked again. This would cause misreads and require multiple reads before getting a correct result. Using python we were able to get data back on the first try most of the time. The frequency of how often the temperature should be polled is  determined by the administrator when the device is first set up. This is created through as simple cron job which the system administrator determines how often he or she wants the information polled. After data has been polled the program writes it to an XML file that is hosted by apache on the raspberry pi. 
 
+\newpage
 \subsection*{Implementation}
 \addcontentsline{toc}{subsection}{Implementation}
 \indent
 Now how did this design turn out. Before all the old site vital areas were shown. Now after implementing BootStrap we have a completely different front end. Here is the initial view of the site once a user has logged in.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{firstlogin.PNG}}
-	\caption{After Logging In}
+	\caption{After Logging In on a Desktop Computer}
 \end{figure}
 \newpage
-
 \indent
 Now when a user clicks on the tab it will expand to show what the current temperature and humidity are. Next to that is the status of the machine i.e. okay or critical. Upon mousing over the graph it will give the temperature or humidity at that time in history. See the next figure.
 \begin{figure}[H]
@@ -320,22 +332,60 @@ The room assignments tab is very important. This is where administrators assign 
 	\caption{User Room Assignments}
 \end{figure}
 \newpage
+\indent 
+The last piece of the administration panel is the device tab. This device type tab. This is where the administrator can add different types of devices based on what they want to connect to their system. We have two device drivers that we have created. One is for the temperature @lert system which our raspberry pi also uses, and we have one for test sensors. If someone wanted to create their own driver they would make the connection here between the ui and the driver and then would need to create a driver to parse the XML.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.45]{Devicetype.PNG}}
+	\caption{User Room Assignments}
+\end{figure}
+\newpage
+One important feature that the client said was a must is that there must be support for mobile devices as we have stated before. The website on a mobile device looks almost identical to the desktop version of the site. Below are some screen shots from mobile devices looking at normal pages in the temperature window and the administration panel.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.25]{mobilecombined.PNG}}
+	\caption{User Area On Mobile Device}
+\end{figure}
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.25]{mobilecombinedadmin.PNG}}
+	\caption{Administration Panel on Mobile Device}
+\end{figure}
+\newpage
+Now that the new site has been shown we will take a look at the finished product of the raspberry pi. First we have a picture of the device not assembled. There is the white temperature sensor, the black sd card, the usb wireless adapter and lastly the raspberry pi.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.55]{disassembled.PNG}}
+	\caption{Disassembled (Banana for Scale)}
+\end{figure}
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.55]{assembled.PNG}}
+	\caption{Assembled (Banana for Scale)}
+\end{figure}
+\newpage
 
+\newpage
 \subsection*{Testing}
 \addcontentsline{toc}{subsection}{Testing}
 \indent
 There are two types of testing that we used in this project unit testing and functional testing. Unit Testing is a must because it will allow the user to test every feature when a new patch comes out and allows after each upgrade to check if the features still work. Unit tests cannot be used to check everything so there must also be functional tests that show the site is reacting correctly and can handle loads properly.
 \newline
 \indent
-Unit tests for this project are ran through the command line and use laravel's testing framework. 
-\newline
+Unit tests for this project are ran through the command line and use Laravel's testing framework. 
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.75]{test_pass.png}}
+	\caption{Successful Running of Unit Tests}
+\end{figure}
 \indent
-There were many different functional tests that we ran to test full functionality of our project. A few tests that we ran include
-\begin{itemize}
-	\item E-mail Alerts
-	\item Text Message Alerts
-	\item Virtual Sensors to test the web site's reporting and usability
-\end{itemize}
+There were many different functional tests that we ran to test full functionality of our project. Some of the big functional tests that we ran are for email alerts, text message alerts and virtual sensors.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.25]{textmessage.png}}
+	\caption{Text Message Alert and Verification Functional Testing}
+\end{figure}
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.65]{emailalerts.png}}
+	\caption{Email Alert Functional Testing}
+\end{figure}
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.25]{textmessage.png}}
+	\caption{Multiple Sensor Testing}
+\end{figure}
 \newpage
 
 \subsection*{Security}
@@ -366,8 +416,10 @@ In addition, we have created multiple guides and how-to manuals for installing a
 	\item Raspberry Pi
 	\item Temperature Sensor(s)
 	\item Humidity Sensor(s)
-	\item Web Server, preferably externally hosted
+	\item Externally Hosted Web Server
 	\item Soldering Equipment
+	\item Cabling to Connect Sensor to Pi
+	\item Resistor
 	\item SD card(s) loaded with the Raspbian Operating System
 	\item Power Connector(s) for Raspberry Pi
 	\item WiFi usb dongle for Raspberry Pi
@@ -411,6 +463,10 @@ For everything web server related these are the sites we use
 		College of Engineering and Applied Sciences at Western Michigan University.
 	\item [PHP] \hfill \\
 		A recursive acronym for “PHP Hypertext Preprocessor” - the web programming language being used.
+	\item [LAMP] \hfill \\
+		LAMP is an acronym for Linux Apache Mysql PHP and is a common way to host dynamic websites
+	\item [Apache] \hfill \\
+		Apache is a web host used for serving up web pages all around the web.
 \end{description}
 \newpage
 
