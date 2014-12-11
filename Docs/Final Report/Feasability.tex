@@ -277,7 +277,7 @@ On the right of the figure below, we have different rooms that are set up. Each 
 Now to take a closer look at the interactions between the custom built raspberry pi sensing unit and the Linux central management system. On the Linux side we have the LAMP stack. Our laravel framework depends on this stack to function appropriately. When the time comes laravel will need to update the current temperature that a device has. So it will download the XML file from the device and send it through the driver for that device type. After that it will store the data in the database and based on the constraints for that device determine what the status of the device is and if it needs to react to its temperature. 
 \newline
 \indent
-Meanwhile on the RaspberryPi side we have the RaspberryPi communicating with the sensor. The frequency of how often the sensor unit should be polled is determined by the administrator when the device is first set up. This is created through as simple cron job.After data has been polled the program writes it to an XML file that is hosted by apache on the RaspberryPi. For a more detailed description of how the RaspberryPi interacts with the sensors, please see the  
+Meanwhile on the RaspberryPi side we have the RaspberryPi communicating with the sensor. The frequency of how often the sensor unit should be polled is determined by the administrator when the device is first set up. This is created through as simple cron job.After data has been polled the program writes it to an XML file that is hosted by apache on the RaspberryPi. For a more detailed description of how the RaspberryPi interacts with the sensors, please see the Design Decisions sensing.
 \newpage
 
 \subsection*{Implementation}
