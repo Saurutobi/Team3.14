@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.8)  10 DEC 2014 20:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.8)  10 DEC 2014 20:32
 entering extended mode
 **Feasability.tex
 
@@ -415,13 +415,20 @@ Package pdftex.def Info: textmessage.png used on input line 397.
 (pdftex.def)             Requested size: 180.67455pt x 321.19922pt.
  [32 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/tex
 tmessage.png>] [33 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Fi
-nal Report/emailalerts.png>] [34]
-Overfull \hbox (1.79677pt too wide) in paragraph at lines 417--428
+nal Report/emailalerts.png>] [34] <HashedPwd.png, id=174, 499.8675pt x 48.93282
+pt>
+File: HashedPwd.png Graphic file (type png)
+ <use HashedPwd.png>
+Package pdftex.def Info: HashedPwd.png used on input line 436.
+(pdftex.def)             Requested size: 324.91002pt x 31.80594pt.
+
+Overfull \hbox (1.79677pt too wide) in paragraph at lines 418--438
 []\OT1/cmr/m/n/10 For ses-sions, we sim-ply used Lar-avel's stan-dard in-ter-fa
 ce. This means session-
  []
 
-[35] [36] [37] [38]
+[35] [36 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report
+/HashedPwd.png>] [37] [38] [39]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -431,27 +438,27 @@ Missing character: There is no œ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no  in font cmr10!
- [39]
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no œ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no  in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no œ in font cmr10!
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no  in font cmr10!
  [40]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no œ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no  in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no œ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no  in font cmr10!
+ [41]
 ("C:\Users\Saurutobi\My Files\LbKStudios\Git\Team3.14\Docs\Final Report\Feasabi
 lity.aux") ) 
 Here is how much of TeX's memory you used:
- 1681 strings out of 493921
- 23133 string characters out of 3144864
+ 1686 strings out of 493921
+ 23217 string characters out of 3144864
  81927 words of memory out of 3000000
- 4965 multiletter control sequences out of 15000+200000
+ 4969 multiletter control sequences out of 15000+200000
  7896 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,8n,21p,1579b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -462,9 +469,9 @@ x12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Feasability.pdf (41 pages, 5558874 bytes).
+Output written on Feasability.pdf (42 pages, 5565756 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
+ 222 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

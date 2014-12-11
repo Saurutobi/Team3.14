@@ -412,6 +412,7 @@ Security was a big concern of our Client. Used Laravel's industry-grade tools to
 	\item Input Sanitization
 	\item XSS
 	\item SQL Injections
+	\item Bad Sensor Unit Data
 	\item Password Hashing
 \end{itemize}
 \indent
@@ -424,8 +425,17 @@ For sessions, we simply used Laravel's standard interface. This means session-hi
 Tokens are very important when trying to prevent false data. A token is basically a key that verifies the identity of the user or the sensor unit. By using tokens and the other security features, the only way a malicious person can infiltrate the website is by physically messing with the sensor unit hardware.
 \newline
 \indent
-Input Sanitization is the key to making sure that malicious or bad information cannot enter the web site. By making sure the user cannot submit certain pieces of data if the data doesn't conform to a specification, we can prevent a malicious user from breaking the web site.
-
+Input Sanitization is the key to making sure that malicious or bad information cannot enter the web site. By making sure the user cannot submit certain pieces of data if the data doesn't conform to a specification, we can prevent a malicious user from breaking the web site. Cleaning up user input allows the website to be secure against XSS attacks and SQL Injections. In addition, Laravel has a built-in layer that prevents these types of attacks.
+\newline
+\indent
+Sometimes, the web site can poll the sensor units at the exact time that the sensor unit is constructing the XML containing all the data. When this happens, the data is considered corrupt. We've implemented a layer using input sanitization that verifies the data that the sensor unit returns is valid and not corrupt. If the web site detects such bad data, it will wait a few seconds and re-poll the device. This will happen ten times, and then the web site will alert the users of a malfunctioning sensor unit.
+\newline
+\indent
+Lastly, we use Laravel's industry-grade password hashing tools to make sure the passwords of users and administrators are secure. In doing so, any person who is able to view the database storing the user's data will not be able to view the passwords, as they have been hashed. For an example, see the image below.
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.65]{HashedPwd.png}}
+	\caption{Hashed Passwords in the Database}
+\end{figure}
 \newpage
 
 \subsection*{Maintenance}
