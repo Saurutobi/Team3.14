@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.11.24)  10 DEC 2014 16:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.12.8)  10 DEC 2014 19:55
 entering extended mode
 **Feasability.tex
-("C:\Users\BuckDich\Documents\GitHub\Team3.14\Docs\Final Report\Feasability.tex
-"
+
+("C:\Users\Saurutobi\My Files\LbKStudios\Git\Team3.14\Docs\Final Report\Feasabi
+lity.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -93,8 +94,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks16
 \@floatcapt=\box27
 )
-("C:\Users\BuckDich\Documents\GitHub\Team3.14\Docs\Final Report\Feasability.aux
-")
+("C:\Users\Saurutobi\My Files\LbKStudios\Git\Team3.14\Docs\Final Report\Feasabi
+lity.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
@@ -107,7 +108,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
- (C:\Users\BuckDich\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count91
 \scratchdimen=\dimen106
@@ -129,9 +130,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 8.
  [1
 
-{C:/Users/BuckDich/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Users\BuckDich\Documents\GitHub\Team3.14\Docs\Final Report\Feasability.toc
-"
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("C:\Users\Saurutobi\My Files\LbKStudios\Git\Team3.14\Docs\Final Report\Feasabi
+lity.toc"
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -159,8 +160,8 @@ File: Website.PNG Graphic file (type png)
 <use Website.PNG>
 Package pdftex.def Info: Website.PNG used on input line 39.
 (pdftex.def)             Requested size: 421.19756pt x 272.51746pt.
- [4 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/Website.PNG>
-] <LoginPage.PNG, id=26, 492.33937pt x 228.855pt>
+ [4 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/Webs
+ite.PNG>] <LoginPage.PNG, id=26, 492.33937pt x 228.855pt>
 File: LoginPage.PNG Graphic file (type png)
 
 <use LoginPage.PNG>
@@ -202,93 +203,90 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
- [5 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/LoginPage.PN
-G>] <AddPage.PNG, id=31, 798.73407pt x 566.86781pt>
+ [5 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/Logi
+nPage.PNG>] <AddPage.PNG, id=31, 798.73407pt x 566.86781pt>
 File: AddPage.PNG Graphic file (type png)
 
 <use AddPage.PNG>
 Package pdftex.def Info: AddPage.PNG used on input line 62.
 (pdftex.def)             Requested size: 399.36606pt x 283.43321pt.
- [6 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/AddPage.PNG>
-] <AddDevice.PNG, id=37, 487.06969pt x 331.2375pt>
+ [6 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/AddP
+age.PNG>] <AddDevice.PNG, id=37, 487.06969pt x 331.2375pt>
 File: AddDevice.PNG Graphic file (type png)
 
 <use AddDevice.PNG>
 Package pdftex.def Info: AddDevice.PNG used on input line 71.
 (pdftex.def)             Requested size: 365.30136pt x 248.4275pt.
- [7 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/AddDevice.PN
-G>] <AddDeviceType.PNG, id=42, 389.20406pt x 210.03468pt>
+ [7 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/AddD
+evice.PNG>]
+<AddDeviceType.PNG, id=42, 389.20406pt x 210.03468pt>
 File: AddDeviceType.PNG Graphic file (type png)
-
-<use AddDeviceType.PNG>
+ <use AddDeviceType.PNG>
 Package pdftex.def Info: AddDeviceType.PNG used on input line 79.
 (pdftex.def)             Requested size: 291.90233pt x 157.52562pt.
- <AddRoom.PNG, id=43, 457.71pt x 255.95625pt>
-File: AddRoom.PNG Graphic file (type png)
 
-<use AddRoom.PNG>
+<AddRoom.PNG, id=43, 457.71pt x 255.95625pt>
+File: AddRoom.PNG Graphic file (type png)
+ <use AddRoom.PNG>
 Package pdftex.def Info: AddRoom.PNG used on input line 88.
 (pdftex.def)             Requested size: 343.28166pt x 191.9667pt.
- [8 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/AddDeviceTyp
-e.PNG> <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/AddRoom.P
-NG>] <AddUser.PNG, id=49, 411.03563pt x 323.70938pt>
+ [8 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/AddD
+eviceType.PNG> <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final 
+Report/AddRoom.PNG>] <AddUser.PNG, id=49, 411.03563pt x 323.70938pt>
 File: AddUser.PNG Graphic file (type png)
-
-<use AddUser.PNG>
+ <use AddUser.PNG>
 Package pdftex.def Info: AddUser.PNG used on input line 102.
 (pdftex.def)             Requested size: 308.27596pt x 242.78143pt.
- [9 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/AddUser.PNG>
-] <ERDDiagram.png, id=54, 691.58376pt x 949.5475pt>
+ [9 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/AddU
+ser.PNG>]
+<ERDDiagram.png, id=54, 691.58376pt x 949.5475pt>
 File: ERDDiagram.png Graphic file (type png)
-
-<use ERDDiagram.png>
+ <use ERDDiagram.png>
 Package pdftex.def Info: ERDDiagram.png used on input line 110.
 (pdftex.def)             Requested size: 242.05794pt x 332.3466pt.
- [10 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/ERDDiagram.
-png>] <raspberripi.png, id=58, 164.2938pt x 122.3772pt>
+ [10 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/ERD
+Diagram.png>] <raspberripi.png, id=58, 164.2938pt x 122.3772pt>
 File: raspberripi.png Graphic file (type png)
-
-<use raspberripi.png>
-Package pdftex.def Info: raspberripi.png used on input line 126.
+ <use raspberripi.png>
+Package pdftex.def Info: raspberripi.png used on input line 127.
 (pdftex.def)             Requested size: 82.14668pt x 61.18843pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--128
+Underfull \hbox (badness 10000) in paragraph at lines 122--129
 
  []
 
 <msp430.png, id=59, 162.3666pt x 162.3666pt>
 File: msp430.png Graphic file (type png)
  <use msp430.png>
-Package pdftex.def Info: msp430.png used on input line 130.
+Package pdftex.def Info: msp430.png used on input line 131.
 (pdftex.def)             Requested size: 81.18309pt x 81.18309pt.
 
 <arduino.png, id=60, 142.131pt x 113.223pt>
 File: arduino.png Graphic file (type png)
  <use arduino.png>
-Package pdftex.def Info: arduino.png used on input line 134.
+Package pdftex.def Info: arduino.png used on input line 135.
 (pdftex.def)             Requested size: 71.0653pt x 56.61136pt.
- [11 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/raspberripi
-.png> <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/msp430.png
-> <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/arduino.png>] 
-[12]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 153.
+ [11 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/ras
+pberripi.png> <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final R
+eport/msp430.png> <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Fin
+al Report/arduino.png>] [12]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 155.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
- [13] [14]
-<frameworks2.png, id=78, 489.32813pt x 301.125pt>
-File: frameworks2.png Graphic file (type png)
- <use frameworks2.png>
-Package pdftex.def Info: frameworks2.png used on input line 196.
-(pdftex.def)             Requested size: 366.99518pt x 225.84319pt.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
 
-[15 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/frameworks2.
-png>] [16] [17]
-Overfull \hbox (3.1812pt too wide) in paragraph at lines 243--254
+[13] [14] <frameworks2.png, id=78, 489.32813pt x 301.125pt>
+File: frameworks2.png Graphic file (type png)
+
+<use frameworks2.png>
+Package pdftex.def Info: frameworks2.png used on input line 201.
+(pdftex.def)             Requested size: 366.99518pt x 225.84319pt.
+ [15 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/fra
+meworks2.png>] [16] [17]
+Overfull \hbox (3.1812pt too wide) in paragraph at lines 250--262
 \OT1/cmr/m/n/10 al-to-gether and gone with com-monly used li-braries like Googl
 e Charts, or Chart.js.
  []
@@ -296,134 +294,139 @@ e Charts, or Chart.js.
 [18] <overlook.png, id=93, 688.0104pt x 400.3758pt>
 File: overlook.png Graphic file (type png)
  <use overlook.png>
-Package pdftex.def Info: overlook.png used on input line 265.
+Package pdftex.def Info: overlook.png used on input line 273.
 (pdftex.def)             Requested size: 516.00655pt x 300.2811pt.
 
 <zoomed.png, id=94, 683.6742pt x 391.7034pt>
 File: zoomed.png Graphic file (type png)
  <use zoomed.png>
-Package pdftex.def Info: zoomed.png used on input line 269.
+Package pdftex.def Info: zoomed.png used on input line 277.
 (pdftex.def)             Requested size: 512.75438pt x 293.77682pt.
- [19 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/overlook.pn
-g>] [20 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/zoomed.p
-ng>] [21]
-<firstlogin.PNG, id=106, 612.67702pt x 444.40657pt>
+ [19 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/ove
+rlook.png>]
+[20 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/zoom
+ed.png>] <firstlogin.PNG, id=103, 612.67702pt x 444.40657pt>
 File: firstlogin.PNG Graphic file (type png)
- <use firstlogin.PNG>
-Package pdftex.def Info: firstlogin.PNG used on input line 284.
+
+<use firstlogin.PNG>
+Package pdftex.def Info: firstlogin.PNG used on input line 293.
 (pdftex.def)             Requested size: 459.50664pt x 333.30411pt.
-
-[22 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/firstlogin.P
-NG>] <opentabfirst.PNG, id=111, 615.91298pt x 446.56387pt>
+ [21 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/fir
+stlogin.PNG>]
+<opentabfirst.PNG, id=108, 615.91298pt x 446.56387pt>
 File: opentabfirst.PNG Graphic file (type png)
-
-<use opentabfirst.PNG>
-Package pdftex.def Info: opentabfirst.PNG used on input line 291.
+ <use opentabfirst.PNG>
+Package pdftex.def Info: opentabfirst.PNG used on input line 301.
 (pdftex.def)             Requested size: 461.9336pt x 334.92207pt.
- [23 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/opentabfirs
-t.PNG>]
-<adminpaneldesktop.PNG, id=116, 602.42584pt x 436.78511pt>
+
+[22 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/open
+tabfirst.PNG>] <adminpaneldesktop.PNG, id=113, 602.42584pt x 436.78511pt>
 File: adminpaneldesktop.PNG Graphic file (type png)
 
 <use adminpaneldesktop.PNG>
-Package pdftex.def Info: adminpaneldesktop.PNG used on input line 299.
+Package pdftex.def Info: adminpaneldesktop.PNG used on input line 309.
 (pdftex.def)             Requested size: 451.81827pt x 327.58803pt.
- [24 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/adminpaneld
-esktop.PNG>]
-<roomsdesktop.PNG, id=122, 604.72986pt x 438.93398pt>
+ [23 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/adm
+inpaneldesktop.PNG>]
+<roomsdesktop.PNG, id=118, 604.72986pt x 438.93398pt>
 File: roomsdesktop.PNG Graphic file (type png)
  <use roomsdesktop.PNG>
-Package pdftex.def Info: roomsdesktop.PNG used on input line 307.
+Package pdftex.def Info: roomsdesktop.PNG used on input line 317.
 (pdftex.def)             Requested size: 453.54628pt x 329.19968pt.
 
-[25 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/roomsdesktop
-.PNG>] <devicesdesktop.PNG, id=127, 613.75568pt x 444.94589pt>
+[24 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/room
+sdesktop.PNG>] <devicesdesktop.PNG, id=124, 613.75568pt x 444.94589pt>
 File: devicesdesktop.PNG Graphic file (type png)
 
 <use devicesdesktop.PNG>
-Package pdftex.def Info: devicesdesktop.PNG used on input line 315.
+Package pdftex.def Info: devicesdesktop.PNG used on input line 325.
 (pdftex.def)             Requested size: 460.31561pt x 333.7086pt.
- [26 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/devicesdesk
-top.PNG>]
-<usersdesktop.PNG, id=132, 619.45714pt x 449.37811pt>
+ [25 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/dev
+icesdesktop.PNG>]
+<usersdesktop.PNG, id=129, 619.45714pt x 449.37811pt>
 File: usersdesktop.PNG Graphic file (type png)
  <use usersdesktop.PNG>
-Package pdftex.def Info: usersdesktop.PNG used on input line 323.
+Package pdftex.def Info: usersdesktop.PNG used on input line 333.
 (pdftex.def)             Requested size: 464.59172pt x 337.03276pt.
 
-[27 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/usersdesktop
-.PNG>] <roomassignmentsdesktop.PNG, id=137, 620.54391pt x 449.92151pt>
+[26 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/user
+sdesktop.PNG>] <roomassignmentsdesktop.PNG, id=134, 620.54391pt x 449.92151pt>
 File: roomassignmentsdesktop.PNG Graphic file (type png)
 
 <use roomassignmentsdesktop.PNG>
-Package pdftex.def Info: roomassignmentsdesktop.PNG used on input line 331.
+Package pdftex.def Info: roomassignmentsdesktop.PNG used on input line 341.
 (pdftex.def)             Requested size: 465.40678pt x 337.4403pt.
- [28 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/roomassignm
-entsdesktop.PNG>]
-<Devicetype.PNG, id=142, 1203.7472pt x 508.14844pt>
+ [27 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/roo
+massignmentsdesktop.PNG>]
+<Devicetype.PNG, id=139, 1203.7472pt x 508.14844pt>
 File: Devicetype.PNG Graphic file (type png)
  <use Devicetype.PNG>
-Package pdftex.def Info: Devicetype.PNG used on input line 338.
+Package pdftex.def Info: Devicetype.PNG used on input line 349.
 (pdftex.def)             Requested size: 541.68123pt x 228.66467pt.
 
-[29 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/Devicetype.P
-NG>] <mobilecombined.PNG, id=147, 2308.12312pt x 1445.4pt>
+[28 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/Devi
+cetype.PNG>] <mobilecombined.PNG, id=144, 2308.12312pt x 1445.4pt>
 File: mobilecombined.PNG Graphic file (type png)
 
 <use mobilecombined.PNG>
-Package pdftex.def Info: mobilecombined.PNG used on input line 344.
+Package pdftex.def Info: mobilecombined.PNG used on input line 357.
 (pdftex.def)             Requested size: 577.02937pt x 361.34912pt.
 
-<mobilecombinedadmin.PNG, id=148, 2299.08937pt x 1445.4pt>
+<mobilecombinedadmin.PNG, id=145, 2299.08937pt x 1445.4pt>
 File: mobilecombinedadmin.PNG Graphic file (type png)
 
 <use mobilecombinedadmin.PNG>
-Package pdftex.def Info: mobilecombinedadmin.PNG used on input line 348.
+Package pdftex.def Info: mobilecombinedadmin.PNG used on input line 361.
 (pdftex.def)             Requested size: 574.77094pt x 361.34912pt.
- [30 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/mobilecombi
-ned.PNG>] [31 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/mo
-bilecombinedadmin.PNG>]
-<disassembled.PNG, id=158, 487.5816pt x 354.123pt>
+ [29 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/mob
+ilecombined.PNG>] [30 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs
+/Final Report/mobilecombinedadmin.PNG>]
+<disassembled.PNG, id=155, 487.5816pt x 354.123pt>
 File: disassembled.PNG Graphic file (type png)
  <use disassembled.PNG>
-Package pdftex.def Info: disassembled.PNG used on input line 354.
+Package pdftex.def Info: disassembled.PNG used on input line 369.
 (pdftex.def)             Requested size: 268.17072pt x 194.76823pt.
 
-<assembled.PNG, id=159, 412.4208pt x 383.9946pt>
+<assembled.PNG, id=156, 412.4208pt x 383.9946pt>
 File: assembled.PNG Graphic file (type png)
  <use assembled.PNG>
-Package pdftex.def Info: assembled.PNG used on input line 358.
+Package pdftex.def Info: assembled.PNG used on input line 373.
 (pdftex.def)             Requested size: 226.83214pt x 211.19768pt.
- [32 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/disassemble
-d.PNG> <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/assembled
-.PNG>]
-<test_pass.png, id=165, 466.74374pt x 204.765pt>
+ [31 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/dis
+assembled.PNG> <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final 
+Report/assembled.PNG>] <test_pass.png, id=162, 466.74374pt x 204.765pt>
 File: test_pass.png Graphic file (type png)
- <use test_pass.png>
-Package pdftex.def Info: test_pass.png used on input line 372.
+
+<use test_pass.png>
+Package pdftex.def Info: test_pass.png used on input line 387.
 (pdftex.def)             Requested size: 350.05695pt x 153.57335pt.
-
-<textmessage.png, id=166, 722.7pt x 1284.8pt>
+ <textmessage.png, id=163, 722.7pt x 1284.8pt>
 File: textmessage.png Graphic file (type png)
- <use textmessage.png>
-Package pdftex.def Info: textmessage.png used on input line 378.
-(pdftex.def)             Requested size: 180.67455pt x 321.19922pt.
 
-<emailalerts.png, id=167, 818.30719pt x 456.95718pt>
+<use textmessage.png>
+Package pdftex.def Info: textmessage.png used on input line 393.
+(pdftex.def)             Requested size: 180.67455pt x 321.19922pt.
+ <emailalerts.png, id=164, 818.30719pt x 456.95718pt>
 File: emailalerts.png Graphic file (type png)
- <use emailalerts.png>
-Package pdftex.def Info: emailalerts.png used on input line 382.
-(pdftex.def)             Requested size: 531.89337pt x 297.01865pt.
 
-[33 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/test_pass.pn
-g>]
+<use emailalerts.png>
+Package pdftex.def Info: emailalerts.png used on input line 397.
+(pdftex.def)             Requested size: 531.89337pt x 297.01865pt.
+ [32 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/tes
+t_pass.png>]
 File: textmessage.png Graphic file (type png)
  <use textmessage.png>
-Package pdftex.def Info: textmessage.png used on input line 386.
+Package pdftex.def Info: textmessage.png used on input line 401.
 (pdftex.def)             Requested size: 180.67455pt x 321.19922pt.
- [34 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/textmessage
-.png>] [35 <C:/Users/BuckDich/Documents/GitHub/Team3.14/Docs/Final Report/email
-alerts.png>] [36] [37] [38] [39] [40]
+ [33 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Final Report/tex
+tmessage.png>] [34 <C:/Users/Saurutobi/My Files/LbKStudios/Git/Team3.14/Docs/Fi
+nal Report/emailalerts.png>] [35]
+Overfull \hbox (1.79677pt too wide) in paragraph at lines 421--432
+[]\OT1/cmr/m/n/10 For ses-sions, we sim-ply used Lar-avel's stan-dard in-ter-fa
+ce. This means session-
+ []
+
+[36] [37] [38] [39]
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ô in font cmr10!
@@ -433,40 +436,40 @@ Missing character: There is no ú in font cmr10!
 Missing character: There is no ‚ in font cmr10!
 Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
+ [40]
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
  [41]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
- [42]
-("C:\Users\BuckDich\Documents\GitHub\Team3.14\Docs\Final Report\Feasability.aux
-") ) 
+("C:\Users\Saurutobi\My Files\LbKStudios\Git\Team3.14\Docs\Final Report\Feasabi
+lity.aux") ) 
 Here is how much of TeX's memory you used:
  1686 strings out of 493921
- 23173 string characters out of 3144866
+ 23212 string characters out of 3144864
  81927 words of memory out of 3000000
  4969 multiletter control sequences out of 15000+200000
  7896 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  27i,8n,21p,1579b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Feasability.pdf (43 pages, 5519066 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Feasability.pdf (42 pages, 5519571 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
+ 223 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

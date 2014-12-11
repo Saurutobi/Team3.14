@@ -4,7 +4,7 @@
 \usepackage{float}
 \begin{document}
 \title{Temperature and Humidity Monitoring System}
-\author{Jason Pearson, Justin Koehler, and Marcel Englmaier}
+\author{Marcel EnglmaierJustin Koehler, and Jason Pearson}
 \maketitle
 \tableofcontents
 \newpage
@@ -120,6 +120,7 @@ Above is the old database diagram of the web site. We decided to not make minor 
 	\textbf{Hardware, The Microprocessor}
 \end{center}
 \indent
+\indent
 There were multiple options for microprocessors we could use. After some research, we narrowed down our list of possible units to these three: the RaspberryPi, the MSP430 Launchpad, and the Arduino Leonardo.
 \newline
 \begin{figure}[H]
@@ -148,6 +149,7 @@ Finally, the RaspberryPi. The RaspberryPi is heavily used and offers much docume
 	\textbf{Hardware, The Sensors}
 \end{center}
 \indent
+\indent
 Our client asked us to use both temperature and humidity sensors. We found many sensors:
 \begin{itemize}
 	\item TMP36 Analog Temperature Sensor
@@ -156,6 +158,7 @@ Our client asked us to use both temperature and humidity sensors. We found many 
 	\item DHT11 Sensor Unit
 	\item DHT22 Sensor Unit
 \end{itemize}
+\indent
 These sensor are all very good sensors in their own regard. We first looked at using two different sensors, and began by searching for temperature sensors.
 \newline
 \indent
@@ -175,6 +178,7 @@ After testing for a few weeks, we began looking at the accuracy of our DHT11. As
 	\textbf{Hardware, Enabling Internet Connectivity}
 \end{center}
 \indent
+\indent
 We had two options for connecting our RaspberryPi sensors to the internet: a wireless or a wired connection. Both options we available to us by our Client.
 \newline
 \indent
@@ -191,6 +195,7 @@ In contrast, using a wireless connection opens us up to a wide range of uses. Wh
 	\textbf{Software, Web Framework}
 \end{center}
 \indent
+\indent
 For our web framework, we had many choices. We had options ranging from Ruby on Rails, to Tomcat, to CakePHP, and even to code in raw PHP without a framework. In the end, we decided to use Laravel. We did extensive research, and found, according to the graph below, that Laravel has the most market share of all PHP web frameworks.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{frameworks2.png}}
@@ -206,6 +211,7 @@ We did have a few more specific reasons for choosing Laravel over our other opti
 \begin{center}
 	\textbf{Software, Sensor Unit Programming Language}
 \end{center}
+\indent
 \indent
 Our RaspberryPi sensor unit requires some form of programming language. This decision should have been a rather simple decision, but during test, we had some issues. The manufacturer of our DHT22 sensing unit provides libraries for us to use to interface with the DHT22. During testing, we had some problems occur while trying to read data off of the DHT22. Originally, we used the C programming language to write the code which reads the DHT22. While C is incredibly fast, it requires compilation, which turns out wasn't the worst of our issues. While polling the DHT22 for measurements, it took the program anywhere from one to 15 tries to properly read the data. In our eyes, that isn't very reliable.
 \newline
@@ -225,6 +231,7 @@ For our server setup, we had to make a few decisions.
 	\item What Framework should we use?
 	\item Where do we host the web server?
 \end{itemize}
+\indent
 These questions are all equally important. We first had to pick the Operating System. We had the choice between Windows, a rather expensive option, and Linux, a very free option. We decided to go for the Linux system because of the cost and because it is open source.
 \newline
 \indent
@@ -240,6 +247,7 @@ Our primary reason for picking AWS was that it is free for the first year, and t
 \begin{center}
 	\textbf{Web Site, Design and Styling}
 \end{center}
+\indent
 \indent
 The existing web site that we took over from the previous team did not look nice at all. The buttons were ugly, the styling was poor, and the colors were mismatched. Furthermore, it was not mobile-compatibly at all. We had to find a solution.
 \newline
@@ -260,7 +268,7 @@ Along with an updated and cleaner charting library, we decided to scrap most of 
 Next we shall look at how the pieces interact with each other to create the system. First we will look at an overview of how the server, the user and the devices interact and how they are setup. 
 \newline
 \indent
-On the right we have different rooms that are set up. Each room has sensors in it of any type. Each sensor hosts an xml document that shows the current information about the sensor. The central management server then on a routine basis will go out and fetch data from these sources and respond accordingly ie text or email if a threshold has been reached. The user can also view the website and it will interact with the user appropriately that way.
+On the right of the figure below, we have different rooms that are set up. Each room has sensors in it of any type. Each sensor hosts an xml document that shows the current information about the sensor. The central management server then on a routine basis will go out and fetch data from these sources and respond accordingly ie text or email if a threshold has been reached. The user can also view the website and it will interact with the user appropriately that way.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{overlook.png}}
 	\caption{Overlook of the User, Server, and Device Relations}
@@ -273,11 +281,12 @@ On the right we have different rooms that are set up. Each room has sensors in i
 Now to take a closer look at the interactions between the custom built raspberry pi sensing unit and the Linux central management system. On the Linux side we have the LAMP stack. Our laravel framework depends on this stack to function appropriately. When the time comes laravel will need to update the current temperature that a device has. So it will download the XML file from the device and send it through the driver for that device type. After that it will store the data in the database and based on the constraints for that device determine what the status of the device is and if it needs to react to its temperature. 
 \newline
 \indent
-Meanwhile on the Raspberry Pi side we have the Pi communicating with the sensor. To communicate with the sensor we use a library provided by the sensor's  manufacturer and python. Originally we used C to talk to the device, but C talked so fast to the device it didn't have time to determine the current temperature and humidity before being asked again. This would cause misreads and require multiple reads before getting a correct result. Using python we were able to get data back on the first try most of the time. The frequency of how often the temperature should be polled is  determined by the administrator when the device is first set up. This is created through as simple cron job which the system administrator determines how often he or she wants the information polled. After data has been polled the program writes it to an XML file that is hosted by apache on the raspberry pi. 
-
+Meanwhile on the RaspberryPi side we have the RaspberryPi communicating with the sensor. The frequency of how often the sensor unit should be polled is determined by the administrator when the device is first set up. This is created through as simple cron job.After data has been polled the program writes it to an XML file that is hosted by apache on the RaspberryPi. For a more detailed description of how the RaspberryPi interacts with the sensors, please see the  
 \newpage
+
 \subsection*{Implementation}
 \addcontentsline{toc}{subsection}{Implementation}
+\indent
 \indent
 Now how did this design turn out. Before all the old site vital areas were shown. Now after implementing BootStrap we have a completely different front end. Here is the initial view of the site once a user has logged in.
 \begin{figure}[H]
@@ -285,6 +294,7 @@ Now how did this design turn out. Before all the old site vital areas were shown
 	\caption{After Logging In on a Desktop Computer}
 \end{figure}
 \newpage
+
 \indent
 Now when a user clicks on the tab it will expand to show what the current temperature and humidity are. Next to that is the status of the machine i.e. okay or critical. Upon mousing over the graph it will give the temperature or humidity at that time in history. See the next figure.
 \begin{figure}[H]
@@ -332,6 +342,7 @@ The room assignments tab is very important. This is where administrators assign 
 	\caption{User Room Assignments}
 \end{figure}
 \newpage
+
 \indent 
 The last piece of the administration panel is the device tab. This device type tab. This is where the administrator can add different types of devices based on what they want to connect to their system. We have two device drivers that we have created. One is for the temperature @lert system which our raspberry pi also uses, and we have one for test sensors. If someone wanted to create their own driver they would make the connection here between the ui and the driver and then would need to create a driver to parse the XML.
 \begin{figure}[H]
@@ -339,6 +350,8 @@ The last piece of the administration panel is the device tab. This device type t
 	\caption{User Room Assignments}
 \end{figure}
 \newpage
+
+\indent
 One important feature that the client said was a must is that there must be support for mobile devices as we have stated before. The website on a mobile device looks almost identical to the desktop version of the site. Below are some screen shots from mobile devices looking at normal pages in the temperature window and the administration panel.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.25]{mobilecombined.PNG}}
@@ -349,6 +362,8 @@ One important feature that the client said was a must is that there must be supp
 	\caption{Administration Panel on Mobile Device}
 \end{figure}
 \newpage
+
+\indent
 Now that the new site has been shown we will take a look at the finished product of the raspberry pi. First we have a picture of the device not assembled. There is the white temperature sensor, the black sd card, the usb wireless adapter and lastly the raspberry pi.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.55]{disassembled.PNG}}
@@ -360,20 +375,20 @@ Now that the new site has been shown we will take a look at the finished product
 \end{figure}
 \newpage
 
-\newpage
 \subsection*{Testing}
 \addcontentsline{toc}{subsection}{Testing}
 \indent
-There are two types of testing that we used in this project unit testing and functional testing. Unit Testing is a must because it will allow the user to test every feature when a new patch comes out and allows after each upgrade to check if the features still work. Unit tests cannot be used to check everything so there must also be functional tests that show the site is reacting correctly and can handle loads properly.
+\indent
+There are two types of testing that we used in this project: Unit Testing and Functional Testing. Unit Testing is a must because it will allow the user to test every feature when a new patch comes out and allows after each code change to check if the features still work. Unit tests cannot be used to check everything so there must also be functional tests that show the site is reacting correctly and can handle loads properly.
 \newline
 \indent
-Unit tests for this project are ran through the command line and use Laravel's testing framework. 
+Unit tests for this project are run through the command line and use Laravel's testing framework. 
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{test_pass.png}}
 	\caption{Successful Running of Unit Tests}
 \end{figure}
 \indent
-There were many different functional tests that we ran to test full functionality of our project. Some of the big functional tests that we ran are for email alerts, text message alerts and virtual sensors.
+There were many different functional tests that we run to test the full functionality of our project. Some of the big functional tests that we run are for email alerts, text message alerts and virtual sensors.
 \begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.25]{textmessage.png}}
 	\caption{Text Message Alert and Verification Functional Testing}
@@ -386,14 +401,40 @@ There were many different functional tests that we ran to test full functionalit
 	\makebox[\textwidth]{\includegraphics[scale=0.25]{textmessage.png}}
 	\caption{Multiple Sensor Testing}
 \end{figure}
+\indent
+We also used the sensor units we build to do functional testing. We put the units near hot and cold things like an oven or a refrigerator and measured the actual readings with a thermometer and humidity measuring device. We then checked the web site to make sure the sensor units were reporting accurate readings.
 \newpage
 
 \subsection*{Security}
 \addcontentsline{toc}{subsection}{Security}
+\indent
+\indent
+Security was a big concern of our Client. Used Laravel's industry-grade tools to create a secure website. Some of the things we used and prevented were:
+\begin{itemize}
+	\item Sessions
+	\item Tokens
+	\item Input Sanitization
+	\item XSS
+	\item SQL Injections
+	\item Password Hashing
+\end{itemize}
+\indent
+Each of these items is useful on their own, but used together, they are quite secure.
+\newline
+\indent
+For sessions, we simply used Laravel's standard interface. This means session-hijacking can not be done. If the user logs out, hitting the back button will not magically log them back in. If the user is already signed in, then another device can not log in as that user.
+\newline
+\indent
+Tokens are very important when trying to prevent false data. A token is basically a key that verifies the identity of the user or the sensor unit. By using tokens and the other security features, the only way a malicious person can infiltrate the website is by physically messing with the sensor unit hardware.
+\newline
+\indent
+Input Sanitization is the key to making sure that malicious or bad information cannot enter the web site. By making sure the user cannot submit certain pieces of data if the data doesn't conform to a specification, we can prevent a malicious user from breaking the web site.
+
 \newpage
 
 \subsection*{Maintenance}
 \addcontentsline{toc}{subsection}{Maintenance}
+\indent
 \indent
 After the completion of this project the current senior design team will offer no maintenance. All modifications will be done by the staff at Western Michigan University and anyone else who uses the project. This being said there are modifications that we had planned but didn't have time to get to that could be added to increase the user experience for the project. These include
 \begin{itemize}
@@ -403,6 +444,7 @@ After the completion of this project the current senior design team will offer n
 	\item Upgrading the user control area to have group administration,
 	\item Making a program that would poll servers for their data and add it to a graph.
 \end{itemize}
+\indent
 We plan on working on implementing these features, and modifying the project with our own ideas in the coming future, gut we do not guarantee any finished products. We will, however, offer our work to the client upon completion of a stable version and successful testing.
 \newline
 \indent
