@@ -99,6 +99,11 @@ The administrators are in charge of handling all room assignments as well as cre
 \indent
 The normal user can see the graph of data on the front page and login. They also receive alerts, but are not able to change any settings with the devices etc.
 \begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.60]{adminlevels.PNG}}
+	\caption{Page To Add Users}
+\end{figure}
+
+\begin{figure}[H]
 	\makebox[\textwidth]{\includegraphics[scale=0.75]{AddUser.PNG}}
 	\caption{Page To Add Users}
 \end{figure}
@@ -266,11 +271,11 @@ Next we shall look at how the pieces interact with each other to create the syst
 \indent
 On the right of the figure below, we have different rooms that are set up. Each room has sensors in it of any type. Each sensor hosts an xml document that shows the current information about the sensor. The central management server then on a routine basis will go out and fetch data from these sources and respond accordingly ie text or email if a threshold has been reached. The user can also view the website and it will interact with the user appropriately that way.
 \begin{figure}[H]
-	\makebox[\textwidth]{\includegraphics[scale=0.75]{overlook.png}}
+	\makebox[\textwidth]{\includegraphics[scale=0.55]{overlook.png}}
 	\caption{Overlook of the User, Server, and Device Relations}
 \end{figure}
 \begin{figure}[H]
-	\makebox[\textwidth]{\includegraphics[scale=0.75]{zoomed.png}}
+	\makebox[\textwidth]{\includegraphics[scale=0.50]{zoomed.png}}
 	\caption{Closer Look of Server and Raspberry Pi}
 \end{figure}
 \indent
@@ -394,7 +399,7 @@ There were many different functional tests that we run to test the full function
 	\caption{Email Alert Functional Testing}
 \end{figure}
 \begin{figure}[H]
-	\makebox[\textwidth]{\includegraphics[scale=0.25]{textmessage.png}}
+	\makebox[\textwidth]{\includegraphics[scale=0.55]{lotsofsensors.png}}
 	\caption{Multiple Sensor Testing}
 \end{figure}
 \indent
@@ -441,10 +446,7 @@ After the completion of this project the current senior design team will offer n
 	\item Making a program that would poll servers for their data and add it to a graph.
 \end{itemize}
 \indent
-We plan on working on implementing these features, and modifying the project with our own ideas in the coming future, gut we do not guarantee any finished products. We will, however, offer our work to the client upon completion of a stable version and successful testing.
-\newline
-\indent
-In addition, we have created multiple guides and how-to manuals for installing and building the sensor unit, and for putting the server together.
+We plan on working on implementing these features, and modifying the project with our own ideas in the coming future, but we do not guarantee anything as it will be during free time. We have created multiple guides and how-to manuals for installing and building the sensor unit, and for putting the server together. These documents should be able to deal with most of the setup concerns and make installation simple.
 \newpage
 
 \subsection*{Resources}
