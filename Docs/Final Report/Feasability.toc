@@ -6,7 +6,7 @@
 \contentsline {subsection}{Testing}{32}
 \contentsline {subsection}{Security}{36}
 \contentsline {subsection}{Maintenance}{37}
-\contentsline {subsection}{Maintenance}{38}
+\contentsline {subsection}{Resources}{38}
 \contentsline {subsection}{References}{39}
 \contentsline {subsection}{Glossary}{40}
 \contentsline {subsection}{Ownership}{41}
