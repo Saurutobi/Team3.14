@@ -123,16 +123,8 @@ Above is the old database diagram of the web site. We decided to not make minor 
 There were multiple options for microprocessors we could use. After some research, we narrowed down our list of possible units to these three: the RaspberryPi, the MSP430 Launchpad, and the Arduino Leonardo.
 \newline
 \begin{figure}[H]
-	\makebox[\textwidth]{\includegraphics[scale=0.50]{raspberripi.png}}
-	\caption{The RaspberryPi}
-\end{figure}
-\begin{figure}[H]
-	\makebox[\textwidth]{\includegraphics[scale=0.50]{msp430.png}}
-	\caption{The MSP430 Launchpad}
-\end{figure}
-\begin{figure}[H]
-	\makebox[\textwidth]{\includegraphics[scale=0.50]{arduino.png}}
-	\caption{The Arduino Leonardo}
+	\makebox[\textwidth]{\includegraphics[scale=0.50]{alldevvices.png}}
+	\caption{RaspberryPi, Arduino, MSP430 from Left to Right}
 \end{figure}
 \indent
 Each of these devices had their own benefits. The MSP430 Launchpad was the cheapest option while the RaspberryPi was the most expensive option. A big problem with the MSP430 Launchpad is that is offers almost no features. It may be cheap, but the time, effort, and money we would need to put in to this device to connect it to the internet made it unusable to us.
@@ -156,10 +148,10 @@ Our client asked us to use both temperature and humidity sensors. We found many 
 	\item DHT11 Sensor Unit
 	\item DHT22 Sensor Unit
 \end{itemize}
-These sensor are all very good sensors in their own regard. We first looked at using two different sensors, and began by searching for temperature sensors.
+These sensors are all very good in their own regard. We first looked at using two different sensors, and began by searching for temperature sensors.
 \newline
 \indent
-The TMP36 was the first temperature sensor we looked at. It is cheap, and fast. It's also analog. Because it is an analog sensor, it requires calibration for each individual sensor. This is too much work and can cause reliablitiy issues, so we did not go with the TMP36.
+The TMP36 was the first temperature sensor we looked at. It is cheap, and fast. It's also analog. Because it is an analog sensor, it requires calibration for each individual sensor. This is too much work and can cause reliability issues, so we did not go with the TMP36.
 \newline
 \indent
 The DS18B20 and AM2315 sensors were the next sensors we looked at. Both are digital, and require no calibration. We immediately removed the AM2315 from our list because it costs \textdollar30. We purchased a few DS18B20 sensors to do some preliminary testing. It is slow, requiring about a second to return proper data.
@@ -168,9 +160,14 @@ The DS18B20 and AM2315 sensors were the next sensors we looked at. Both are digi
 As we'd found our temperature sensor, we began looking for a humidity sensor. All of the ones we found received terrible reviews and we ignored them altogether. Then, we stumbled upon the DHT11 Sensor Unit. This sensor reads both temperature and humidity and is digital. It is about 3 times more expensive than a DS18B20 but is just as slow.
 \newline
 \indent
-After testing for a few weeks, we began looking at the accuracy of our DHT11. As it turns out, the DHT11 is about 4 times worse in terms of accuracy than the existing \textdollar300 Temperature@lert units in place. We soon found out that the DHT11 has a big bother, the DHT22. It performs the same functions as the DHT11, but has a wider range of sensing, and is just as accurate as the existing Temperature@lert units. While the DHT22 is \textdollar5, it is very powerful and inscredibly accurate, and we decided to use the DHT22 for our final sensor.
-\newpage
+After testing for a few weeks, we began looking at the accuracy of our DHT11. As it turns out, the DHT11 is about 4 times worse in terms of accuracy than the existing \textdollar300 Temperature@lert units in place. We soon found out that the DHT11 has a big bother, the DHT22. It performs the same functions as the DHT11, but has a wider range of sensing, and is just as accurate as the existing Temperature@lert units. While the DHT22 is \textdollar5, it is very powerful and incredibly accurate, and we decided to use the DHT22 for our final sensor.
 
+\begin{figure}[H]
+	\makebox[\textwidth]{\includegraphics[scale=0.50]{dht22.png}}
+	\caption{DHT22 Sensor}
+\end{figure}
+
+\newpage
 \begin{center}
 	\textbf{Hardware, Enabling Internet Connectivity}
 \end{center}
@@ -184,7 +181,7 @@ Using the wired connection approach, we would be able to run the RaspberryPi usi
 Another drawback of using a wired connection would be the need to run an ethernet cable to wherever the RaspberryPi will be located. This is very inconvenient for moving the sensor units around and for cable cleanliness in general.
 \newline
 \indent
-In contrast, using a wireless connection opens us up to a wide range of uses. While the USB wireless unit does cost about \textdollar10, this was a cost we were willing to incur. The wireless adapter we chose is a generic 802.11n adapter, but it is backwards compatible with the 802.11a/b/g protocols. Using a wireless adapter, we can move the sensor unit around to any location we require it to be, and because the 802.11n protocol is a long range protocol, we can go quite a distance from a wireless internet access point.
+In contrast, using a wireless connection opens us up to a wide range of uses. While the USB wireless unit does cost about \textdollar10, this was a cost we were willing to incur. The wireless adapter we chose is a generic 802.11n adapter, but it is backwards compatible with the 802.11a/b/g protocols. Using a wireless adapter, we can move the sensor unit around to any location we require it to be, and because the 802.11n protocol is a long range protocol, we can go quite a distance from a wireless internet access point. This means that if the nearest access point was to overheat there is a chance that the sensor could hook up to another access point and try to send as much data as possible.
 \newpage
 
 \begin{center}
@@ -200,7 +197,7 @@ For our web framework, we had many choices. We had options ranging from Ruby on 
 Having over a quarter market share over all other PHP web frameworks means that Laravel is doing something right. It also means that people trust Laravel, and because of this, there is quite a lot of documentation.
 \newline
 \indent
-We did have a few more specific reasons for choosing Laravel over our other options. One of the biggest reasons we chose Laravel is because it has industry-standard security measures, that, when implemented properly, can lead to a very secure web site. In addition, Laravel is a little older, and has had time to mature and work out bugs. Therefore, Laravel provides an incredibly reliable Model-View-Controller system. As an added bonus, it's even open source!
+We did have a few more specific reasons for choosing Laravel over our other options. One of the biggest reasons we chose Laravel is because it has industry-standard security measures, that, when implemented properly, can lead to a very secure web site. In addition, Laravel is a little older, and has had time to mature and work out bugs. Therefore, Laravel provides an incredibly reliable Model-View-Controller system. As an added bonus, it's even open source.
 \newpage
 
 \begin{center}
